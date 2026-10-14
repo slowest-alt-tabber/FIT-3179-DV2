@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Finishing the Degree | Australian University Completion</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+</head>
+
+<body>
+  <header class="hero">
+    <p class="eyebrow">AUSTRALIAN HIGHER EDUCATION</p>
+    <h1>Finishing the Degree</h1>
+    <p class="subtitle">
+      Who completes university, how do outcomes differ,
+      and what might student experiences tell us?
+    </p>
+    <p class="intro">
+      Explore university completion outcomes across student cohorts,
+      fields of education and student characteristics, alongside
+      national evidence about students' learning experiences.
+    </p>
+  </header>
+
+  <main>
+
+    <section class="story-section">
+      <h2>01 — The big picture</h2>
+      <p>
+        Start with the national completion trend, then compare
+        differences across fields and institution types.
+      </p>
+
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>How have completion rates changed?</h3>
+          <div id="chart-trend"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Which study areas have higher completion rates?</h3>
+          <div id="chart-field"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>How do outcomes change with follow-up time?</h3>
+          <div id="chart-institution"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Completed, still studying or not completed?</h3>
+          <div id="chart-outcomes"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <h2>02 — Who completes their studies?</h2>
+      <p>
+        Completion is not necessarily the same for every student.
+        Compare student characteristics and the time taken to
+        complete a qualification.
+      </p>
+
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>How do outcomes differ across published groups?</h3>
+          <div id="chart-characteristics"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Early completion versus longer-term outcomes</h3>
+          <div id="chart-dumbbell"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>How are university experience ratings distributed?</h3>
+          <div id="chart-cohort-size"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <h2>03 — The student experience</h2>
+      <p>
+        The Student Experience Survey reports indicators such as teaching
+        quality, peer engagement, learning resources and student support.
+        University-level ratings provide context for the completion results,
+        but they do not track the same individuals in the completion cohorts.
+        Differences between these measures should not be interpreted as
+        evidence that student experience causes course completion.
+        </p>
+
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>How do university-level experience ratings vary?</h3>
+          <div id="chart-qilt-indicators"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>How does experience vary by field?</h3>
+          <div id="chart-qilt-heatmap"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>How do experience indicators compare across universities?</h3>
+          <div id="chart-completion-experience"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <h2>04 — A geographic perspective</h2>
+      <p>
+        These maps show the geographic distribution of university-level
+        student-experience ratings. Each mapped university is associated
+        with a representative campus location from AURIN. The ratings
+        describe the institution, not the campus or the students living
+        near it. State averages are unweighted averages of the universities
+        represented and should not be interpreted as state-wide student
+        satisfaction rates.
+        </p>
+
+      <div class="chart-grid">
+        <article class="chart-card">
+          <h3>Student support by state or territory</h3>
+          <div id="chart-map-choropleth"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>Institution locations and support ratings</h3>
+          <div id="chart-map-symbol"></div>
+        </article>
+
+        <article class="chart-card">
+          <h3>State comparison: a tile-grid map</h3>
+          <div id="chart-map-tile"></div>
+        </article>
+      </div>
+
+      <p class="note">
+        State summaries are grouped by the state associated with
+        each institution's mapped location. They are not necessarily
+        representative of the states or territories where students
+        reside.
+      </p>
+    </section>
+
+    <section class="methodology">
+      <h2>About the data</h2>
+
+      <p>
+        Completion rates follow commencing student cohorts over
+        specified periods. Student Experience Survey indicators
+        describe reported experiences among surveyed students.
+        The two sources do not automatically track the same
+        individuals.
+      </p>
+
+      <p>
+        Any relationship between completion rates and survey
+        indicators should be interpreted as an association, not
+        proof of a causal effect.
+      </p>
+
+      <h3>Sources</h3>
+      <ul>
+        <li>
+          <a href="https://www.education.gov.au/higher-education-statistics/resources/2024-section-17-completion-rates">
+            Australian Government — 2024 Section 17: Completion Rates
+          </a>
+        </li>
+        <li>
+          <a href="https://www.qilt.edu.au/surveys/student-experience-survey-%28ses%29">
+            Quality Indicators for Learning and Teaching — Student Experience Survey
+          </a>
+        </li>
+        <li>
+          <a href="https://data.gov.au/data/organization/aurin-australian-urban-research-infrastructure-network">
+            AURIN — geographic reference data
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/rowanhogan/australian-states">
+            Australian states map geometry
+          </a>
+        </li>
+      </ul>
+
+      <p class="credit">
+        FIT3179 Data Visualisation · Lee Zhe Qi · 2026
+      </p>
+    </section>
+
+    <div id="load-message" role="status"></div>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
