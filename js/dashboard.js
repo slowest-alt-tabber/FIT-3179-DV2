@@ -694,7 +694,7 @@ async function renderQiltYearSlope() {
   );
 
   const spec = baseSpec(
-    "Published university ratings across survey years",
+    "",
     values,
     310
   );
@@ -758,7 +758,7 @@ async function renderTrend() {
   }));
 
   const spec = baseSpec(
-    "Published completion rates across cohort periods",
+    "",
     rows,
     280
   );
@@ -818,24 +818,6 @@ async function renderFieldBars() {
   let title = "Completion rates by field of education";
   let label = "category";
 
-  if (uniqueValues(rows.map((r) => r.category)).length < 2) {
-    rows = completed.filter(isStateRow);
-    title = "Completion rates by state or territory";
-    label = "state";
-  }
-
-  if (uniqueValues(rows.map((r) => r[label])).length < 2) {
-    rows = completed.filter(isCharacteristicRow);
-    title = "Completion across published student groups";
-    label = "category";
-  }
-
-  if (uniqueValues(rows.map((r) => r[label])).length < 2) {
-    rows = completed;
-    title = "Completion rates across published populations";
-    label = "category";
-  }
-
   // Display the richest available published slice. No data are
   // manufactured when a field/provider breakdown is unavailable.
   const slice = bestTimeDurationSlice(rows);
@@ -853,7 +835,7 @@ async function renderFieldBars() {
 
   setHeading("chart-field", title);
 
-  const spec = baseSpec(title, values, Math.max(220, Math.min(390, values.length * 25)));
+  const spec = baseSpec("", values, Math.max(220, Math.min(390, values.length * 25)));
 
   spec.mark = { type: "bar", cornerRadiusEnd: 3 };
   spec.encoding = {
@@ -886,24 +868,39 @@ async function renderFieldBars() {
 // 7. CHART 3 — OUTCOMES BY FOLLOW-UP DURATION
 // ------------------------------------------------------------
 
+
 async function renderDurationTrend() {
+  // Keep the selected national profile across ALL cohort periods.
+  // Do not call bestTimeframe(), which discards other periods.
   const profile = dominantProfile(nationalRows());
-  let rows = bestTimeframe(profile);
+  const rows = profile.length ? profile : completionData;
 
-  if (!rows.length) rows = bestTimeframe(completionData);
-
-  const values = rows.map((row) => ({
-    ...row,
-    outcome_display: outcomeClass(row.outcome)
-  }));
+  const values = rows
+    .filter((row) =>
+      row.duration_years !== null &&
+      row.rate !== null &&
+      row.outcome !== ""
+    )
+    .map((row) => ({
+      ...row,
+      outcome_display: outcomeClass(row.outcome)
+    }));
 
   const spec = baseSpec(
-    "How published outcomes vary with follow-up duration",
+    "",
     values,
     280
   );
 
-  spec.mark = { type: "line", point: true, strokeWidth: 2.5 };
+  // Different follow-up durations can represent different cohorts.
+  // Points avoid implying that these observations belong to one cohort.
+  spec.mark = {
+    type: "point",
+    filled: true,
+    size: 85,
+    opacity: 0.8
+  };
+
   spec.encoding = {
     x: {
       field: "duration_years",
@@ -923,11 +920,6 @@ async function renderDurationTrend() {
       title: "Outcome",
       scale: outcomeScale()
     },
-    detail: { field: "outcome_display" },
-    order: {
-      field: "duration_years",
-      type: "quantitative"
-    },
     tooltip: [
       { field: "timeframe", title: "Cohort period" },
       { field: "duration_label", title: "Follow-up" },
@@ -938,6 +930,7 @@ async function renderDurationTrend() {
 
   await showChart("chart-institution", spec);
 }
+
 
 // ------------------------------------------------------------
 // 8. CHART 4 — OUTCOME COMPARISON
@@ -956,7 +949,7 @@ async function renderOutcomes() {
   }));
 
   const spec = baseSpec(
-    "Published outcome profile for a comparable cohort and duration",
+    "",
     values,
     270
   );
@@ -1035,7 +1028,7 @@ async function renderCharacteristics() {
 
   setHeading("chart-characteristics", title);
 
-  const spec = baseSpec(title, values, Math.max(
+  const spec = baseSpec("", values, Math.max(
     260,
     Math.min(440, uniqueValues(values.map((r) => r.segment)).length * 25)
   ));
@@ -1196,9 +1189,7 @@ async function renderDumbbell() {
   const spec = {
     $schema: SCHEMA,
     title: {
-      text: pairs[0].comparison === "Follow-up duration"
-        ? "Completion at earlier and later follow-up durations"
-        : "Overall experience: early and latest available survey",
+      text: "",
       anchor: "start",
       fontSize: 14,
       color: COLOURS.ink
@@ -1492,7 +1483,7 @@ async function renderViolin() {
 
   setHeading(
     "chart-cohort-size",
-    `Rating distributions by indicator — ${dataset.scopeLabel}`
+    `Rating distributions by indicator`
   );
 
   if (!violinValues.length) {
@@ -1514,8 +1505,7 @@ async function renderViolin() {
   height: Math.max(300, indicators.length * 42),
 
   title: {
-    text: "Distribution of published positive ratings",
-    subtitle: "Latest available survey year for each indicator",
+    text: "",
     anchor: "start",
     fontSize: 14,
     color: COLOURS.ink
@@ -1551,7 +1541,7 @@ async function renderViolin() {
     y: {
       field: "y0",
       type: "quantitative",
-      title: "QILT indicator",
+      title: "Indicator",
       scale: {
         domain: [-0.5, indicators.length - 0.5],
         reverse: true,
@@ -1639,18 +1629,12 @@ async function renderQiltIndicators() {
 
   setHeading(
     "chart-qilt-indicators",
-    `How do rating distributions vary by indicator? (${dataset.scopeLabel})`
+    `How do rating distributions vary by indicator?`
   );
 
   const spec = {
     $schema: SCHEMA,
-    title: {
-      text: "Published positive ratings by indicator — latest available year per indicator",
-        subtitle: dataset.scopeLabel,
-      anchor: "start",
-      fontSize: 14,
-      color: COLOURS.ink
-    },
+    title: "",
     width: "container",
     height: 320,
     layer: [
@@ -1766,7 +1750,7 @@ async function renderQiltHeatmap() {
     indicator_display: row.indicator
   }));
 
-  const spec = baseSpec(heading, values,
+  const spec = baseSpec("", values,
     Math.max(270, Math.min(440, uniqueValues(
       values.map((r) => r.display_group)
     ).length * 22))
@@ -1868,7 +1852,7 @@ async function renderCompletionExperience() {
     );
 
     const fallbackSpec = baseSpec(
-      "Published indicator profiles by field",
+      "",
       fallback,
       320
     );
@@ -1909,11 +1893,11 @@ async function renderCompletionExperience() {
 
   setHeading(
     "chart-completion-experience",
-    `How do indicators compare across universities? (${latestYear(rows)})`
+    `How do indicators compare across universities? (2025))`
   );
 
   const spec = baseSpec(
-    "University experience profiles across multiple indicators",
+    "",
     values,
     330
   );
@@ -2167,14 +2151,6 @@ async function renderChoropleth(stateSummary, metricName) {
   const spec = {
     $schema: SCHEMA,
 
-    title: {
-      text: `Mean university-level ${metricName.toLowerCase()} rating by state`,
-      subtitle: "Unweighted average of represented universities",
-      anchor: "start",
-      fontSize: 14,
-      color: COLOURS.ink
-    },
-
     width: "container",
     height: 340,
 
@@ -2193,20 +2169,21 @@ async function renderChoropleth(stateSummary, metricName) {
     encoding: {
       color: {
         condition: {
-            test: "isValid(datum.properties.mean_rating)",
-            field: "properties.mean_rating",
-            type: "quantitative",
-            scale: {
+          test: "isValid(datum.properties.mean_rating)",
+          field: "properties.mean_rating",
+          type: "quantitative",
+          title: "Placeholder",
+          scale: {
             domain: [0, 100],
             range: STATE_MEAN_RATING_RANGE,
             clamp: true
-            }
+          },
+          legend: {
+            title: "Mean Positive Rating"
+          }
         },
-        value: "#d5e1e7",
-        legend: {
-            title: STATE_MEAN_LEGEND_TITLE
-        }
-        },
+        value: "#d5e1e7"
+      },
 
       tooltip: [
         {
@@ -2235,14 +2212,6 @@ async function renderChoropleth(stateSummary, metricName) {
     }
   };
 
-  console.log(
-    "Choropleth values:",
-    mappedFeatures.map((feature) => ({
-      state: feature.properties.state_norm,
-      rating: feature.properties.mean_rating,
-      universities: feature.properties.university_count
-    }))
-  );
 
   await showChart("chart-map-choropleth", spec, "canvas");
 }
@@ -2268,14 +2237,6 @@ async function renderSymbolMap(rows, metricName) {
 
   const spec = {
     $schema: SCHEMA,
-
-    title: {
-      text: `University locations and ${metricName.toLowerCase()} ratings`,
-      subtitle: "Ratings belong to institutions, not individual campuses",
-      anchor: "start",
-      fontSize: 14,
-      color: COLOURS.ink
-    },
 
     width: "container",
     height: 340,
@@ -2415,12 +2376,6 @@ async function renderTileMap(stateSummary, metricName) {
 
   const spec = {
     $schema: SCHEMA,
-    title: {
-      text: `State comparison: ${metricName.toLowerCase()}`,
-      anchor: "start",
-      fontSize: 14,
-      color: COLOURS.ink
-    },
     width: "container",
     height: 300,
     data: { values: tiles },
