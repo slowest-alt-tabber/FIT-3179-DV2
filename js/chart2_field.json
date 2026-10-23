@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 340,
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "white",
+  "data": {
+    "url": "data/completion_field_of_education.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.field_of_education != null && datum.field_of_education != ''"
+    },
+    {
+      "filter": "datum.rate != null && (datum.outcome == 'Completed, in any year' || datum.outcome == 'Completed')"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "rate",
+          "as": "mean_rate"
+        }
+      ],
+      "groupby": ["field_of_education"]
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "color": "#167c80",
+    "cornerRadiusEnd": 2
+  },
+  "encoding": {
+    "y": {
+      "field": "field_of_education",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": { "labelLimit": 240, "labelFontSize": 10, "labelColor": "#263943" }
+    },
+    "x": {
+      "field": "mean_rate",
+      "type": "quantitative",
+      "title": "Completion rate (%)",
+      "scale": { "domain": [0, 100] },
+      "axis": { "gridColor": "#e6ecef", "labelFontSize": 10, "labelColor": "#263943", "titleColor": "#263943" }
+    },
+    "tooltip": [
+      { "field": "field_of_education", "title": "Field of Education" },
+      { "field": "mean_rate", "title": "Mean Completion Rate (%)", "format": ".1f" }
+    ]
+  },
+  "config": { "view": { "stroke": null } }
+}

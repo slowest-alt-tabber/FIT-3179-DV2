@@ -1,0 +1,128 @@
+
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 300,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "white",
+  "data": {
+    "url": "data/qilt_tile_map.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "col": "number",
+        "row": "number",
+        "mean_rating": "number",
+        "university_count": "number"
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 3,
+        "cornerRadius": 5
+      },
+      "encoding": {
+        "x": {
+          "field": "col",
+          "type": "ordinal",
+          "title": null,
+          "axis": null,
+          "sort": [0, 1, 2, 3, 4, 5],
+          "scale": {
+            "domain": [0, 1, 2, 3, 4, 5],
+            "paddingInner": 0.08
+          }
+        },
+        "y": {
+          "field": "row",
+          "type": "ordinal",
+          "title": null,
+          "axis": null,
+          "sort": [0, 1, 2, 3, 4],
+          "scale": {
+            "domain": [0, 1, 2, 3, 4],
+            "paddingInner": 0.08
+          }
+        },
+        "color": {
+          "field": "mean_rating",
+          "type": "quantitative",
+          "title": "Mean Positive Rating",
+          "scale": {
+            "domain": [0, 100],
+            "range": ["#d1eee7", "#00695c"],
+            "clamp": true
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State or territory"
+          },
+          {
+            "field": "indicator",
+            "title": "Survey indicator"
+          },
+          {
+            "field": "survey_year",
+            "title": "Survey year"
+          },
+          {
+            "field": "mean_rating",
+            "title": "Mean university rating (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "university_count",
+            "title": "Universities represented"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": "bold",
+        "color": "#18343d"
+      },
+      "encoding": {
+        "x": {
+          "field": "col",
+          "type": "ordinal",
+          "sort": [0, 1, 2, 3, 4, 5],
+          "scale": {
+            "domain": [0, 1, 2, 3, 4, 5],
+            "paddingInner": 0.08
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "row",
+          "type": "ordinal",
+          "sort": [0, 1, 2, 3, 4],
+          "scale": {
+            "domain": [0, 1, 2, 3, 4],
+            "paddingInner": 0.08
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "state_abbr"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

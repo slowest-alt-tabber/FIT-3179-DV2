@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 310,
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "white",
+  "data": { "url": "data/qilt_slopegraph_study_level.csv" },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "study_level",
+          "type": "nominal",
+          "title": null,
+          "sort": ["Undergraduate", "Postgraduate coursework"],
+          "axis": {
+            "labelFontSize": 11,
+            "labelFontWeight": "bold",
+            "labelColor": "#263943",
+            "labelAngle": 0
+          }
+        },
+        "y": {
+          "field": "positive_percent",
+          "type": "quantitative",
+          "title": "Positive rating (%)",
+          "scale": { "domain": [50, 90] },
+          "axis": {
+            "gridColor": "#e6ecef",
+            "labelFontSize": 10,
+            "labelColor": "#263943"
+          }
+        },
+        "color": {
+          "field": "indicator",
+          "type": "nominal",
+          "title": "Indicator",
+          "scale": {
+            "domain": [
+              "Skills Development",
+              "Peer Engagement",
+              "Teaching Quality and Engagement",
+              "Student Support and Services",
+              "Learning Resources",
+              "Overall Educational Experience"
+            ],
+            "range": [
+              "#167c80",
+              "#315f91",
+              "#e58a47",
+              "#bd665b",
+              "#8064a2",
+              "#258577"
+            ]
+          }
+        },
+        "detail": { "field": "indicator" }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 70
+      },
+      "encoding": {
+        "x": {
+          "field": "study_level",
+          "type": "nominal",
+          "sort": ["Undergraduate", "Postgraduate coursework"]
+        },
+        "y": {
+          "field": "positive_percent",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "indicator",
+          "type": "nominal"
+        },
+        "tooltip": [
+          { "field": "study_level", "title": "Study Level" },
+          { "field": "indicator", "title": "Indicator" },
+          { "field": "positive_percent", "title": "Rating (%)", "format": ".1f" }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": { "stroke": null }
+  }
+}

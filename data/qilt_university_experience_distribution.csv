@@ -1,0 +1,529 @@
+study_level,institution,indicator,positive_percent
+Undergraduate,Australian Catholic University,Skills Development,84.5
+Undergraduate,Australian Catholic University,Peer Engagement *,64.8
+Undergraduate,Australian Catholic University,Teaching Quality and Engagement,81.4
+Undergraduate,Australian Catholic University,Student Support and Services *,73.6
+Undergraduate,Australian Catholic University,Learning Resources,85.7
+Undergraduate,Australian Catholic University,Overall Educational Experience,80.4
+Undergraduate,Australian University of Theology*,Skills Development,90.5
+Undergraduate,Australian University of Theology*,Peer Engagement *,62
+Undergraduate,Australian University of Theology*,Teaching Quality and Engagement,98.7
+Undergraduate,Australian University of Theology*,Student Support and Services *,94.9
+Undergraduate,Australian University of Theology*,Learning Resources,94.9
+Undergraduate,Australian University of Theology*,Overall Educational Experience,96
+Undergraduate,Avondale University,Skills Development,89.8
+Undergraduate,Avondale University,Peer Engagement *,82.9
+Undergraduate,Avondale University,Teaching Quality and Engagement,91.2
+Undergraduate,Avondale University,Student Support and Services *,86.3
+Undergraduate,Avondale University,Learning Resources,89.4
+Undergraduate,Avondale University,Overall Educational Experience,91.9
+Undergraduate,Bond University,Skills Development,90.6
+Undergraduate,Bond University,Peer Engagement *,84.9
+Undergraduate,Bond University,Teaching Quality and Engagement,89.1
+Undergraduate,Bond University,Student Support and Services *,84.6
+Undergraduate,Bond University,Learning Resources,93.5
+Undergraduate,Bond University,Overall Educational Experience,87
+Undergraduate,Central Queensland University,Skills Development,79.4
+Undergraduate,Central Queensland University,Peer Engagement *,34.9
+Undergraduate,Central Queensland University,Teaching Quality and Engagement,78.5
+Undergraduate,Central Queensland University,Student Support and Services *,74.9
+Undergraduate,Central Queensland University,Learning Resources,80.2
+Undergraduate,Central Queensland University,Overall Educational Experience,78.1
+Undergraduate,Charles Darwin University,Skills Development,79.1
+Undergraduate,Charles Darwin University,Peer Engagement *,35.8
+Undergraduate,Charles Darwin University,Teaching Quality and Engagement,77.1
+Undergraduate,Charles Darwin University,Student Support and Services *,74.5
+Undergraduate,Charles Darwin University,Learning Resources,83.2
+Undergraduate,Charles Darwin University,Overall Educational Experience,74.1
+Undergraduate,Charles Sturt University,Skills Development,80.2
+Undergraduate,Charles Sturt University,Peer Engagement *,38.4
+Undergraduate,Charles Sturt University,Teaching Quality and Engagement,80.3
+Undergraduate,Charles Sturt University,Student Support and Services *,74
+Undergraduate,Charles Sturt University,Learning Resources,84.7
+Undergraduate,Charles Sturt University,Overall Educational Experience,79.8
+Undergraduate,Curtin University,Skills Development,79.4
+Undergraduate,Curtin University,Peer Engagement *,57.6
+Undergraduate,Curtin University,Teaching Quality and Engagement,76.6
+Undergraduate,Curtin University,Student Support and Services *,67.8
+Undergraduate,Curtin University,Learning Resources,84.1
+Undergraduate,Curtin University,Overall Educational Experience,73.8
+Undergraduate,Deakin University,Skills Development,83.2
+Undergraduate,Deakin University,Peer Engagement *,52.9
+Undergraduate,Deakin University,Teaching Quality and Engagement,82.1
+Undergraduate,Deakin University,Student Support and Services *,77.2
+Undergraduate,Deakin University,Learning Resources,90
+Undergraduate,Deakin University,Overall Educational Experience,80.6
+Undergraduate,Edith Cowan University,Skills Development,84.8
+Undergraduate,Edith Cowan University,Peer Engagement *,59.4
+Undergraduate,Edith Cowan University,Teaching Quality and Engagement,81.1
+Undergraduate,Edith Cowan University,Student Support and Services *,77.4
+Undergraduate,Edith Cowan University,Learning Resources,87.3
+Undergraduate,Edith Cowan University,Overall Educational Experience,80
+Undergraduate,Federation University Australia,Skills Development,84.2
+Undergraduate,Federation University Australia,Peer Engagement *,56.3
+Undergraduate,Federation University Australia,Teaching Quality and Engagement,82.9
+Undergraduate,Federation University Australia,Student Support and Services *,78.8
+Undergraduate,Federation University Australia,Learning Resources,84.9
+Undergraduate,Federation University Australia,Overall Educational Experience,79.8
+Undergraduate,Flinders University,Skills Development,84
+Undergraduate,Flinders University,Peer Engagement *,67.5
+Undergraduate,Flinders University,Teaching Quality and Engagement,83.3
+Undergraduate,Flinders University,Student Support and Services *,76.8
+Undergraduate,Flinders University,Learning Resources,85.2
+Undergraduate,Flinders University,Overall Educational Experience,78.7
+Undergraduate,Griffith University,Skills Development,79.7
+Undergraduate,Griffith University,Peer Engagement *,56.4
+Undergraduate,Griffith University,Teaching Quality and Engagement,77.7
+Undergraduate,Griffith University,Student Support and Services *,71
+Undergraduate,Griffith University,Learning Resources,82.5
+Undergraduate,Griffith University,Overall Educational Experience,75.3
+Undergraduate,James Cook University,Skills Development,81.6
+Undergraduate,James Cook University,Peer Engagement *,61.8
+Undergraduate,James Cook University,Teaching Quality and Engagement,76.1
+Undergraduate,James Cook University,Student Support and Services *,69.4
+Undergraduate,James Cook University,Learning Resources,77.6
+Undergraduate,James Cook University,Overall Educational Experience,74.3
+Undergraduate,La Trobe University,Skills Development,81.5
+Undergraduate,La Trobe University,Peer Engagement *,58.9
+Undergraduate,La Trobe University,Teaching Quality and Engagement,81.7
+Undergraduate,La Trobe University,Student Support and Services *,71
+Undergraduate,La Trobe University,Learning Resources,83.8
+Undergraduate,La Trobe University,Overall Educational Experience,77
+Undergraduate,Macquarie University,Skills Development,79.5
+Undergraduate,Macquarie University,Peer Engagement *,63.2
+Undergraduate,Macquarie University,Teaching Quality and Engagement,78.8
+Undergraduate,Macquarie University,Student Support and Services *,66.7
+Undergraduate,Macquarie University,Learning Resources,85.3
+Undergraduate,Macquarie University,Overall Educational Experience,73.9
+Undergraduate,Monash University,Skills Development,81.2
+Undergraduate,Monash University,Peer Engagement *,69.7
+Undergraduate,Monash University,Teaching Quality and Engagement,80.3
+Undergraduate,Monash University,Student Support and Services *,67.9
+Undergraduate,Monash University,Learning Resources,84.9
+Undergraduate,Monash University,Overall Educational Experience,74.4
+Undergraduate,Murdoch University,Skills Development,83.5
+Undergraduate,Murdoch University,Peer Engagement *,64.4
+Undergraduate,Murdoch University,Teaching Quality and Engagement,83.3
+Undergraduate,Murdoch University,Student Support and Services *,75.6
+Undergraduate,Murdoch University,Learning Resources,86.3
+Undergraduate,Murdoch University,Overall Educational Experience,79.8
+Undergraduate,Queensland University of Technology,Skills Development,79.7
+Undergraduate,Queensland University of Technology,Peer Engagement *,56.8
+Undergraduate,Queensland University of Technology,Teaching Quality and Engagement,77.4
+Undergraduate,Queensland University of Technology,Student Support and Services *,69.6
+Undergraduate,Queensland University of Technology,Learning Resources,85.5
+Undergraduate,Queensland University of Technology,Overall Educational Experience,74.3
+Undergraduate,RMIT University,Skills Development,80.4
+Undergraduate,RMIT University,Peer Engagement *,66.2
+Undergraduate,RMIT University,Teaching Quality and Engagement,78.2
+Undergraduate,RMIT University,Student Support and Services *,68
+Undergraduate,RMIT University,Learning Resources,83.3
+Undergraduate,RMIT University,Overall Educational Experience,73.3
+Undergraduate,Southern Cross University,Skills Development,81.9
+Undergraduate,Southern Cross University,Peer Engagement *,43.5
+Undergraduate,Southern Cross University,Teaching Quality and Engagement,81.1
+Undergraduate,Southern Cross University,Student Support and Services *,76.7
+Undergraduate,Southern Cross University,Learning Resources,84.8
+Undergraduate,Southern Cross University,Overall Educational Experience,76.4
+Undergraduate,Swinburne University of Technology,Skills Development,79.7
+Undergraduate,Swinburne University of Technology,Peer Engagement *,50.7
+Undergraduate,Swinburne University of Technology,Teaching Quality and Engagement,80.8
+Undergraduate,Swinburne University of Technology,Student Support and Services *,73.9
+Undergraduate,Swinburne University of Technology,Learning Resources,82.5
+Undergraduate,Swinburne University of Technology,Overall Educational Experience,77.3
+Undergraduate,The Australian National University,Skills Development,78.8
+Undergraduate,The Australian National University,Peer Engagement *,66.3
+Undergraduate,The Australian National University,Teaching Quality and Engagement,81.1
+Undergraduate,The Australian National University,Student Support and Services *,54.3
+Undergraduate,The Australian National University,Learning Resources,78.3
+Undergraduate,The Australian National University,Overall Educational Experience,70.9
+Undergraduate,The University of Adelaide**,Skills Development,81.8
+Undergraduate,The University of Adelaide**,Peer Engagement *,66.5
+Undergraduate,The University of Adelaide**,Teaching Quality and Engagement,81.4
+Undergraduate,The University of Adelaide**,Student Support and Services *,70.2
+Undergraduate,The University of Adelaide**,Learning Resources,83.5
+Undergraduate,The University of Adelaide**,Overall Educational Experience,77.9
+Undergraduate,The University of Melbourne,Skills Development,77.8
+Undergraduate,The University of Melbourne,Peer Engagement *,67.8
+Undergraduate,The University of Melbourne,Teaching Quality and Engagement,78.9
+Undergraduate,The University of Melbourne,Student Support and Services *,65
+Undergraduate,The University of Melbourne,Learning Resources,85
+Undergraduate,The University of Melbourne,Overall Educational Experience,72.6
+Undergraduate,The University of Notre Dame Australia,Skills Development,84.9
+Undergraduate,The University of Notre Dame Australia,Peer Engagement *,70.9
+Undergraduate,The University of Notre Dame Australia,Teaching Quality and Engagement,76.7
+Undergraduate,The University of Notre Dame Australia,Student Support and Services *,56.4
+Undergraduate,The University of Notre Dame Australia,Learning Resources,65.9
+Undergraduate,The University of Notre Dame Australia,Overall Educational Experience,66.9
+Undergraduate,The University of Queensland,Skills Development,80.1
+Undergraduate,The University of Queensland,Peer Engagement *,61
+Undergraduate,The University of Queensland,Teaching Quality and Engagement,82.6
+Undergraduate,The University of Queensland,Student Support and Services *,69.5
+Undergraduate,The University of Queensland,Learning Resources,86.7
+Undergraduate,The University of Queensland,Overall Educational Experience,79.6
+Undergraduate,The University of South Australia**,Skills Development,81
+Undergraduate,The University of South Australia**,Peer Engagement *,52.3
+Undergraduate,The University of South Australia**,Teaching Quality and Engagement,79.3
+Undergraduate,The University of South Australia**,Student Support and Services *,73.1
+Undergraduate,The University of South Australia**,Learning Resources,81.6
+Undergraduate,The University of South Australia**,Overall Educational Experience,77.6
+Undergraduate,The University of Sydney,Skills Development,79.1
+Undergraduate,The University of Sydney,Peer Engagement *,68.7
+Undergraduate,The University of Sydney,Teaching Quality and Engagement,77
+Undergraduate,The University of Sydney,Student Support and Services *,61.1
+Undergraduate,The University of Sydney,Learning Resources,81.2
+Undergraduate,The University of Sydney,Overall Educational Experience,71.5
+Undergraduate,The University of Western Australia,Skills Development,76.9
+Undergraduate,The University of Western Australia,Peer Engagement *,62.9
+Undergraduate,The University of Western Australia,Teaching Quality and Engagement,79.4
+Undergraduate,The University of Western Australia,Student Support and Services *,66.7
+Undergraduate,The University of Western Australia,Learning Resources,83.9
+Undergraduate,The University of Western Australia,Overall Educational Experience,74.8
+Undergraduate,Torrens University,Skills Development,81.2
+Undergraduate,Torrens University,Peer Engagement *,42.1
+Undergraduate,Torrens University,Teaching Quality and Engagement,83.7
+Undergraduate,Torrens University,Student Support and Services *,76
+Undergraduate,Torrens University,Learning Resources,77.9
+Undergraduate,Torrens University,Overall Educational Experience,77.9
+Undergraduate,University of Canberra,Skills Development,81.8
+Undergraduate,University of Canberra,Peer Engagement *,61.8
+Undergraduate,University of Canberra,Teaching Quality and Engagement,80.1
+Undergraduate,University of Canberra,Student Support and Services *,72.5
+Undergraduate,University of Canberra,Learning Resources,82.3
+Undergraduate,University of Canberra,Overall Educational Experience,76.6
+Undergraduate,University of Divinity,Skills Development,87.1
+Undergraduate,University of Divinity,Peer Engagement *,57.7
+Undergraduate,University of Divinity,Teaching Quality and Engagement,94.4
+Undergraduate,University of Divinity,Student Support and Services *,95.6
+Undergraduate,University of Divinity,Learning Resources,92.5
+Undergraduate,University of Divinity,Overall Educational Experience,94.4
+Undergraduate,University of New England,Skills Development,79
+Undergraduate,University of New England,Peer Engagement *,28.2
+Undergraduate,University of New England,Teaching Quality and Engagement,84.6
+Undergraduate,University of New England,Student Support and Services *,76.7
+Undergraduate,University of New England,Learning Resources,87.4
+Undergraduate,University of New England,Overall Educational Experience,83.1
+Undergraduate,University of New South Wales,Skills Development,78.2
+Undergraduate,University of New South Wales,Peer Engagement *,66.3
+Undergraduate,University of New South Wales,Teaching Quality and Engagement,79.4
+Undergraduate,University of New South Wales,Student Support and Services *,70.3
+Undergraduate,University of New South Wales,Learning Resources,83.5
+Undergraduate,University of New South Wales,Overall Educational Experience,74.1
+Undergraduate,University of Newcastle,Skills Development,81
+Undergraduate,University of Newcastle,Peer Engagement *,56.6
+Undergraduate,University of Newcastle,Teaching Quality and Engagement,79.7
+Undergraduate,University of Newcastle,Student Support and Services *,70.4
+Undergraduate,University of Newcastle,Learning Resources,84.4
+Undergraduate,University of Newcastle,Overall Educational Experience,77.6
+Undergraduate,University of Southern Queensland,Skills Development,76.2
+Undergraduate,University of Southern Queensland,Peer Engagement *,30.9
+Undergraduate,University of Southern Queensland,Teaching Quality and Engagement,73.5
+Undergraduate,University of Southern Queensland,Student Support and Services *,69.4
+Undergraduate,University of Southern Queensland,Learning Resources,82.5
+Undergraduate,University of Southern Queensland,Overall Educational Experience,71
+Undergraduate,University of Tasmania,Skills Development,80.3
+Undergraduate,University of Tasmania,Peer Engagement *,43.6
+Undergraduate,University of Tasmania,Teaching Quality and Engagement,83.3
+Undergraduate,University of Tasmania,Student Support and Services *,69
+Undergraduate,University of Tasmania,Learning Resources,77.7
+Undergraduate,University of Tasmania,Overall Educational Experience,78.9
+Undergraduate,University of Technology Sydney,Skills Development,81.1
+Undergraduate,University of Technology Sydney,Peer Engagement *,70.3
+Undergraduate,University of Technology Sydney,Teaching Quality and Engagement,79.8
+Undergraduate,University of Technology Sydney,Student Support and Services *,70.3
+Undergraduate,University of Technology Sydney,Learning Resources,85.9
+Undergraduate,University of Technology Sydney,Overall Educational Experience,76.1
+Undergraduate,University of Wollongong,Skills Development,83.2
+Undergraduate,University of Wollongong,Peer Engagement *,68.5
+Undergraduate,University of Wollongong,Teaching Quality and Engagement,81.4
+Undergraduate,University of Wollongong,Student Support and Services *,74.4
+Undergraduate,University of Wollongong,Learning Resources,85.5
+Undergraduate,University of Wollongong,Overall Educational Experience,76.2
+Undergraduate,University of the Sunshine Coast,Skills Development,83.7
+Undergraduate,University of the Sunshine Coast,Peer Engagement *,60
+Undergraduate,University of the Sunshine Coast,Teaching Quality and Engagement,83.2
+Undergraduate,University of the Sunshine Coast,Student Support and Services *,78.2
+Undergraduate,University of the Sunshine Coast,Learning Resources,88.3
+Undergraduate,University of the Sunshine Coast,Overall Educational Experience,81.6
+Undergraduate,Victoria University,Skills Development,85.4
+Undergraduate,Victoria University,Peer Engagement *,77.2
+Undergraduate,Victoria University,Teaching Quality and Engagement,81.4
+Undergraduate,Victoria University,Student Support and Services *,73.2
+Undergraduate,Victoria University,Learning Resources,80.9
+Undergraduate,Victoria University,Overall Educational Experience,77.9
+Undergraduate,Western Sydney University,Skills Development,81.3
+Undergraduate,Western Sydney University,Peer Engagement *,64.9
+Undergraduate,Western Sydney University,Teaching Quality and Engagement,78.2
+Undergraduate,Western Sydney University,Student Support and Services *,69.6
+Undergraduate,Western Sydney University,Learning Resources,83.7
+Undergraduate,Western Sydney University,Overall Educational Experience,74.1
+Undergraduate,All Universities,Skills Development,80.9
+Undergraduate,All Universities,Peer Engagement *,59.9
+Undergraduate,All Universities,Teaching Quality and Engagement,80
+Undergraduate,All Universities,Student Support and Services *,70.4
+Undergraduate,All Universities,Learning Resources,83.9
+Undergraduate,All Universities,Overall Educational Experience,76.2
+Postgraduate coursework,Australian Catholic University,Skills Development,80.4
+Postgraduate coursework,Australian Catholic University,Peer Engagement *,40.9
+Postgraduate coursework,Australian Catholic University,Teaching Quality and Engagement,82.8
+Postgraduate coursework,Australian Catholic University,Student Support and Services *,75.5
+Postgraduate coursework,Australian Catholic University,Learning Resources,84.6
+Postgraduate coursework,Australian Catholic University,Overall Educational Experience,77.2
+Postgraduate coursework,Australian University of Theology*,Skills Development,91.4
+Postgraduate coursework,Australian University of Theology*,Peer Engagement *,57.5
+Postgraduate coursework,Australian University of Theology*,Teaching Quality and Engagement,96.8
+Postgraduate coursework,Australian University of Theology*,Student Support and Services *,86.6
+Postgraduate coursework,Australian University of Theology*,Learning Resources,97.8
+Postgraduate coursework,Australian University of Theology*,Overall Educational Experience,96
+Postgraduate coursework,Avondale University,Skills Development,88.5
+Postgraduate coursework,Avondale University,Peer Engagement *,39.6
+Postgraduate coursework,Avondale University,Teaching Quality and Engagement,98
+Postgraduate coursework,Avondale University,Student Support and Services *,83.8
+Postgraduate coursework,Avondale University,Learning Resources,93.5
+Postgraduate coursework,Avondale University,Overall Educational Experience,84.9
+Postgraduate coursework,Bond University,Skills Development,86.2
+Postgraduate coursework,Bond University,Peer Engagement *,79.6
+Postgraduate coursework,Bond University,Teaching Quality and Engagement,82.8
+Postgraduate coursework,Bond University,Student Support and Services *,75.9
+Postgraduate coursework,Bond University,Learning Resources,86.9
+Postgraduate coursework,Bond University,Overall Educational Experience,77.6
+Postgraduate coursework,Central Queensland University,Skills Development,85.5
+Postgraduate coursework,Central Queensland University,Peer Engagement *,65.2
+Postgraduate coursework,Central Queensland University,Teaching Quality and Engagement,85.2
+Postgraduate coursework,Central Queensland University,Student Support and Services *,83.9
+Postgraduate coursework,Central Queensland University,Learning Resources,86.1
+Postgraduate coursework,Central Queensland University,Overall Educational Experience,81.7
+Postgraduate coursework,Charles Darwin University,Skills Development,86.5
+Postgraduate coursework,Charles Darwin University,Peer Engagement *,65
+Postgraduate coursework,Charles Darwin University,Teaching Quality and Engagement,85
+Postgraduate coursework,Charles Darwin University,Student Support and Services *,83.9
+Postgraduate coursework,Charles Darwin University,Learning Resources,86.2
+Postgraduate coursework,Charles Darwin University,Overall Educational Experience,79.1
+Postgraduate coursework,Charles Sturt University,Skills Development,77.3
+Postgraduate coursework,Charles Sturt University,Peer Engagement *,17.8
+Postgraduate coursework,Charles Sturt University,Teaching Quality and Engagement,84.4
+Postgraduate coursework,Charles Sturt University,Student Support and Services *,73.8
+Postgraduate coursework,Charles Sturt University,Learning Resources,82.4
+Postgraduate coursework,Charles Sturt University,Overall Educational Experience,82.3
+Postgraduate coursework,Curtin University,Skills Development,83.3
+Postgraduate coursework,Curtin University,Peer Engagement *,60.8
+Postgraduate coursework,Curtin University,Teaching Quality and Engagement,81.4
+Postgraduate coursework,Curtin University,Student Support and Services *,76.5
+Postgraduate coursework,Curtin University,Learning Resources,88.7
+Postgraduate coursework,Curtin University,Overall Educational Experience,75
+Postgraduate coursework,Deakin University,Skills Development,83.8
+Postgraduate coursework,Deakin University,Peer Engagement *,48.9
+Postgraduate coursework,Deakin University,Teaching Quality and Engagement,84.3
+Postgraduate coursework,Deakin University,Student Support and Services *,81.5
+Postgraduate coursework,Deakin University,Learning Resources,90.4
+Postgraduate coursework,Deakin University,Overall Educational Experience,79.9
+Postgraduate coursework,Edith Cowan University,Skills Development,84.6
+Postgraduate coursework,Edith Cowan University,Peer Engagement *,61.9
+Postgraduate coursework,Edith Cowan University,Teaching Quality and Engagement,84.9
+Postgraduate coursework,Edith Cowan University,Student Support and Services *,83.7
+Postgraduate coursework,Edith Cowan University,Learning Resources,89.7
+Postgraduate coursework,Edith Cowan University,Overall Educational Experience,78.9
+Postgraduate coursework,Federation University Australia,Skills Development,83.5
+Postgraduate coursework,Federation University Australia,Peer Engagement *,51.4
+Postgraduate coursework,Federation University Australia,Teaching Quality and Engagement,80.6
+Postgraduate coursework,Federation University Australia,Student Support and Services *,76.6
+Postgraduate coursework,Federation University Australia,Learning Resources,81.9
+Postgraduate coursework,Federation University Australia,Overall Educational Experience,76
+Postgraduate coursework,Flinders University,Skills Development,83.2
+Postgraduate coursework,Flinders University,Peer Engagement *,57.1
+Postgraduate coursework,Flinders University,Teaching Quality and Engagement,81.3
+Postgraduate coursework,Flinders University,Student Support and Services *,77.5
+Postgraduate coursework,Flinders University,Learning Resources,84.7
+Postgraduate coursework,Flinders University,Overall Educational Experience,74
+Postgraduate coursework,Griffith University,Skills Development,82.5
+Postgraduate coursework,Griffith University,Peer Engagement *,50.4
+Postgraduate coursework,Griffith University,Teaching Quality and Engagement,83.8
+Postgraduate coursework,Griffith University,Student Support and Services *,77.7
+Postgraduate coursework,Griffith University,Learning Resources,84.1
+Postgraduate coursework,Griffith University,Overall Educational Experience,79.9
+Postgraduate coursework,James Cook University,Skills Development,86.5
+Postgraduate coursework,James Cook University,Peer Engagement *,54.4
+Postgraduate coursework,James Cook University,Teaching Quality and Engagement,88.5
+Postgraduate coursework,James Cook University,Student Support and Services *,84.8
+Postgraduate coursework,James Cook University,Learning Resources,88.6
+Postgraduate coursework,James Cook University,Overall Educational Experience,83.2
+Postgraduate coursework,La Trobe University,Skills Development,84.8
+Postgraduate coursework,La Trobe University,Peer Engagement *,51.2
+Postgraduate coursework,La Trobe University,Teaching Quality and Engagement,85.9
+Postgraduate coursework,La Trobe University,Student Support and Services *,79.2
+Postgraduate coursework,La Trobe University,Learning Resources,86.6
+Postgraduate coursework,La Trobe University,Overall Educational Experience,80.8
+Postgraduate coursework,Macquarie University,Skills Development,83.1
+Postgraduate coursework,Macquarie University,Peer Engagement *,70.4
+Postgraduate coursework,Macquarie University,Teaching Quality and Engagement,82.1
+Postgraduate coursework,Macquarie University,Student Support and Services *,73.5
+Postgraduate coursework,Macquarie University,Learning Resources,87.1
+Postgraduate coursework,Macquarie University,Overall Educational Experience,74.8
+Postgraduate coursework,Monash University,Skills Development,83.6
+Postgraduate coursework,Monash University,Peer Engagement *,66.9
+Postgraduate coursework,Monash University,Teaching Quality and Engagement,83.9
+Postgraduate coursework,Monash University,Student Support and Services *,77
+Postgraduate coursework,Monash University,Learning Resources,88.7
+Postgraduate coursework,Monash University,Overall Educational Experience,76.3
+Postgraduate coursework,Murdoch University,Skills Development,90
+Postgraduate coursework,Murdoch University,Peer Engagement *,82.3
+Postgraduate coursework,Murdoch University,Teaching Quality and Engagement,91
+Postgraduate coursework,Murdoch University,Student Support and Services *,87.9
+Postgraduate coursework,Murdoch University,Learning Resources,92.5
+Postgraduate coursework,Murdoch University,Overall Educational Experience,81.1
+Postgraduate coursework,Queensland University of Technology,Skills Development,82.9
+Postgraduate coursework,Queensland University of Technology,Peer Engagement *,50.7
+Postgraduate coursework,Queensland University of Technology,Teaching Quality and Engagement,83
+Postgraduate coursework,Queensland University of Technology,Student Support and Services *,77.4
+Postgraduate coursework,Queensland University of Technology,Learning Resources,88.4
+Postgraduate coursework,Queensland University of Technology,Overall Educational Experience,77
+Postgraduate coursework,RMIT University,Skills Development,85.3
+Postgraduate coursework,RMIT University,Peer Engagement *,71.2
+Postgraduate coursework,RMIT University,Teaching Quality and Engagement,85
+Postgraduate coursework,RMIT University,Student Support and Services *,80.2
+Postgraduate coursework,RMIT University,Learning Resources,89.6
+Postgraduate coursework,RMIT University,Overall Educational Experience,77.2
+Postgraduate coursework,Southern Cross University,Skills Development,86.7
+Postgraduate coursework,Southern Cross University,Peer Engagement *,51.1
+Postgraduate coursework,Southern Cross University,Teaching Quality and Engagement,86
+Postgraduate coursework,Southern Cross University,Student Support and Services *,82
+Postgraduate coursework,Southern Cross University,Learning Resources,84
+Postgraduate coursework,Southern Cross University,Overall Educational Experience,82.1
+Postgraduate coursework,Swinburne University of Technology,Skills Development,83.8
+Postgraduate coursework,Swinburne University of Technology,Peer Engagement *,57.1
+Postgraduate coursework,Swinburne University of Technology,Teaching Quality and Engagement,82
+Postgraduate coursework,Swinburne University of Technology,Student Support and Services *,76.4
+Postgraduate coursework,Swinburne University of Technology,Learning Resources,82.5
+Postgraduate coursework,Swinburne University of Technology,Overall Educational Experience,77.9
+Postgraduate coursework,The Australian National University,Skills Development,81.7
+Postgraduate coursework,The Australian National University,Peer Engagement *,63.2
+Postgraduate coursework,The Australian National University,Teaching Quality and Engagement,81.8
+Postgraduate coursework,The Australian National University,Student Support and Services *,70.1
+Postgraduate coursework,The Australian National University,Learning Resources,84
+Postgraduate coursework,The Australian National University,Overall Educational Experience,73
+Postgraduate coursework,The University of Adelaide**,Skills Development,82.4
+Postgraduate coursework,The University of Adelaide**,Peer Engagement *,68.8
+Postgraduate coursework,The University of Adelaide**,Teaching Quality and Engagement,80
+Postgraduate coursework,The University of Adelaide**,Student Support and Services *,79.2
+Postgraduate coursework,The University of Adelaide**,Learning Resources,86
+Postgraduate coursework,The University of Adelaide**,Overall Educational Experience,70.3
+Postgraduate coursework,The University of Melbourne,Skills Development,83.7
+Postgraduate coursework,The University of Melbourne,Peer Engagement *,69.2
+Postgraduate coursework,The University of Melbourne,Teaching Quality and Engagement,82.1
+Postgraduate coursework,The University of Melbourne,Student Support and Services *,70
+Postgraduate coursework,The University of Melbourne,Learning Resources,84.2
+Postgraduate coursework,The University of Melbourne,Overall Educational Experience,74.6
+Postgraduate coursework,The University of Notre Dame Australia,Skills Development,82.5
+Postgraduate coursework,The University of Notre Dame Australia,Peer Engagement *,66.7
+Postgraduate coursework,The University of Notre Dame Australia,Teaching Quality and Engagement,72.6
+Postgraduate coursework,The University of Notre Dame Australia,Student Support and Services *,43.4
+Postgraduate coursework,The University of Notre Dame Australia,Learning Resources,41.7
+Postgraduate coursework,The University of Notre Dame Australia,Overall Educational Experience,59.2
+Postgraduate coursework,The University of Queensland,Skills Development,83.9
+Postgraduate coursework,The University of Queensland,Peer Engagement *,64.9
+Postgraduate coursework,The University of Queensland,Teaching Quality and Engagement,84.2
+Postgraduate coursework,The University of Queensland,Student Support and Services *,77.4
+Postgraduate coursework,The University of Queensland,Learning Resources,89.8
+Postgraduate coursework,The University of Queensland,Overall Educational Experience,78
+Postgraduate coursework,The University of South Australia**,Skills Development,85.8
+Postgraduate coursework,The University of South Australia**,Peer Engagement *,63.2
+Postgraduate coursework,The University of South Australia**,Teaching Quality and Engagement,86.9
+Postgraduate coursework,The University of South Australia**,Student Support and Services *,80.1
+Postgraduate coursework,The University of South Australia**,Learning Resources,89.2
+Postgraduate coursework,The University of South Australia**,Overall Educational Experience,79.1
+Postgraduate coursework,The University of Sydney,Skills Development,82.1
+Postgraduate coursework,The University of Sydney,Peer Engagement *,72.6
+Postgraduate coursework,The University of Sydney,Teaching Quality and Engagement,79.2
+Postgraduate coursework,The University of Sydney,Student Support and Services *,70.2
+Postgraduate coursework,The University of Sydney,Learning Resources,84.7
+Postgraduate coursework,The University of Sydney,Overall Educational Experience,70.7
+Postgraduate coursework,The University of Western Australia,Skills Development,84.1
+Postgraduate coursework,The University of Western Australia,Peer Engagement *,74.8
+Postgraduate coursework,The University of Western Australia,Teaching Quality and Engagement,79.9
+Postgraduate coursework,The University of Western Australia,Student Support and Services *,72.4
+Postgraduate coursework,The University of Western Australia,Learning Resources,84.1
+Postgraduate coursework,The University of Western Australia,Overall Educational Experience,72.4
+Postgraduate coursework,Torrens University,Skills Development,87.9
+Postgraduate coursework,Torrens University,Peer Engagement *,72.8
+Postgraduate coursework,Torrens University,Teaching Quality and Engagement,86.6
+Postgraduate coursework,Torrens University,Student Support and Services *,81.1
+Postgraduate coursework,Torrens University,Learning Resources,82.3
+Postgraduate coursework,Torrens University,Overall Educational Experience,80.4
+Postgraduate coursework,University of Canberra,Skills Development,79.9
+Postgraduate coursework,University of Canberra,Peer Engagement *,53.1
+Postgraduate coursework,University of Canberra,Teaching Quality and Engagement,78.6
+Postgraduate coursework,University of Canberra,Student Support and Services *,75.2
+Postgraduate coursework,University of Canberra,Learning Resources,81.7
+Postgraduate coursework,University of Canberra,Overall Educational Experience,72.9
+Postgraduate coursework,University of Divinity,Skills Development,84.1
+Postgraduate coursework,University of Divinity,Peer Engagement *,52.3
+Postgraduate coursework,University of Divinity,Teaching Quality and Engagement,87.1
+Postgraduate coursework,University of Divinity,Student Support and Services *,80.7
+Postgraduate coursework,University of Divinity,Learning Resources,94.3
+Postgraduate coursework,University of Divinity,Overall Educational Experience,87.8
+Postgraduate coursework,University of New England,Skills Development,79.4
+Postgraduate coursework,University of New England,Peer Engagement *,16.7
+Postgraduate coursework,University of New England,Teaching Quality and Engagement,85.9
+Postgraduate coursework,University of New England,Student Support and Services *,78.1
+Postgraduate coursework,University of New England,Learning Resources,89.3
+Postgraduate coursework,University of New England,Overall Educational Experience,82.4
+Postgraduate coursework,University of New South Wales,Skills Development,82.7
+Postgraduate coursework,University of New South Wales,Peer Engagement *,61.3
+Postgraduate coursework,University of New South Wales,Teaching Quality and Engagement,85.8
+Postgraduate coursework,University of New South Wales,Student Support and Services *,77.7
+Postgraduate coursework,University of New South Wales,Learning Resources,90.7
+Postgraduate coursework,University of New South Wales,Overall Educational Experience,79.1
+Postgraduate coursework,University of Newcastle,Skills Development,84.7
+Postgraduate coursework,University of Newcastle,Peer Engagement *,41.1
+Postgraduate coursework,University of Newcastle,Teaching Quality and Engagement,86.5
+Postgraduate coursework,University of Newcastle,Student Support and Services *,79.8
+Postgraduate coursework,University of Newcastle,Learning Resources,88.8
+Postgraduate coursework,University of Newcastle,Overall Educational Experience,81.1
+Postgraduate coursework,University of Southern Queensland,Skills Development,78.2
+Postgraduate coursework,University of Southern Queensland,Peer Engagement *,34.6
+Postgraduate coursework,University of Southern Queensland,Teaching Quality and Engagement,82.2
+Postgraduate coursework,University of Southern Queensland,Student Support and Services *,77.9
+Postgraduate coursework,University of Southern Queensland,Learning Resources,83.2
+Postgraduate coursework,University of Southern Queensland,Overall Educational Experience,77.5
+Postgraduate coursework,University of Tasmania,Skills Development,81.9
+Postgraduate coursework,University of Tasmania,Peer Engagement *,35.6
+Postgraduate coursework,University of Tasmania,Teaching Quality and Engagement,84.3
+Postgraduate coursework,University of Tasmania,Student Support and Services *,78
+Postgraduate coursework,University of Tasmania,Learning Resources,83
+Postgraduate coursework,University of Tasmania,Overall Educational Experience,81.3
+Postgraduate coursework,University of Technology Sydney,Skills Development,85.6
+Postgraduate coursework,University of Technology Sydney,Peer Engagement *,61.6
+Postgraduate coursework,University of Technology Sydney,Teaching Quality and Engagement,84.8
+Postgraduate coursework,University of Technology Sydney,Student Support and Services *,79.5
+Postgraduate coursework,University of Technology Sydney,Learning Resources,89.4
+Postgraduate coursework,University of Technology Sydney,Overall Educational Experience,78.9
+Postgraduate coursework,University of Wollongong,Skills Development,82
+Postgraduate coursework,University of Wollongong,Peer Engagement *,60.2
+Postgraduate coursework,University of Wollongong,Teaching Quality and Engagement,81.7
+Postgraduate coursework,University of Wollongong,Student Support and Services *,77
+Postgraduate coursework,University of Wollongong,Learning Resources,87.8
+Postgraduate coursework,University of Wollongong,Overall Educational Experience,74.1
+Postgraduate coursework,University of the Sunshine Coast,Skills Development,83
+Postgraduate coursework,University of the Sunshine Coast,Peer Engagement *,51
+Postgraduate coursework,University of the Sunshine Coast,Teaching Quality and Engagement,84.9
+Postgraduate coursework,University of the Sunshine Coast,Student Support and Services *,81.4
+Postgraduate coursework,University of the Sunshine Coast,Learning Resources,81.9
+Postgraduate coursework,University of the Sunshine Coast,Overall Educational Experience,78.5
+Postgraduate coursework,Victoria University,Skills Development,84.4
+Postgraduate coursework,Victoria University,Peer Engagement *,65.1
+Postgraduate coursework,Victoria University,Teaching Quality and Engagement,83.3
+Postgraduate coursework,Victoria University,Student Support and Services *,78.1
+Postgraduate coursework,Victoria University,Learning Resources,81
+Postgraduate coursework,Victoria University,Overall Educational Experience,78.6
+Postgraduate coursework,Western Sydney University,Skills Development,82.5
+Postgraduate coursework,Western Sydney University,Peer Engagement *,63.8
+Postgraduate coursework,Western Sydney University,Teaching Quality and Engagement,82.5
+Postgraduate coursework,Western Sydney University,Student Support and Services *,72.5
+Postgraduate coursework,Western Sydney University,Learning Resources,87.1
+Postgraduate coursework,Western Sydney University,Overall Educational Experience,76.4
+Postgraduate coursework,All Universities,Skills Development,83.7
+Postgraduate coursework,All Universities,Peer Engagement *,60.8
+Postgraduate coursework,All Universities,Teaching Quality and Engagement,83.5
+Postgraduate coursework,All Universities,Student Support and Services *,76.8
+Postgraduate coursework,All Universities,Learning Resources,86.3
+Postgraduate coursework,All Universities,Overall Educational Experience,77.1

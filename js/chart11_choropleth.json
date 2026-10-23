@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 340,
+  "projection": {
+    "type": "mercator",
+    "center": [134, -26],
+    "scale": 500
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+    "format": { "property": "features" }
+  },
+  "transform": [
+    {
+      "lookup": "properties.STATE_NAME",
+      "from": {
+        "data": {
+          "url": "data/qilt_state_support_summary.csv"
+        },
+        "key": "state_full",
+        "fields": ["mean_rating", "university_count", "indicator"]
+      }
+    }
+  ],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "#627984",
+    "strokeWidth": 0.9
+  },
+  "encoding": {
+    "color": {
+      "condition": {
+        "test": "isValid(datum.mean_rating)",
+        "field": "mean_rating",
+        "type": "quantitative",
+        "title": "Mean Rating (%)",
+        "scale": {
+          "domain": [0, 100],
+          "range": ["#d1eee7", "#00695c"],
+          "clamp": true
+        }
+      },
+      "value": "#d5e1e7"
+    },
+    "tooltip": [
+      { "field": "properties.STATE_NAME", "type": "nominal", "title": "State / Territory" },
+      { "field": "mean_rating", "type": "quantitative", "title": "Mean University Rating (%)", "format": ".1f" },
+      { "field": "university_count", "type": "quantitative", "title": "Universities Represented" },
+      { "field": "indicator", "type": "nominal", "title": "Survey Indicator" }
+    ]
+  },
+  "config": {
+    "view": { "stroke": null }
+  }
+}

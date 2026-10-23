@@ -1,0 +1,55 @@
+study_level,stage_of_study,year,positive_percent
+Undergraduate,All,2017,51.4
+Undergraduate,All,2018,52.8
+Undergraduate,All,2019,51.7
+Undergraduate,All,2020,41.1
+Undergraduate,All,2021,42.2
+Undergraduate,All,2022,46.5
+Undergraduate,All,2023,46.3
+Undergraduate,All,2024,46.6
+Undergraduate,All,2025,48
+Undergraduate,Commencing,2017,52.7
+Undergraduate,Commencing,2018,54.3
+Undergraduate,Commencing,2019,53.5
+Undergraduate,Commencing,2020,41.8
+Undergraduate,Commencing,2021,44.4
+Undergraduate,Commencing,2022,49.3
+Undergraduate,Commencing,2023,49.8
+Undergraduate,Commencing,2024,48.8
+Undergraduate,Commencing,2025,50.3
+Undergraduate,Later year,2017,49.6
+Undergraduate,Later year,2018,50.4
+Undergraduate,Later year,2019,49.3
+Undergraduate,Later year,2020,40.1
+Undergraduate,Later year,2021,39.3
+Undergraduate,Later year,2022,43.3
+Undergraduate,Later year,2023,42.4
+Undergraduate,Later year,2024,43.4
+Undergraduate,Later year,2025,44.8
+Postgraduate coursework,All,2017,48.3
+Postgraduate coursework,All,2018,51.1
+Postgraduate coursework,All,2019,51.5
+Postgraduate coursework,All,2020,43.4
+Postgraduate coursework,All,2021,39.7
+Postgraduate coursework,All,2022,44.7
+Postgraduate coursework,All,2023,48.5
+Postgraduate coursework,All,2024,51.9
+Postgraduate coursework,All,2025,52.6
+Postgraduate coursework,Commencing,2017,47.4
+Postgraduate coursework,Commencing,2018,50
+Postgraduate coursework,Commencing,2019,50.4
+Postgraduate coursework,Commencing,2020,41.4
+Postgraduate coursework,Commencing,2021,37.2
+Postgraduate coursework,Commencing,2022,45.9
+Postgraduate coursework,Commencing,2023,50.5
+Postgraduate coursework,Commencing,2024,50.6
+Postgraduate coursework,Commencing,2025,50
+Postgraduate coursework,Later year,2017,49.3
+Postgraduate coursework,Later year,2018,52.2
+Postgraduate coursework,Later year,2019,52.6
+Postgraduate coursework,Later year,2020,45.5
+Postgraduate coursework,Later year,2021,42
+Postgraduate coursework,Later year,2022,43.5
+Postgraduate coursework,Later year,2023,46.5
+Postgraduate coursework,Later year,2024,53.2
+Postgraduate coursework,Later year,2025,54.6

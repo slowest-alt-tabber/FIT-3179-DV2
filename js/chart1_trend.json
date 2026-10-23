@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 280,
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "white",
+  "data": {
+    "url": "data/completion_national_trend.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.cohort_type == 'Domestic Students'"
+    },
+    {
+      "filter": "datum.rate != null && (datum.outcome == 'Completed, in any year' || datum.outcome == 'Completed')"
+    },
+    {
+      "calculate": "datum.duration_years == 4 || datum.duration_label == '4 Years' ? 'Four Years' : (datum.duration_years == 6 || datum.duration_label == '6 Years' ? 'Six Years' : (datum.duration_years == 9 || datum.duration_label == '9 Years' ? 'Nine Years' : datum.duration_label))",
+      "as": "duration_series"
+    },
+    {
+      "filter": "datum.duration_series == 'Four Years' || datum.duration_series == 'Six Years' || datum.duration_series == 'Nine Years'"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "rate",
+          "as": "mean_rate"
+        }
+      ],
+      "groupby": ["timeframe", "duration_series"]
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "point": { "filled": true, "size": 35 },
+    "strokeWidth": 2.5
+  },
+  "encoding": {
+    "x": {
+      "field": "timeframe",
+      "type": "nominal",
+      "title": "Published cohort period",
+      "axis": { "labelAngle": -90, "labelFontSize": 10 }
+    },
+    "y": {
+      "field": "mean_rate",
+      "type": "quantitative",
+      "title": "Completed (%)",
+      "scale": { "domain": [0, 100] }
+    },
+    "color": {
+      "field": "duration_series",
+      "type": "nominal",
+      "title": "Follow-up duration",
+      "scale": {
+        "domain": ["Four Years", "Six Years", "Nine Years"],
+        "range": ["#222222", "#555555", "#999999"]
+      }
+    },
+    "tooltip": [
+      { "field": "timeframe", "title": "Cohort period" },
+      { "field": "duration_series", "title": "Follow-up duration" },
+      { "field": "mean_rate", "title": "Completion rate (%)", "format": ".1f" }
+    ]
+  },
+  "config": {
+    "view": { "stroke": null },
+    "axis": { "gridColor": "#e6ecef", "labelColor": "#263943", "titleColor": "#263943" }
+  }
+}

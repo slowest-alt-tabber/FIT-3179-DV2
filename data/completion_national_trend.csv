@@ -1,0 +1,481 @@
+cohort_type,duration_label,duration_years,timeframe,outcome,rate
+Domestic Students,Four Years,4,2012-2015,"Completed, in any year",44.25
+Domestic Students,Four Years,4,2012-2015,Still enrolled at the end of the period,34.24
+Domestic Students,Four Years,4,2012-2015,"Re-enrolled, but dropped out",12.129999999999999
+Domestic Students,Four Years,4,2012-2015,Never came back after the first year,9.38
+Domestic Students,Four Years,4,2013-2016,"Completed, in any year",42.92
+Domestic Students,Four Years,4,2013-2016,Still enrolled at the end of the period,34.28
+Domestic Students,Four Years,4,2013-2016,"Re-enrolled, but dropped out",12.2
+Domestic Students,Four Years,4,2013-2016,Never came back after the first year,10.6
+Domestic Students,Four Years,4,2014-2017,"Completed, in any year",41.98
+Domestic Students,Four Years,4,2014-2017,Still enrolled at the end of the period,34.58
+Domestic Students,Four Years,4,2014-2017,"Re-enrolled, but dropped out",12.5
+Domestic Students,Four Years,4,2014-2017,Never came back after the first year,10.94
+Domestic Students,Four Years,4,2015-2018,"Completed, in any year",42.08
+Domestic Students,Four Years,4,2015-2018,Still enrolled at the end of the period,34.49
+Domestic Students,Four Years,4,2015-2018,"Re-enrolled, but dropped out",12.56
+Domestic Students,Four Years,4,2015-2018,Never came back after the first year,10.870000000000001
+Domestic Students,Four Years,4,2016-2019,"Completed, in any year",43.05
+Domestic Students,Four Years,4,2016-2019,Still enrolled at the end of the period,34.15
+Domestic Students,Four Years,4,2016-2019,"Re-enrolled, but dropped out",12.55
+Domestic Students,Four Years,4,2016-2019,Never came back after the first year,10.26
+Domestic Students,Four Years,4,2017-2020,"Completed, in any year",41.7
+Domestic Students,Four Years,4,2017-2020,Still enrolled at the end of the period,35.89
+Domestic Students,Four Years,4,2017-2020,"Re-enrolled, but dropped out",11.91
+Domestic Students,Four Years,4,2017-2020,Never came back after the first year,10.5
+Domestic Students,Four Years,4,2018-2021,"Completed, in any year",41.02
+Domestic Students,Four Years,4,2018-2021,Still enrolled at the end of the period,37.910000000000004
+Domestic Students,Four Years,4,2018-2021,"Re-enrolled, but dropped out",11.02
+Domestic Students,Four Years,4,2018-2021,Never came back after the first year,10.050000000000002
+Domestic Students,Four Years,4,2019-2022,"Completed, in any year",40.92
+Domestic Students,Four Years,4,2019-2022,Still enrolled at the end of the period,37.4
+Domestic Students,Four Years,4,2019-2022,"Re-enrolled, but dropped out",12.350000000000001
+Domestic Students,Four Years,4,2019-2022,Never came back after the first year,9.33
+Domestic Students,Four Years,4,2020-2023,"Completed, in any year",39.949999999999996
+Domestic Students,Four Years,4,2020-2023,Still enrolled at the end of the period,36.24
+Domestic Students,Four Years,4,2020-2023,"Re-enrolled, but dropped out",14.370000000000001
+Domestic Students,Four Years,4,2020-2023,Never came back after the first year,9.450000000000001
+Domestic Students,Four Years,4,2021-2024,"Completed, in any year",41.55
+Domestic Students,Four Years,4,2021-2024,Still enrolled at the end of the period,35.550000000000004
+Domestic Students,Four Years,4,2021-2024,"Re-enrolled, but dropped out",12.28
+Domestic Students,Four Years,4,2021-2024,Never came back after the first year,10.629999999999999
+Domestic Students,Six Years,6,2010-2015,"Completed, in any year",65.97
+Domestic Students,Six Years,6,2010-2015,Still enrolled at the end of the period,11.79
+Domestic Students,Six Years,6,2010-2015,"Re-enrolled, but dropped out",14.360000000000001
+Domestic Students,Six Years,6,2010-2015,Never came back after the first year,7.87
+Domestic Students,Six Years,6,2011-2016,"Completed, in any year",65.75
+Domestic Students,Six Years,6,2011-2016,Still enrolled at the end of the period,11.82
+Domestic Students,Six Years,6,2011-2016,"Re-enrolled, but dropped out",14.729999999999999
+Domestic Students,Six Years,6,2011-2016,Never came back after the first year,7.7
+Domestic Students,Six Years,6,2012-2017,"Completed, in any year",64.45
+Domestic Students,Six Years,6,2012-2017,Still enrolled at the end of the period,11.950000000000001
+Domestic Students,Six Years,6,2012-2017,"Re-enrolled, but dropped out",15.3
+Domestic Students,Six Years,6,2012-2017,Never came back after the first year,8.3
+Domestic Students,Six Years,6,2013-2018,"Completed, in any year",63.339999999999996
+Domestic Students,Six Years,6,2013-2018,Still enrolled at the end of the period,11.8
+Domestic Students,Six Years,6,2013-2018,"Re-enrolled, but dropped out",15.41
+Domestic Students,Six Years,6,2013-2018,Never came back after the first year,9.450000000000001
+Domestic Students,Six Years,6,2014-2019,"Completed, in any year",62.41
+Domestic Students,Six Years,6,2014-2019,Still enrolled at the end of the period,12.12
+Domestic Students,Six Years,6,2014-2019,"Re-enrolled, but dropped out",15.719999999999999
+Domestic Students,Six Years,6,2014-2019,Never came back after the first year,9.76
+Domestic Students,Six Years,6,2015-2020,"Completed, in any year",62.33
+Domestic Students,Six Years,6,2015-2020,Still enrolled at the end of the period,12.739999999999998
+Domestic Students,Six Years,6,2015-2020,"Re-enrolled, but dropped out",15.4
+Domestic Students,Six Years,6,2015-2020,Never came back after the first year,9.530000000000001
+Domestic Students,Six Years,6,2016-2021,"Completed, in any year",62.64
+Domestic Students,Six Years,6,2016-2021,Still enrolled at the end of the period,13.27
+Domestic Students,Six Years,6,2016-2021,"Re-enrolled, but dropped out",15.129999999999999
+Domestic Students,Six Years,6,2016-2021,Never came back after the first year,8.960000000000003
+Domestic Students,Six Years,6,2017-2022,"Completed, in any year",61.77
+Domestic Students,Six Years,6,2017-2022,Still enrolled at the end of the period,12.88
+Domestic Students,Six Years,6,2017-2022,"Re-enrolled, but dropped out",16.04
+Domestic Students,Six Years,6,2017-2022,Never came back after the first year,9.31
+Domestic Students,Six Years,6,2018-2023,"Completed, in any year",62.260000000000005
+Domestic Students,Six Years,6,2018-2023,Still enrolled at the end of the period,12.46
+Domestic Students,Six Years,6,2018-2023,"Re-enrolled, but dropped out",16.21
+Domestic Students,Six Years,6,2018-2023,Never came back after the first year,9.06
+Domestic Students,Six Years,6,2019-2024,"Completed, in any year",62.75
+Domestic Students,Six Years,6,2019-2024,Still enrolled at the end of the period,12.58
+Domestic Students,Six Years,6,2019-2024,"Re-enrolled, but dropped out",16.29
+Domestic Students,Six Years,6,2019-2024,Never came back after the first year,8.370000000000003
+Domestic Students,Nine Years,9,2007-2015,"Completed, in any year",73.6
+Domestic Students,Nine Years,9,2007-2015,Still enrolled at the end of the period,4.159999999999999
+Domestic Students,Nine Years,9,2007-2015,"Re-enrolled, but dropped out",14.47
+Domestic Students,Nine Years,9,2007-2015,Never came back after the first year,7.76
+Domestic Students,Nine Years,9,2008-2016,"Completed, in any year",74.01
+Domestic Students,Nine Years,9,2008-2016,Still enrolled at the end of the period,3.98
+Domestic Students,Nine Years,9,2008-2016,"Re-enrolled, but dropped out",14.83
+Domestic Students,Nine Years,9,2008-2016,Never came back after the first year,7.18
+Domestic Students,Nine Years,9,2009-2017,"Completed, in any year",73.86
+Domestic Students,Nine Years,9,2009-2017,Still enrolled at the end of the period,4.26
+Domestic Students,Nine Years,9,2009-2017,"Re-enrolled, but dropped out",15.219999999999999
+Domestic Students,Nine Years,9,2009-2017,Never came back after the first year,6.659999999999999
+Domestic Students,Nine Years,9,2010-2018,"Completed, in any year",73.03
+Domestic Students,Nine Years,9,2010-2018,Still enrolled at the end of the period,4.28
+Domestic Students,Nine Years,9,2010-2018,"Re-enrolled, but dropped out",15.54
+Domestic Students,Nine Years,9,2010-2018,Never came back after the first year,7.159999999999999
+Domestic Students,Nine Years,9,2011-2019,"Completed, in any year",72.89
+Domestic Students,Nine Years,9,2011-2019,Still enrolled at the end of the period,4.1899999999999995
+Domestic Students,Nine Years,9,2011-2019,"Re-enrolled, but dropped out",15.93
+Domestic Students,Nine Years,9,2011-2019,Never came back after the first year,6.99
+Domestic Students,Nine Years,9,2012-2020,"Completed, in any year",71.74
+Domestic Students,Nine Years,9,2012-2020,Still enrolled at the end of the period,4.619999999999999
+Domestic Students,Nine Years,9,2012-2020,"Re-enrolled, but dropped out",16.2
+Domestic Students,Nine Years,9,2012-2020,Never came back after the first year,7.45
+Domestic Students,Nine Years,9,2013-2021,"Completed, in any year",70.53
+Domestic Students,Nine Years,9,2013-2021,Still enrolled at the end of the period,4.83
+Domestic Students,Nine Years,9,2013-2021,"Re-enrolled, but dropped out",16.21
+Domestic Students,Nine Years,9,2013-2021,Never came back after the first year,8.42
+Domestic Students,Nine Years,9,2014-2022,"Completed, in any year",69.78
+Domestic Students,Nine Years,9,2014-2022,Still enrolled at the end of the period,4.51
+Domestic Students,Nine Years,9,2014-2022,"Re-enrolled, but dropped out",16.939999999999998
+Domestic Students,Nine Years,9,2014-2022,Never came back after the first year,8.780000000000001
+Domestic Students,Nine Years,9,2015-2023,"Completed, in any year",69.81
+Domestic Students,Nine Years,9,2015-2023,Still enrolled at the end of the period,4.29
+Domestic Students,Nine Years,9,2015-2023,"Re-enrolled, but dropped out",17.22
+Domestic Students,Nine Years,9,2015-2023,Never came back after the first year,8.69
+Domestic Students,Nine Years,9,2016-2024,"Completed, in any year",70.45
+Domestic Students,Nine Years,9,2016-2024,Still enrolled at the end of the period,4.14
+Domestic Students,Nine Years,9,2016-2024,"Re-enrolled, but dropped out",17.14
+Domestic Students,Nine Years,9,2016-2024,Never came back after the first year,8.27
+Overseas Students (for comparison),Four Years,4,2012-2015,"Completed, in any year",71
+Overseas Students (for comparison),Four Years,4,2012-2015,Still enrolled at the end of the period,11.370000000000001
+Overseas Students (for comparison),Four Years,4,2012-2015,"Re-enrolled, but dropped out",9.39
+Overseas Students (for comparison),Four Years,4,2012-2015,Never came back after the first year,8.239999999999998
+Overseas Students (for comparison),Four Years,4,2013-2016,"Completed, in any year",71.2
+Overseas Students (for comparison),Four Years,4,2013-2016,Still enrolled at the end of the period,11.709999999999999
+Overseas Students (for comparison),Four Years,4,2013-2016,"Re-enrolled, but dropped out",9.33
+Overseas Students (for comparison),Four Years,4,2013-2016,Never came back after the first year,7.7700000000000005
+Overseas Students (for comparison),Four Years,4,2014-2017,"Completed, in any year",70.82
+Overseas Students (for comparison),Four Years,4,2014-2017,Still enrolled at the end of the period,11.8
+Overseas Students (for comparison),Four Years,4,2014-2017,"Re-enrolled, but dropped out",9.11
+Overseas Students (for comparison),Four Years,4,2014-2017,Never came back after the first year,8.27
+Overseas Students (for comparison),Four Years,4,2015-2018,"Completed, in any year",69.54
+Overseas Students (for comparison),Four Years,4,2015-2018,Still enrolled at the end of the period,12.61
+Overseas Students (for comparison),Four Years,4,2015-2018,"Re-enrolled, but dropped out",9.01
+Overseas Students (for comparison),Four Years,4,2015-2018,Never came back after the first year,8.84
+Overseas Students (for comparison),Four Years,4,2016-2019,"Completed, in any year",69.63
+Overseas Students (for comparison),Four Years,4,2016-2019,Still enrolled at the end of the period,12.91
+Overseas Students (for comparison),Four Years,4,2016-2019,"Re-enrolled, but dropped out",8.75
+Overseas Students (for comparison),Four Years,4,2016-2019,Never came back after the first year,8.71
+Overseas Students (for comparison),Four Years,4,2017-2020,"Completed, in any year",69.28
+Overseas Students (for comparison),Four Years,4,2017-2020,Still enrolled at the end of the period,13.38
+Overseas Students (for comparison),Four Years,4,2017-2020,"Re-enrolled, but dropped out",8.93
+Overseas Students (for comparison),Four Years,4,2017-2020,Never came back after the first year,8.41
+Overseas Students (for comparison),Four Years,4,2018-2021,"Completed, in any year",65.96
+Overseas Students (for comparison),Four Years,4,2018-2021,Still enrolled at the end of the period,15.41
+Overseas Students (for comparison),Four Years,4,2018-2021,"Re-enrolled, but dropped out",9.32
+Overseas Students (for comparison),Four Years,4,2018-2021,Never came back after the first year,9.32
+Overseas Students (for comparison),Four Years,4,2019-2022,"Completed, in any year",64.92
+Overseas Students (for comparison),Four Years,4,2019-2022,Still enrolled at the end of the period,16.45
+Overseas Students (for comparison),Four Years,4,2019-2022,"Re-enrolled, but dropped out",7.659999999999999
+Overseas Students (for comparison),Four Years,4,2019-2022,Never came back after the first year,10.97
+Overseas Students (for comparison),Four Years,4,2020-2023,"Completed, in any year",66.2
+Overseas Students (for comparison),Four Years,4,2020-2023,Still enrolled at the end of the period,16.9
+Overseas Students (for comparison),Four Years,4,2020-2023,"Re-enrolled, but dropped out",7
+Overseas Students (for comparison),Four Years,4,2020-2023,Never came back after the first year,9.9
+Overseas Students (for comparison),Four Years,4,2021-2024,"Completed, in any year",71.32
+Overseas Students (for comparison),Four Years,4,2021-2024,Still enrolled at the end of the period,16.3
+Overseas Students (for comparison),Four Years,4,2021-2024,"Re-enrolled, but dropped out",7
+Overseas Students (for comparison),Four Years,4,2021-2024,Never came back after the first year,5.38
+Overseas Students (for comparison),Six Years,6,2010-2015,"Completed, in any year",78.82
+Overseas Students (for comparison),Six Years,6,2010-2015,Still enrolled at the end of the period,1.36
+Overseas Students (for comparison),Six Years,6,2010-2015,"Re-enrolled, but dropped out",12.11
+Overseas Students (for comparison),Six Years,6,2010-2015,Never came back after the first year,7.72
+Overseas Students (for comparison),Six Years,6,2011-2016,"Completed, in any year",78.66
+Overseas Students (for comparison),Six Years,6,2011-2016,Still enrolled at the end of the period,1.44
+Overseas Students (for comparison),Six Years,6,2011-2016,"Re-enrolled, but dropped out",11.56
+Overseas Students (for comparison),Six Years,6,2011-2016,Never came back after the first year,8.350000000000001
+Overseas Students (for comparison),Six Years,6,2012-2017,"Completed, in any year",79.31
+Overseas Students (for comparison),Six Years,6,2012-2017,Still enrolled at the end of the period,1.54
+Overseas Students (for comparison),Six Years,6,2012-2017,"Re-enrolled, but dropped out",11
+Overseas Students (for comparison),Six Years,6,2012-2017,Never came back after the first year,8.15
+Overseas Students (for comparison),Six Years,6,2013-2018,"Completed, in any year",79.86999999999999
+Overseas Students (for comparison),Six Years,6,2013-2018,Still enrolled at the end of the period,1.56
+Overseas Students (for comparison),Six Years,6,2013-2018,"Re-enrolled, but dropped out",10.89
+Overseas Students (for comparison),Six Years,6,2013-2018,Never came back after the first year,7.67
+Overseas Students (for comparison),Six Years,6,2014-2019,"Completed, in any year",79.7
+Overseas Students (for comparison),Six Years,6,2014-2019,Still enrolled at the end of the period,1.55
+Overseas Students (for comparison),Six Years,6,2014-2019,"Re-enrolled, but dropped out",10.57
+Overseas Students (for comparison),Six Years,6,2014-2019,Never came back after the first year,8.19
+Overseas Students (for comparison),Six Years,6,2015-2020,"Completed, in any year",78.88
+Overseas Students (for comparison),Six Years,6,2015-2020,Still enrolled at the end of the period,1.7
+Overseas Students (for comparison),Six Years,6,2015-2020,"Re-enrolled, but dropped out",10.67
+Overseas Students (for comparison),Six Years,6,2015-2020,Never came back after the first year,8.739999999999998
+Overseas Students (for comparison),Six Years,6,2016-2021,"Completed, in any year",78.7
+Overseas Students (for comparison),Six Years,6,2016-2021,Still enrolled at the end of the period,1.96
+Overseas Students (for comparison),Six Years,6,2016-2021,"Re-enrolled, but dropped out",10.709999999999999
+Overseas Students (for comparison),Six Years,6,2016-2021,Never came back after the first year,8.639999999999999
+Overseas Students (for comparison),Six Years,6,2017-2022,"Completed, in any year",79.16999999999999
+Overseas Students (for comparison),Six Years,6,2017-2022,Still enrolled at the end of the period,2.04
+Overseas Students (for comparison),Six Years,6,2017-2022,"Re-enrolled, but dropped out",10.44
+Overseas Students (for comparison),Six Years,6,2017-2022,Never came back after the first year,8.34
+Overseas Students (for comparison),Six Years,6,2018-2023,"Completed, in any year",77.71
+Overseas Students (for comparison),Six Years,6,2018-2023,Still enrolled at the end of the period,2.27
+Overseas Students (for comparison),Six Years,6,2018-2023,"Re-enrolled, but dropped out",10.76
+Overseas Students (for comparison),Six Years,6,2018-2023,Never came back after the first year,9.26
+Overseas Students (for comparison),Six Years,6,2019-2024,"Completed, in any year",76.9
+Overseas Students (for comparison),Six Years,6,2019-2024,Still enrolled at the end of the period,2.4699999999999998
+Overseas Students (for comparison),Six Years,6,2019-2024,"Re-enrolled, but dropped out",9.739999999999998
+Overseas Students (for comparison),Six Years,6,2019-2024,Never came back after the first year,10.89
+Overseas Students (for comparison),Nine Years,9,2007-2015,"Completed, in any year",78.44000000000001
+Overseas Students (for comparison),Nine Years,9,2007-2015,Still enrolled at the end of the period,0.21000000000000002
+Overseas Students (for comparison),Nine Years,9,2007-2015,"Re-enrolled, but dropped out",12.42
+Overseas Students (for comparison),Nine Years,9,2007-2015,Never came back after the first year,8.93
+Overseas Students (for comparison),Nine Years,9,2008-2016,"Completed, in any year",79.24
+Overseas Students (for comparison),Nine Years,9,2008-2016,Still enrolled at the end of the period,0.2
+Overseas Students (for comparison),Nine Years,9,2008-2016,"Re-enrolled, but dropped out",12.33
+Overseas Students (for comparison),Nine Years,9,2008-2016,Never came back after the first year,8.229999999999999
+Overseas Students (for comparison),Nine Years,9,2009-2017,"Completed, in any year",80.04
+Overseas Students (for comparison),Nine Years,9,2009-2017,Still enrolled at the end of the period,0.22
+Overseas Students (for comparison),Nine Years,9,2009-2017,"Re-enrolled, but dropped out",12.1
+Overseas Students (for comparison),Nine Years,9,2009-2017,Never came back after the first year,7.64
+Overseas Students (for comparison),Nine Years,9,2010-2018,"Completed, in any year",79.85
+Overseas Students (for comparison),Nine Years,9,2010-2018,Still enrolled at the end of the period,0.19
+Overseas Students (for comparison),Nine Years,9,2010-2018,"Re-enrolled, but dropped out",12.27
+Overseas Students (for comparison),Nine Years,9,2010-2018,Never came back after the first year,7.68
+Overseas Students (for comparison),Nine Years,9,2011-2019,"Completed, in any year",79.76
+Overseas Students (for comparison),Nine Years,9,2011-2019,Still enrolled at the end of the period,0.19
+Overseas Students (for comparison),Nine Years,9,2011-2019,"Re-enrolled, but dropped out",11.75
+Overseas Students (for comparison),Nine Years,9,2011-2019,Never came back after the first year,8.3
+Overseas Students (for comparison),Nine Years,9,2012-2020,"Completed, in any year",80.48
+Overseas Students (for comparison),Nine Years,9,2012-2020,Still enrolled at the end of the period,0.23
+Overseas Students (for comparison),Nine Years,9,2012-2020,"Re-enrolled, but dropped out",11.19
+Overseas Students (for comparison),Nine Years,9,2012-2020,Never came back after the first year,8.1
+Overseas Students (for comparison),Nine Years,9,2013-2021,"Completed, in any year",81.04
+Overseas Students (for comparison),Nine Years,9,2013-2021,Still enrolled at the end of the period,0.25
+Overseas Students (for comparison),Nine Years,9,2013-2021,"Re-enrolled, but dropped out",11.07
+Overseas Students (for comparison),Nine Years,9,2013-2021,Never came back after the first year,7.63
+Overseas Students (for comparison),Nine Years,9,2014-2022,"Completed, in any year",80.84
+Overseas Students (for comparison),Nine Years,9,2014-2022,Still enrolled at the end of the period,0.25
+Overseas Students (for comparison),Nine Years,9,2014-2022,"Re-enrolled, but dropped out",10.76
+Overseas Students (for comparison),Nine Years,9,2014-2022,Never came back after the first year,8.15
+Overseas Students (for comparison),Nine Years,9,2015-2023,"Completed, in any year",80.11999999999999
+Overseas Students (for comparison),Nine Years,9,2015-2023,Still enrolled at the end of the period,0.23
+Overseas Students (for comparison),Nine Years,9,2015-2023,"Re-enrolled, but dropped out",10.96
+Overseas Students (for comparison),Nine Years,9,2015-2023,Never came back after the first year,8.700000000000001
+Overseas Students (for comparison),Nine Years,9,2016-2024,"Completed, in any year",80.2
+Overseas Students (for comparison),Nine Years,9,2016-2024,Still enrolled at the end of the period,0.26
+Overseas Students (for comparison),Nine Years,9,2016-2024,"Re-enrolled, but dropped out",10.93
+Overseas Students (for comparison),Nine Years,9,2016-2024,Never came back after the first year,8.61
+Domestic Students,Four Years,4,2012-2015,"Completed, in any year",39.80000000000001
+Domestic Students,Four Years,4,2012-2015,Still enrolled at the end of the period,18.54
+Domestic Students,Four Years,4,2012-2015,"Re-enrolled, but dropped out",19.41
+Domestic Students,Four Years,4,2012-2015,Never came back after the first year,22.25
+Domestic Students,Four Years,4,2013-2016,"Completed, in any year",38.58
+Domestic Students,Four Years,4,2013-2016,Still enrolled at the end of the period,18.739999999999995
+Domestic Students,Four Years,4,2013-2016,"Re-enrolled, but dropped out",19.479999999999997
+Domestic Students,Four Years,4,2013-2016,Never came back after the first year,23.2
+Domestic Students,Four Years,4,2014-2017,"Completed, in any year",40.9
+Domestic Students,Four Years,4,2014-2017,Still enrolled at the end of the period,18.459999999999997
+Domestic Students,Four Years,4,2014-2017,"Re-enrolled, but dropped out",18.54
+Domestic Students,Four Years,4,2014-2017,Never came back after the first year,22.1
+Domestic Students,Four Years,4,2015-2018,"Completed, in any year",41.760000000000005
+Domestic Students,Four Years,4,2015-2018,Still enrolled at the end of the period,17.88
+Domestic Students,Four Years,4,2015-2018,"Re-enrolled, but dropped out",18.2
+Domestic Students,Four Years,4,2015-2018,Never came back after the first year,22.16
+Domestic Students,Four Years,4,2016-2019,"Completed, in any year",41.120000000000005
+Domestic Students,Four Years,4,2016-2019,Still enrolled at the end of the period,18.54
+Domestic Students,Four Years,4,2016-2019,"Re-enrolled, but dropped out",17.82
+Domestic Students,Four Years,4,2016-2019,Never came back after the first year,22.52
+Domestic Students,Four Years,4,2017-2020,"Completed, in any year",42.09
+Domestic Students,Four Years,4,2017-2020,Still enrolled at the end of the period,17.97
+Domestic Students,Four Years,4,2017-2020,"Re-enrolled, but dropped out",16.88
+Domestic Students,Four Years,4,2017-2020,Never came back after the first year,23.06
+Domestic Students,Four Years,4,2018-2021,"Completed, in any year",44.82
+Domestic Students,Four Years,4,2018-2021,Still enrolled at the end of the period,18.35
+Domestic Students,Four Years,4,2018-2021,"Re-enrolled, but dropped out",15.99
+Domestic Students,Four Years,4,2018-2021,Never came back after the first year,20.830000000000002
+Domestic Students,Four Years,4,2019-2022,"Completed, in any year",45.8
+Domestic Students,Four Years,4,2019-2022,Still enrolled at the end of the period,17.93
+Domestic Students,Four Years,4,2019-2022,"Re-enrolled, but dropped out",15.66
+Domestic Students,Four Years,4,2019-2022,Never came back after the first year,20.610000000000003
+Domestic Students,Four Years,4,2020-2023,"Completed, in any year",47.25
+Domestic Students,Four Years,4,2020-2023,Still enrolled at the end of the period,16.31
+Domestic Students,Four Years,4,2020-2023,"Re-enrolled, but dropped out",16.04
+Domestic Students,Four Years,4,2020-2023,Never came back after the first year,20.4
+Domestic Students,Four Years,4,2021-2024,"Completed, in any year",45.64
+Domestic Students,Four Years,4,2021-2024,Still enrolled at the end of the period,16.4
+Domestic Students,Four Years,4,2021-2024,"Re-enrolled, but dropped out",14.66
+Domestic Students,Four Years,4,2021-2024,Never came back after the first year,23.3
+Domestic Students,Six Years,6,2010-2015,"Completed, in any year",46.63
+Domestic Students,Six Years,6,2010-2015,Still enrolled at the end of the period,9.040000000000001
+Domestic Students,Six Years,6,2010-2015,"Re-enrolled, but dropped out",23.43
+Domestic Students,Six Years,6,2010-2015,Never came back after the first year,20.9
+Domestic Students,Six Years,6,2011-2016,"Completed, in any year",46.52
+Domestic Students,Six Years,6,2011-2016,Still enrolled at the end of the period,9.27
+Domestic Students,Six Years,6,2011-2016,"Re-enrolled, but dropped out",22.77
+Domestic Students,Six Years,6,2011-2016,Never came back after the first year,21.439999999999998
+Domestic Students,Six Years,6,2012-2017,"Completed, in any year",46.93
+Domestic Students,Six Years,6,2012-2017,Still enrolled at the end of the period,8.620000000000001
+Domestic Students,Six Years,6,2012-2017,"Re-enrolled, but dropped out",23.91
+Domestic Students,Six Years,6,2012-2017,Never came back after the first year,20.54
+Domestic Students,Six Years,6,2013-2018,"Completed, in any year",45.849999999999994
+Domestic Students,Six Years,6,2013-2018,Still enrolled at the end of the period,9.16
+Domestic Students,Six Years,6,2013-2018,"Re-enrolled, but dropped out",23.55
+Domestic Students,Six Years,6,2013-2018,Never came back after the first year,21.45
+Domestic Students,Six Years,6,2014-2019,"Completed, in any year",48.07
+Domestic Students,Six Years,6,2014-2019,Still enrolled at the end of the period,8.67
+Domestic Students,Six Years,6,2014-2019,"Re-enrolled, but dropped out",23.05
+Domestic Students,Six Years,6,2014-2019,Never came back after the first year,20.21
+Domestic Students,Six Years,6,2015-2020,"Completed, in any year",48.43
+Domestic Students,Six Years,6,2015-2020,Still enrolled at the end of the period,9.32
+Domestic Students,Six Years,6,2015-2020,"Re-enrolled, but dropped out",22.35
+Domestic Students,Six Years,6,2015-2020,Never came back after the first year,19.9
+Domestic Students,Six Years,6,2016-2021,"Completed, in any year",48.56
+Domestic Students,Six Years,6,2016-2021,Still enrolled at the end of the period,10.01
+Domestic Students,Six Years,6,2016-2021,"Re-enrolled, but dropped out",21.02
+Domestic Students,Six Years,6,2016-2021,Never came back after the first year,20.42
+Domestic Students,Six Years,6,2017-2022,"Completed, in any year",49.32
+Domestic Students,Six Years,6,2017-2022,Still enrolled at the end of the period,8.540000000000001
+Domestic Students,Six Years,6,2017-2022,"Re-enrolled, but dropped out",20.88
+Domestic Students,Six Years,6,2017-2022,Never came back after the first year,21.259999999999998
+Domestic Students,Six Years,6,2018-2023,"Completed, in any year",52.760000000000005
+Domestic Students,Six Years,6,2018-2023,Still enrolled at the end of the period,7.88
+Domestic Students,Six Years,6,2018-2023,"Re-enrolled, but dropped out",20.130000000000003
+Domestic Students,Six Years,6,2018-2023,Never came back after the first year,19.239999999999995
+Domestic Students,Six Years,6,2019-2024,"Completed, in any year",53.59
+Domestic Students,Six Years,6,2019-2024,Still enrolled at the end of the period,8.65
+Domestic Students,Six Years,6,2019-2024,"Re-enrolled, but dropped out",18.97
+Domestic Students,Six Years,6,2019-2024,Never came back after the first year,18.79
+Domestic Students,Nine Years,9,2007-2015,"Completed, in any year",52.3
+Domestic Students,Nine Years,9,2007-2015,Still enrolled at the end of the period,4.07
+Domestic Students,Nine Years,9,2007-2015,"Re-enrolled, but dropped out",24.25
+Domestic Students,Nine Years,9,2007-2015,Never came back after the first year,19.38
+Domestic Students,Nine Years,9,2008-2016,"Completed, in any year",50.339999999999996
+Domestic Students,Nine Years,9,2008-2016,Still enrolled at the end of the period,3.66
+Domestic Students,Nine Years,9,2008-2016,"Re-enrolled, but dropped out",25.12
+Domestic Students,Nine Years,9,2008-2016,Never came back after the first year,20.88
+Domestic Students,Nine Years,9,2009-2017,"Completed, in any year",50.290000000000006
+Domestic Students,Nine Years,9,2009-2017,Still enrolled at the end of the period,4.24
+Domestic Students,Nine Years,9,2009-2017,"Re-enrolled, but dropped out",24.74
+Domestic Students,Nine Years,9,2009-2017,Never came back after the first year,20.73
+Domestic Students,Nine Years,9,2010-2018,"Completed, in any year",51.309999999999995
+Domestic Students,Nine Years,9,2010-2018,Still enrolled at the end of the period,4.22
+Domestic Students,Nine Years,9,2010-2018,"Re-enrolled, but dropped out",24.86
+Domestic Students,Nine Years,9,2010-2018,Never came back after the first year,19.610000000000003
+Domestic Students,Nine Years,9,2011-2019,"Completed, in any year",51.309999999999995
+Domestic Students,Nine Years,9,2011-2019,Still enrolled at the end of the period,4.119999999999999
+Domestic Students,Nine Years,9,2011-2019,"Re-enrolled, but dropped out",24.38
+Domestic Students,Nine Years,9,2011-2019,Never came back after the first year,20.18
+Domestic Students,Nine Years,9,2012-2020,"Completed, in any year",51.21
+Domestic Students,Nine Years,9,2012-2020,Still enrolled at the end of the period,4.21
+Domestic Students,Nine Years,9,2012-2020,"Re-enrolled, but dropped out",25.51
+Domestic Students,Nine Years,9,2012-2020,Never came back after the first year,19.07
+Domestic Students,Nine Years,9,2013-2021,"Completed, in any year",50.57
+Domestic Students,Nine Years,9,2013-2021,Still enrolled at the end of the period,4.71
+Domestic Students,Nine Years,9,2013-2021,"Re-enrolled, but dropped out",25
+Domestic Students,Nine Years,9,2013-2021,Never came back after the first year,19.72
+Domestic Students,Nine Years,9,2014-2022,"Completed, in any year",52.71
+Domestic Students,Nine Years,9,2014-2022,Still enrolled at the end of the period,4.42
+Domestic Students,Nine Years,9,2014-2022,"Re-enrolled, but dropped out",24.25
+Domestic Students,Nine Years,9,2014-2022,Never came back after the first year,18.62
+Domestic Students,Nine Years,9,2015-2023,"Completed, in any year",53.56
+Domestic Students,Nine Years,9,2015-2023,Still enrolled at the end of the period,3.96
+Domestic Students,Nine Years,9,2015-2023,"Re-enrolled, but dropped out",24.03
+Domestic Students,Nine Years,9,2015-2023,Never came back after the first year,18.459999999999997
+Domestic Students,Nine Years,9,2016-2024,"Completed, in any year",53.760000000000005
+Domestic Students,Nine Years,9,2016-2024,Still enrolled at the end of the period,4.4
+Domestic Students,Nine Years,9,2016-2024,"Re-enrolled, but dropped out",22.7
+Domestic Students,Nine Years,9,2016-2024,Never came back after the first year,19.14
+Overseas Students (for comparison),Four Years,4,2012-2015,"Completed, in any year",63.41
+Overseas Students (for comparison),Four Years,4,2012-2015,Still enrolled at the end of the period,2.42
+Overseas Students (for comparison),Four Years,4,2012-2015,"Re-enrolled, but dropped out",15.03
+Overseas Students (for comparison),Four Years,4,2012-2015,Never came back after the first year,19.14
+Overseas Students (for comparison),Four Years,4,2013-2016,"Completed, in any year",59.06
+Overseas Students (for comparison),Four Years,4,2013-2016,Still enrolled at the end of the period,2.3899999999999997
+Overseas Students (for comparison),Four Years,4,2013-2016,"Re-enrolled, but dropped out",17.12
+Overseas Students (for comparison),Four Years,4,2013-2016,Never came back after the first year,21.43
+Overseas Students (for comparison),Four Years,4,2014-2017,"Completed, in any year",55.82
+Overseas Students (for comparison),Four Years,4,2014-2017,Still enrolled at the end of the period,2.61
+Overseas Students (for comparison),Four Years,4,2014-2017,"Re-enrolled, but dropped out",18.86
+Overseas Students (for comparison),Four Years,4,2014-2017,Never came back after the first year,22.71
+Overseas Students (for comparison),Four Years,4,2015-2018,"Completed, in any year",56.86
+Overseas Students (for comparison),Four Years,4,2015-2018,Still enrolled at the end of the period,3.05
+Overseas Students (for comparison),Four Years,4,2015-2018,"Re-enrolled, but dropped out",16.829999999999995
+Overseas Students (for comparison),Four Years,4,2015-2018,Never came back after the first year,23.259999999999998
+Overseas Students (for comparison),Four Years,4,2016-2019,"Completed, in any year",56.14
+Overseas Students (for comparison),Four Years,4,2016-2019,Still enrolled at the end of the period,3.17
+Overseas Students (for comparison),Four Years,4,2016-2019,"Re-enrolled, but dropped out",17.36
+Overseas Students (for comparison),Four Years,4,2016-2019,Never came back after the first year,23.330000000000002
+Overseas Students (for comparison),Four Years,4,2017-2020,"Completed, in any year",59.14
+Overseas Students (for comparison),Four Years,4,2017-2020,Still enrolled at the end of the period,3.61
+Overseas Students (for comparison),Four Years,4,2017-2020,"Re-enrolled, but dropped out",15.93
+Overseas Students (for comparison),Four Years,4,2017-2020,Never came back after the first year,21.32
+Overseas Students (for comparison),Four Years,4,2018-2021,"Completed, in any year",59.68
+Overseas Students (for comparison),Four Years,4,2018-2021,Still enrolled at the end of the period,5.159999999999999
+Overseas Students (for comparison),Four Years,4,2018-2021,"Re-enrolled, but dropped out",14.1
+Overseas Students (for comparison),Four Years,4,2018-2021,Never came back after the first year,21.06
+Overseas Students (for comparison),Four Years,4,2019-2022,"Completed, in any year",56.65
+Overseas Students (for comparison),Four Years,4,2019-2022,Still enrolled at the end of the period,5.71
+Overseas Students (for comparison),Four Years,4,2019-2022,"Re-enrolled, but dropped out",12.739999999999998
+Overseas Students (for comparison),Four Years,4,2019-2022,Never came back after the first year,24.9
+Overseas Students (for comparison),Four Years,4,2020-2023,"Completed, in any year",61.02
+Overseas Students (for comparison),Four Years,4,2020-2023,Still enrolled at the end of the period,6.26
+Overseas Students (for comparison),Four Years,4,2020-2023,"Re-enrolled, but dropped out",13.209999999999999
+Overseas Students (for comparison),Four Years,4,2020-2023,Never came back after the first year,19.5
+Overseas Students (for comparison),Four Years,4,2021-2024,"Completed, in any year",65.97
+Overseas Students (for comparison),Four Years,4,2021-2024,Still enrolled at the end of the period,8.41
+Overseas Students (for comparison),Four Years,4,2021-2024,"Re-enrolled, but dropped out",13.18
+Overseas Students (for comparison),Four Years,4,2021-2024,Never came back after the first year,12.450000000000001
+Overseas Students (for comparison),Six Years,6,2010-2015,"Completed, in any year",66.14
+Overseas Students (for comparison),Six Years,6,2010-2015,Still enrolled at the end of the period,0.41000000000000003
+Overseas Students (for comparison),Six Years,6,2010-2015,"Re-enrolled, but dropped out",14.739999999999998
+Overseas Students (for comparison),Six Years,6,2010-2015,Never came back after the first year,18.72
+Overseas Students (for comparison),Six Years,6,2011-2016,"Completed, in any year",64.26
+Overseas Students (for comparison),Six Years,6,2011-2016,Still enrolled at the end of the period,0.31
+Overseas Students (for comparison),Six Years,6,2011-2016,"Re-enrolled, but dropped out",16.27
+Overseas Students (for comparison),Six Years,6,2011-2016,Never came back after the first year,19.170000000000005
+Overseas Students (for comparison),Six Years,6,2012-2017,"Completed, in any year",64.56
+Overseas Students (for comparison),Six Years,6,2012-2017,Still enrolled at the end of the period,0.46
+Overseas Students (for comparison),Six Years,6,2012-2017,"Re-enrolled, but dropped out",15.94
+Overseas Students (for comparison),Six Years,6,2012-2017,Never came back after the first year,19.04
+Overseas Students (for comparison),Six Years,6,2013-2018,"Completed, in any year",60.15
+Overseas Students (for comparison),Six Years,6,2013-2018,Still enrolled at the end of the period,0.33999999999999997
+Overseas Students (for comparison),Six Years,6,2013-2018,"Re-enrolled, but dropped out",18.16
+Overseas Students (for comparison),Six Years,6,2013-2018,Never came back after the first year,21.35
+Overseas Students (for comparison),Six Years,6,2014-2019,"Completed, in any year",57.49
+Overseas Students (for comparison),Six Years,6,2014-2019,Still enrolled at the end of the period,0.32999999999999996
+Overseas Students (for comparison),Six Years,6,2014-2019,"Re-enrolled, but dropped out",19.5
+Overseas Students (for comparison),Six Years,6,2014-2019,Never came back after the first year,22.68
+Overseas Students (for comparison),Six Years,6,2015-2020,"Completed, in any year",58.39
+Overseas Students (for comparison),Six Years,6,2015-2020,Still enrolled at the end of the period,0.3
+Overseas Students (for comparison),Six Years,6,2015-2020,"Re-enrolled, but dropped out",18.079999999999995
+Overseas Students (for comparison),Six Years,6,2015-2020,Never came back after the first year,23.24
+Overseas Students (for comparison),Six Years,6,2016-2021,"Completed, in any year",57.91
+Overseas Students (for comparison),Six Years,6,2016-2021,Still enrolled at the end of the period,0.22
+Overseas Students (for comparison),Six Years,6,2016-2021,"Re-enrolled, but dropped out",18.579999999999995
+Overseas Students (for comparison),Six Years,6,2016-2021,Never came back after the first year,23.29
+Overseas Students (for comparison),Six Years,6,2017-2022,"Completed, in any year",61.379999999999995
+Overseas Students (for comparison),Six Years,6,2017-2022,Still enrolled at the end of the period,0.36
+Overseas Students (for comparison),Six Years,6,2017-2022,"Re-enrolled, but dropped out",16.97
+Overseas Students (for comparison),Six Years,6,2017-2022,Never came back after the first year,21.29
+Overseas Students (for comparison),Six Years,6,2018-2023,"Completed, in any year",62.99
+Overseas Students (for comparison),Six Years,6,2018-2023,Still enrolled at the end of the period,0.45
+Overseas Students (for comparison),Six Years,6,2018-2023,"Re-enrolled, but dropped out",15.53
+Overseas Students (for comparison),Six Years,6,2018-2023,Never came back after the first year,21.03
+Overseas Students (for comparison),Six Years,6,2019-2024,"Completed, in any year",60.64
+Overseas Students (for comparison),Six Years,6,2019-2024,Still enrolled at the end of the period,0.72
+Overseas Students (for comparison),Six Years,6,2019-2024,"Re-enrolled, but dropped out",13.79
+Overseas Students (for comparison),Six Years,6,2019-2024,Never came back after the first year,24.84
+Overseas Students (for comparison),Nine Years,9,2007-2015,"Completed, in any year",66.42
+Overseas Students (for comparison),Nine Years,9,2007-2015,Still enrolled at the end of the period,0.05
+Overseas Students (for comparison),Nine Years,9,2007-2015,"Re-enrolled, but dropped out",17.76
+Overseas Students (for comparison),Nine Years,9,2007-2015,Never came back after the first year,15.77
+Overseas Students (for comparison),Nine Years,9,2008-2016,"Completed, in any year",71.35
+Overseas Students (for comparison),Nine Years,9,2008-2016,Still enrolled at the end of the period,0.02
+Overseas Students (for comparison),Nine Years,9,2008-2016,"Re-enrolled, but dropped out",13.870000000000001
+Overseas Students (for comparison),Nine Years,9,2008-2016,Never came back after the first year,14.76
+Overseas Students (for comparison),Nine Years,9,2009-2017,"Completed, in any year",68.77
+Overseas Students (for comparison),Nine Years,9,2009-2017,Still enrolled at the end of the period,0.03
+Overseas Students (for comparison),Nine Years,9,2009-2017,"Re-enrolled, but dropped out",13.92
+Overseas Students (for comparison),Nine Years,9,2009-2017,Never came back after the first year,17.279999999999998
+Overseas Students (for comparison),Nine Years,9,2010-2018,"Completed, in any year",66.35
+Overseas Students (for comparison),Nine Years,9,2010-2018,Still enrolled at the end of the period,0.04
+Overseas Students (for comparison),Nine Years,9,2010-2018,"Re-enrolled, but dropped out",14.93
+Overseas Students (for comparison),Nine Years,9,2010-2018,Never came back after the first year,18.68
+Overseas Students (for comparison),Nine Years,9,2011-2019,"Completed, in any year",64.51
+Overseas Students (for comparison),Nine Years,9,2011-2019,Still enrolled at the end of the period,0.05
+Overseas Students (for comparison),Nine Years,9,2011-2019,"Re-enrolled, but dropped out",16.3
+Overseas Students (for comparison),Nine Years,9,2011-2019,Never came back after the first year,19.14
+Overseas Students (for comparison),Nine Years,9,2012-2020,"Completed, in any year",64.8
+Overseas Students (for comparison),Nine Years,9,2012-2020,Still enrolled at the end of the period,0.03
+Overseas Students (for comparison),Nine Years,9,2012-2020,"Re-enrolled, but dropped out",16.15
+Overseas Students (for comparison),Nine Years,9,2012-2020,Never came back after the first year,19.02
+Overseas Students (for comparison),Nine Years,9,2013-2021,"Completed, in any year",60.52
+Overseas Students (for comparison),Nine Years,9,2013-2021,Still enrolled at the end of the period,0.03
+Overseas Students (for comparison),Nine Years,9,2013-2021,"Re-enrolled, but dropped out",18.130000000000003
+Overseas Students (for comparison),Nine Years,9,2013-2021,Never came back after the first year,21.32
+Overseas Students (for comparison),Nine Years,9,2014-2022,"Completed, in any year",57.68
+Overseas Students (for comparison),Nine Years,9,2014-2022,Still enrolled at the end of the period,0.02
+Overseas Students (for comparison),Nine Years,9,2014-2022,"Re-enrolled, but dropped out",19.65
+Overseas Students (for comparison),Nine Years,9,2014-2022,Never came back after the first year,22.650000000000002
+Overseas Students (for comparison),Nine Years,9,2015-2023,"Completed, in any year",58.58
+Overseas Students (for comparison),Nine Years,9,2015-2023,Still enrolled at the end of the period,0.03
+Overseas Students (for comparison),Nine Years,9,2015-2023,"Re-enrolled, but dropped out",18.170000000000005
+Overseas Students (for comparison),Nine Years,9,2015-2023,Never came back after the first year,23.22
+Overseas Students (for comparison),Nine Years,9,2016-2024,"Completed, in any year",58.07
+Overseas Students (for comparison),Nine Years,9,2016-2024,Still enrolled at the end of the period,0.03
+Overseas Students (for comparison),Nine Years,9,2016-2024,"Re-enrolled, but dropped out",18.630000000000003
+Overseas Students (for comparison),Nine Years,9,2016-2024,Never came back after the first year,23.27

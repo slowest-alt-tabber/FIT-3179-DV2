@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 320,
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "white",
+  "data": {
+    "url": "data/qilt_study_areas.csv"
+  },
+  "transform": [
+    { "filter": "datum.positive_percent != null" }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "boxplot", "extent": 1.5 },
+      "encoding": {
+        "x": {
+          "field": "indicator",
+          "type": "nominal",
+          "title": null,
+          "axis": { "labelAngle": -35 },
+          "sort": [
+          "Skills Development",
+          "Peer Engagement",
+          "Teaching Quality and Engagement",
+          "Student Support and Services",
+          "Learning Resources",
+          "Overall Educational Experience"
+        ]
+        },
+        "y": {
+          "field": "positive_percent",
+          "type": "quantitative",
+          "title": "Positive rating (%)",
+          "scale": { "domain": [0, 100] }
+        },
+        "color": {
+          "field": "indicator",
+          "type": "nominal",
+          "legend": null
+        }
+      }
+    }
+  ]
+}

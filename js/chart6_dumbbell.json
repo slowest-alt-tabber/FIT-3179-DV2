@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 420,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "white",
+  "data": {
+    "url": "data/qilt.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.row_type == 'provider' && datum.indicator == 'Overall Educational Experience' && datum.positive_percent != null"
+    },
+    {
+      "filter": "datum.survey_year == 2017 || datum.survey_year == 2025"
+    },
+    {
+      "pivot": "survey_year",
+      "value": "positive_percent",
+      "groupby": ["provider"]
+    },
+    {
+      "filter": "datum['2017'] != null && datum['2025'] != null"
+    },
+    {
+      "fold": ["2017", "2025"],
+      "as": ["survey_year", "positive_percent"]
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#aab7bd",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "y": {
+          "field": "provider",
+          "type": "nominal",
+          "title": "University",
+          "sort": "-x",
+          "axis": {
+            "labelLimit": 220,
+            "labelFontSize": 10,
+            "labelColor": "#263943"
+          }
+        },
+        "x": {
+          "field": "2017",
+          "type": "quantitative",
+          "title": "Positive rating (%)",
+          "scale": { "domain": [0, 100] }
+        },
+        "x2": {
+          "field": "2025"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 85
+      },
+      "encoding": {
+        "y": {
+          "field": "provider",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "positive_percent",
+          "type": "quantitative",
+          "scale": { "domain": [0, 100] }
+        },
+        "color": {
+          "field": "survey_year",
+          "type": "nominal",
+          "title": "Survey Year",
+          "scale": {
+            "domain": ["2017", "2025"],
+            "range": ["#e58a47", "#167c80"]
+          }
+        },
+        "tooltip": [
+          { "field": "provider", "title": "University" },
+          { "field": "survey_year", "title": "Survey Year" },
+          { "field": "positive_percent", "title": "Rating (%)", "format": ".1f" }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": { "stroke": null },
+    "axis": { "gridColor": "#e6ecef", "labelColor": "#263943", "titleColor": "#263943" }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 340,
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "white",
+  "data": {
+    "url": "data/completion_atar_bands.csv"
+  },
+  "transform": [
+    { "filter": "datum.atar_band != null && datum.atar_band != ''" },
+    {
+      "calculate": "datum.outcome == 'Completed, in any year' || datum.outcome == 'Completed' ? 'Completed' : (datum.outcome == 'Never came back after the first year' || datum.outcome == 'Never returned' ? 'Never returned' : (datum.outcome == 'Re-enrolled, but dropped out' || datum.outcome == 'Re-enrolled, then left' ? 'Re-enrolled, then left' : (datum.outcome == 'Still enrolled at the end of the period' || datum.outcome == 'Still enrolled' ? 'Still enrolled' : datum.outcome)))",
+      "as": "outcome_display"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "rate",
+          "as": "mean_rate"
+        }
+      ],
+      "groupby": ["atar_band", "outcome_display"]
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "cornerRadius": 2,
+    "stroke": "#ffffff",
+    "strokeWidth": 0.5
+  },
+  "encoding": {
+    "x": {
+      "field": "outcome_display",
+      "type": "nominal",
+      "title": "Published outcome",
+      "sort": ["Completed", "Never returned", "Re-enrolled, then left", "Still enrolled"],
+      "axis": { "labelAngle": -25, "labelFontSize": 10, "labelColor": "#263943", "titleColor": "#263943" }
+    },
+    "y": {
+      "field": "atar_band",
+      "type": "nominal",
+      "title": "ATAR Score Band",
+      "sort": ["30-49", "50-59", "60-69", "70-79", "80-89", "90-94", "95-100", "Not provided or not required"],
+      "axis": { "labelLimit": 220, "labelFontSize": 10, "labelColor": "#263943", "titleColor": "#263943" }
+    },
+    "color": {
+      "field": "mean_rate",
+      "type": "quantitative",
+      "title": "Published rate (%)",
+      "scale": { "domain": [0, 100], "scheme": "tealblues" },
+      "legend": { "titleFontSize": 11, "labelFontSize": 10 }
+    },
+    "tooltip": [
+      { "field": "atar_band", "title": "ATAR Band" },
+      { "field": "outcome_display", "title": "Outcome" },
+      { "field": "mean_rate", "title": "Mean Completion Rate (%)", "format": ".1f" }
+    ]
+  },
+  "config": { "view": { "stroke": null } }
+}

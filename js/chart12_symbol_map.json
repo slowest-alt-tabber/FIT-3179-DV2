@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 340,
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "white",
+  "projection": {
+    "type": "mercator",
+    "center": [134, -26],
+    "scale": 500
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+        "format": { "type": "json", "property": "features" }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#d5e1e7",
+        "stroke": "#627984",
+        "strokeWidth": 0.9
+      }
+    },
+    {
+      "data": { "url": "data/qilt_symbol_map.csv" },
+      "transform": [
+        { "filter": "datum.longitude != null && datum.latitude != null && datum.positive_percent != null" }
+      ],
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "size": 95,
+        "opacity": 0.9,
+        "stroke": "#ffffff",
+        "strokeWidth": 0.8
+      },
+      "encoding": {
+        "longitude": { "field": "longitude", "type": "quantitative" },
+        "latitude": { "field": "latitude", "type": "quantitative" },
+        "color": {
+          "field": "positive_percent",
+          "type": "quantitative",
+          "title": "Institution rating (%)",
+          "scale": {
+            "domain": [0, 100],
+            "range": ["#deebf7", "#08519c"]
+          }
+        },
+        "tooltip": [
+          { "field": "provider", "title": "University" },
+          { "field": "campus_name", "title": "Campus" },
+          { "field": "state", "title": "State" },
+          { "field": "indicator", "title": "Indicator" },
+          { "field": "positive_percent", "title": "Rating (%)", "format": ".1f" }
+        ]
+      }
+    }
+  ]
+}

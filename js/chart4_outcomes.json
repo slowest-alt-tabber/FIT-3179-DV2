@@ -1,0 +1,47 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 270,
+  "autosize": { "type": "fit", "contains": "padding" },
+  "background": "white",
+  "data": {
+    "url": "data/completion_national_trend.csv"
+  },
+  "transform": [
+    { "filter": "datum.rate != null && datum.outcome != null" },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "rate",
+          "as": "mean_rate"
+        }
+      ],
+      "groupby": ["outcome"]
+    }
+  ],
+  "mark": { "type": "bar", "cornerRadiusEnd": 3 },
+  "encoding": {
+    "y": {
+      "field": "outcome",
+      "type": "nominal",
+      "title": null
+    },
+    "x": {
+      "field": "mean_rate",
+      "type": "quantitative",
+      "title": "Mean Published rate (%)",
+      "scale": { "domain": [0, 100] }
+    },
+    "color": {
+      "field": "outcome",
+      "type": "nominal",
+      "title": "Outcome"
+    },
+    "tooltip": [
+      { "field": "outcome", "title": "Published outcome" },
+      { "field": "mean_rate", "title": "Mean Rate (%)", "format": ".2f" }
+    ]
+  },
+  "config": { "view": { "stroke": null } }
+}

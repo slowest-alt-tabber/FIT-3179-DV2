@@ -1,0 +1,79 @@
+provider,campus_name,state,longitude,latitude,indicator,positive_percent,survey_year
+Australian Catholic University,North Sydney (MacKillop),NSW,151.2034248,-33.837395900000004,Student Support and Services,73.6,2025
+Australian Catholic University,North Sydney (MacKillop),NSW,151.2034248,-33.837395900000004,Overall Educational Experience,80.4,2025
+Bond University,Gold Coast,QLD,153.4166377,-28.0730934,Student Support and Services,84.6,2025
+Bond University,Gold Coast,QLD,153.4166377,-28.0730934,Overall Educational Experience,87,2025
+Charles Darwin University,CDU Waterfront Darwin,NT,130.84538700000002,-12.4679443,Student Support and Services,74.5,2025
+Charles Darwin University,CDU Waterfront Darwin,NT,130.84538700000002,-12.4679443,Overall Educational Experience,74.1,2025
+Charles Sturt University,CSU Study Centre - Sydney,NSW,151.21364069999996,-33.878646599999996,Student Support and Services,74,2025
+Charles Sturt University,CSU Study Centre - Sydney,NSW,151.21364069999996,-33.878646599999996,Overall Educational Experience,79.8,2025
+Curtin University,Graduate School of Business,WA,115.8632801,-31.9542366,Student Support and Services,67.8,2025
+Curtin University,Graduate School of Business,WA,115.8632801,-31.9542366,Overall Educational Experience,73.8,2025
+Deakin University,Burwood,VIC,145.1151129,-37.846740399999995,Student Support and Services,77.2,2025
+Deakin University,Burwood,VIC,145.1151129,-37.846740399999995,Overall Educational Experience,80.6,2025
+Edith Cowan University,Joondalup,WA,115.772692,-31.7516555,Student Support and Services,77.4,2025
+Edith Cowan University,Joondalup,WA,115.772692,-31.7516555,Overall Educational Experience,80,2025
+Federation University Australia,Camp Street (Ballarat),VIC,143.85891100000003,-37.5612738,Student Support and Services,78.8,2025
+Federation University Australia,Camp Street (Ballarat),VIC,143.85891100000003,-37.5612738,Overall Educational Experience,79.8,2025
+Flinders University,Victoria Square,SA,138.6010834,-34.9273065,Student Support and Services,76.8,2025
+Flinders University,Victoria Square,SA,138.6010834,-34.9273065,Overall Educational Experience,78.7,2025
+Griffith University,"South Bank, Graduate Centre",QLD,153.02404800000002,-27.481706999999997,Student Support and Services,71,2025
+Griffith University,"South Bank, Graduate Centre",QLD,153.02404800000002,-27.481706999999997,Overall Educational Experience,75.3,2025
+James Cook University,Brisbane,QLD,153.0294119,-27.4666044,Student Support and Services,69.4,2025
+James Cook University,Brisbane,QLD,153.0294119,-27.4666044,Overall Educational Experience,74.3,2025
+La Trobe University,Sydney,NSW,151.209343,-33.875640999999995,Student Support and Services,71,2025
+La Trobe University,Sydney,NSW,151.209343,-33.875640999999995,Overall Educational Experience,77,2025
+Macquarie University,Sydney Applied Finance Centre,NSW,151.2083917,-33.8666126,Student Support and Services,66.7,2025
+Macquarie University,Sydney Applied Finance Centre,NSW,151.2083917,-33.8666126,Overall Educational Experience,73.9,2025
+Monash University,City - Law Chambers,VIC,144.9561152,-37.8143737,Student Support and Services,67.9,2025
+Monash University,City - Law Chambers,VIC,144.9561152,-37.8143737,Overall Educational Experience,74.4,2025
+Murdoch University,Murdoch,WA,115.8359469,-32.0674457,Student Support and Services,75.6,2025
+Murdoch University,Murdoch,WA,115.8359469,-32.0674457,Overall Educational Experience,79.8,2025
+Queensland University of Technology,Canberra,ACT,149.0930417,-35.3224667,Student Support and Services,69.6,2025
+Queensland University of Technology,Canberra,ACT,149.0930417,-35.3224667,Overall Educational Experience,74.3,2025
+RMIT University,RMIT City Campus,VIC,144.96375139999998,-37.8076138,Student Support and Services,68,2025
+RMIT University,RMIT City Campus,VIC,144.96375139999998,-37.8076138,Overall Educational Experience,73.3,2025
+Southern Cross University,The Hotel School Sydney,NSW,151.21199,-33.864359,Student Support and Services,76.7,2025
+Southern Cross University,The Hotel School Sydney,NSW,151.21199,-33.864359,Overall Educational Experience,76.4,2025
+Swinburne University of Technology,Hawthorn,VIC,145.03895459999998,-37.822150400000005,Student Support and Services,73.9,2025
+Swinburne University of Technology,Hawthorn,VIC,145.03895459999998,-37.822150400000005,Overall Educational Experience,77.3,2025
+The Australian National University,North Australia Research Unit,NT,130.8715435,-12.369831800000002,Student Support and Services,54.3,2025
+The Australian National University,North Australia Research Unit,NT,130.8715435,-12.369831800000002,Overall Educational Experience,70.9,2025
+The University of Adelaide**,North Terrace,SA,138.60465299999996,-34.919695499999996,Student Support and Services,70.2,2025
+The University of Adelaide**,North Terrace,SA,138.60465299999996,-34.919695499999996,Overall Educational Experience,77.9,2025
+The University of Melbourne,Southbank,VIC,144.9702136,-37.8247525,Student Support and Services,65,2025
+The University of Melbourne,Southbank,VIC,144.9702136,-37.8247525,Overall Educational Experience,72.6,2025
+The University of Notre Dame Australia,Sydney,NSW,151.1973766,-33.884639299999996,Student Support and Services,56.4,2025
+The University of Notre Dame Australia,Sydney,NSW,151.1973766,-33.884639299999996,Overall Educational Experience,66.9,2025
+The University of Queensland,Herston,QLD,153.02376329999998,-27.448325199999996,Student Support and Services,69.5,2025
+The University of Queensland,Herston,QLD,153.02376329999998,-27.448325199999996,Overall Educational Experience,79.6,2025
+The University of South Australia**,City West,SA,138.5910019,-34.92278890000001,Student Support and Services,73.1,2025
+The University of South Australia**,City West,SA,138.5910019,-34.92278890000001,Overall Educational Experience,77.6,2025
+The University of Sydney,Sydney Conservatorium of Music,NSW,151.21442299999998,-33.86344,Student Support and Services,61.1,2025
+The University of Sydney,Sydney Conservatorium of Music,NSW,151.21442299999998,-33.86344,Overall Educational Experience,71.5,2025
+The University of Western Australia,Crawley,WA,115.81795,-31.976913,Student Support and Services,66.7,2025
+The University of Western Australia,Crawley,WA,115.81795,-31.976913,Overall Educational Experience,74.8,2025
+University of Canberra,UCC - Bruce,ACT,149.08359339999998,-35.239076600000004,Student Support and Services,72.5,2025
+University of Canberra,UCC - Bruce,ACT,149.08359339999998,-35.239076600000004,Overall Educational Experience,76.6,2025
+University of Divinity,Morling College,NSW,151.11491329999998,-33.7796534,Student Support and Services,95.6,2025
+University of Divinity,Morling College,NSW,151.11491329999998,-33.7796534,Overall Educational Experience,94.4,2025
+University of New England,Armidale,NSW,151.64450399999996,-30.487854,Student Support and Services,76.7,2025
+University of New England,Armidale,NSW,151.64450399999996,-30.487854,Overall Educational Experience,83.1,2025
+University of New South Wales,CBD Campus O'Connell Street,NSW,151.20989329999998,-33.8646161,Student Support and Services,70.3,2025
+University of New South Wales,CBD Campus O'Connell Street,NSW,151.20989329999998,-33.8646161,Overall Educational Experience,74.1,2025
+University of Newcastle,Sydney,NSW,151.210336,-33.86833800000001,Student Support and Services,70.4,2025
+University of Newcastle,Sydney,NSW,151.210336,-33.86833800000001,Overall Educational Experience,77.6,2025
+University of Southern Queensland,Springfield,QLD,152.90801630000004,-27.6830732,Student Support and Services,69.4,2025
+University of Southern Queensland,Springfield,QLD,152.90801630000004,-27.6830732,Overall Educational Experience,71,2025
+University of Tasmania,Sydney - Darlinghurst,NSW,151.22203690000003,-33.8803839,Student Support and Services,69,2025
+University of Tasmania,Sydney - Darlinghurst,NSW,151.22203690000003,-33.8803839,Overall Educational Experience,78.9,2025
+University of Technology Sydney,City,NSW,151.20049419999998,-33.883237599999994,Student Support and Services,70.3,2025
+University of Technology Sydney,City,NSW,151.20049419999998,-33.883237599999994,Overall Educational Experience,76.1,2025
+University of Wollongong,Sydney Business School,NSW,151.2097433,-33.86198749999999,Student Support and Services,74.4,2025
+University of Wollongong,Sydney Business School,NSW,151.2097433,-33.86198749999999,Overall Educational Experience,76.2,2025
+University of the Sunshine Coast,USC Sydney,NSW,151.2073828,-33.87333280000001,Student Support and Services,78.2,2025
+University of the Sunshine Coast,USC Sydney,NSW,151.2073828,-33.87333280000001,Overall Educational Experience,81.6,2025
+Victoria University,Sydney,NSW,151.20400349999997,-33.8697767,Student Support and Services,73.2,2025
+Victoria University,Sydney,NSW,151.20400349999997,-33.8697767,Overall Educational Experience,77.9,2025
+Western Sydney University,Sydney City,NSW,151.20920349999997,-33.875712400000005,Student Support and Services,69.6,2025
+Western Sydney University,Sydney City,NSW,151.20920349999997,-33.875712400000005,Overall Educational Experience,74.1,2025

@@ -1,0 +1,9 @@
+state,state_abbr,col,row,mean_rating,university_count,indicator,survey_year
+Western Australia,WA,0,2,71.875,4,Student Support and Services,2025
+Northern Territory,NT,2,0,64.4,2,Student Support and Services,2025
+South Australia,SA,2,2,73.36666666666666,3,Student Support and Services,2025
+Queensland,QLD,4,0,72.78,5,Student Support and Services,2025
+New South Wales,NSW,4,2,72.18823529411765,17,Student Support and Services,2025
+Australian Capital Territory,ACT,5,3,71.05,2,Student Support and Services,2025
+Victoria,VIC,3,3,71.8,6,Student Support and Services,2025
+Tasmania,TAS,4,4,,0,Student Support and Services,2025

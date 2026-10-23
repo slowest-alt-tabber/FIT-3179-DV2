@@ -1,0 +1,187 @@
+demographic_dimension,subgroup,indicator,positive_percent
+Stage of studies,Commencing,Skills Development,80.1
+Stage of studies,Commencing,Peer Engagement *,61.3
+Stage of studies,Commencing,Teaching Quality and Engagement,82.7
+Stage of studies,Commencing,Student Support and Services *,73.9
+Stage of studies,Commencing,Learning Resources,86.2
+Stage of studies,Commencing,Questionnaire item: Overall Educational Experience,79.5
+Stage of studies,Later year*,Skills Development,83.1
+Stage of studies,Later year*,Peer Engagement *,61.5
+Stage of studies,Later year*,Teaching Quality and Engagement,77.6
+Stage of studies,Later year*,Student Support and Services *,67.7
+Stage of studies,Later year*,Learning Resources,79.1
+Stage of studies,Later year*,Questionnaire item: Overall Educational Experience,72.6
+Study mode,Internal/Multi-mode,Skills Development,81.7
+Study mode,Internal/Multi-mode,Peer Engagement *,65.9
+Study mode,Internal/Multi-mode,Teaching Quality and Engagement,80.4
+Study mode,Internal/Multi-mode,Student Support and Services *,71.1
+Study mode,Internal/Multi-mode,Learning Resources,83.4
+Study mode,Internal/Multi-mode,Questionnaire item: Overall Educational Experience,76.2
+Study mode,External,Skills Development,79
+Study mode,External,Peer Engagement *,22.8
+Study mode,External,Teaching Quality and Engagement,81.5
+Study mode,External,Student Support and Services *,74.4
+Study mode,External,Learning Resources,81.4
+Study mode,External,Questionnaire item: Overall Educational Experience,79.8
+Provider type,NUHEIs,Skills Development,85.6
+Provider type,NUHEIs,Peer Engagement *,73.8
+Provider type,NUHEIs,Teaching Quality and Engagement,85.2
+Provider type,NUHEIs,Student Support and Services *,78
+Provider type,NUHEIs,Learning Resources,78
+Provider type,NUHEIs,Questionnaire item: Overall Educational Experience,79.5
+Provider type,Universities,Skills Development,80.9
+Provider type,Universities,Peer Engagement *,59.9
+Provider type,Universities,Teaching Quality and Engagement,80
+Provider type,Universities,Student Support and Services *,70.4
+Provider type,Universities,Learning Resources,83.9
+Provider type,Universities,Questionnaire item: Overall Educational Experience,76.2
+Gender,Male,Skills Development,78.3
+Gender,Male,Peer Engagement *,61.4
+Gender,Male,Teaching Quality and Engagement,78.6
+Gender,Male,Student Support and Services *,70
+Gender,Male,Learning Resources,82.7
+Gender,Male,Questionnaire item: Overall Educational Experience,73.2
+Gender,Female,Skills Development,83.1
+Gender,Female,Peer Engagement *,61.3
+Gender,Female,Teaching Quality and Engagement,81.6
+Gender,Female,Student Support and Services *,72.1
+Gender,Female,Learning Resources,83.6
+Gender,Female,Questionnaire item: Overall Educational Experience,78.3
+Age group,Under 25,Skills Development,81.3
+Age group,Under 25,Peer Engagement *,65.1
+Age group,Under 25,Teaching Quality and Engagement,80.2
+Age group,Under 25,Student Support and Services *,70.8
+Age group,Under 25,Learning Resources,83.6
+Age group,Under 25,Questionnaire item: Overall Educational Experience,76
+Age group,25 to 29,Skills Development,81.8
+Age group,25 to 29,Peer Engagement *,54.1
+Age group,25 to 29,Teaching Quality and Engagement,80
+Age group,25 to 29,Student Support and Services *,72
+Age group,25 to 29,Learning Resources,80.4
+Age group,25 to 29,Questionnaire item: Overall Educational Experience,75.6
+Age group,30 to 39,Skills Development,81.5
+Age group,30 to 39,Peer Engagement *,45.8
+Age group,30 to 39,Teaching Quality and Engagement,81.8
+Age group,30 to 39,Student Support and Services *,74.6
+Age group,30 to 39,Learning Resources,82.1
+Age group,30 to 39,Questionnaire item: Overall Educational Experience,79.3
+Age group,40 and over,Skills Development,81.8
+Age group,40 and over,Peer Engagement *,36.2
+Age group,40 and over,Teaching Quality and Engagement,84.8
+Age group,40 and over,Student Support and Services *,75.9
+Age group,40 and over,Learning Resources,83.3
+Age group,40 and over,Questionnaire item: Overall Educational Experience,82.5
+First Nations†,First Nations,Skills Development,81.4
+First Nations†,First Nations,Peer Engagement *,51.8
+First Nations†,First Nations,Teaching Quality and Engagement,80
+First Nations†,First Nations,Student Support and Services *,71.9
+First Nations†,First Nations,Learning Resources,83.2
+First Nations†,First Nations,Questionnaire item: Overall Educational Experience,78.4
+First Nations†,Non-Indigenous,Skills Development,80.3
+First Nations†,Non-Indigenous,Peer Engagement *,58
+First Nations†,Non-Indigenous,Teaching Quality and Engagement,79.8
+First Nations†,Non-Indigenous,Student Support and Services *,68.8
+First Nations†,Non-Indigenous,Learning Resources,82.9
+First Nations†,Non-Indigenous,Questionnaire item: Overall Educational Experience,76.4
+Home language,English,Skills Development,80.7
+Home language,English,Peer Engagement *,58.8
+Home language,English,Teaching Quality and Engagement,80
+Home language,English,Student Support and Services *,69.3
+Home language,English,Learning Resources,82.9
+Home language,English,Questionnaire item: Overall Educational Experience,76.6
+Home language,Other,Skills Development,84.1
+Home language,Other,Peer Engagement *,71.8
+Home language,Other,Teaching Quality and Engagement,82.6
+Home language,Other,Student Support and Services *,77.9
+Home language,Other,Learning Resources,84.6
+Home language,Other,Questionnaire item: Overall Educational Experience,76.3
+Disability,Disability,Skills Development,78.8
+Disability,Disability,Peer Engagement *,59
+Disability,Disability,Teaching Quality and Engagement,78.9
+Disability,Disability,Student Support and Services *,68.1
+Disability,Disability,Learning Resources,79.8
+Disability,Disability,Questionnaire item: Overall Educational Experience,75.1
+Disability,No disability,Skills Development,81.8
+Disability,No disability,Peer Engagement *,61.7
+Disability,No disability,Teaching Quality and Engagement,80.7
+Disability,No disability,Student Support and Services *,71.8
+Disability,No disability,Learning Resources,83.8
+Disability,No disability,Questionnaire item: Overall Educational Experience,76.8
+International,Domestic student,Skills Development,80.4
+International,Domestic student,Peer Engagement *,57.9
+International,Domestic student,Teaching Quality and Engagement,79.8
+International,Domestic student,Student Support and Services *,68.9
+International,Domestic student,Learning Resources,82.9
+International,Domestic student,Questionnaire item: Overall Educational Experience,76.5
+International,International student,Skills Development,85.1
+International,International student,Peer Engagement *,74.2
+International,International student,Teaching Quality and Engagement,83.3
+International,International student,Student Support and Services *,78.5
+International,International student,Learning Resources,84.5
+International,International student,Questionnaire item: Overall Educational Experience,76.8
+First in family,First in family**,Skills Development,81
+First in family,First in family**,Peer Engagement *,56.6
+First in family,First in family**,Teaching Quality and Engagement,83.2
+First in family,First in family**,Student Support and Services *,74.8
+First in family,First in family**,Learning Resources,86.7
+First in family,First in family**,Questionnaire item: Overall Educational Experience,80.5
+First in family,Not first in family**,Skills Development,79.4
+First in family,Not first in family**,Peer Engagement *,63.6
+First in family,Not first in family**,Teaching Quality and Engagement,82.5
+First in family,Not first in family**,Student Support and Services *,72.1
+First in family,Not first in family**,Learning Resources,86.4
+First in family,Not first in family**,Questionnaire item: Overall Educational Experience,79.3
+Previous higher education experience,Current institution**,Skills Development,80.6
+Previous higher education experience,Current institution**,Peer Engagement *,57.5
+Previous higher education experience,Current institution**,Teaching Quality and Engagement,81.9
+Previous higher education experience,Current institution**,Student Support and Services *,72
+Previous higher education experience,Current institution**,Learning Resources,84.8
+Previous higher education experience,Current institution**,Questionnaire item: Overall Educational Experience,78.8
+Previous higher education experience,Another institution**,Skills Development,81.1
+Previous higher education experience,Another institution**,Peer Engagement *,55.2
+Previous higher education experience,Another institution**,Teaching Quality and Engagement,84.6
+Previous higher education experience,Another institution**,Student Support and Services *,76.9
+Previous higher education experience,Another institution**,Learning Resources,85.5
+Previous higher education experience,Another institution**,Questionnaire item: Overall Educational Experience,81.2
+Previous higher education experience,New to higher education**,Skills Development,79.7
+Previous higher education experience,New to higher education**,Peer Engagement *,63.9
+Previous higher education experience,New to higher education**,Teaching Quality and Engagement,82.2
+Previous higher education experience,New to higher education**,Student Support and Services *,73.3
+Previous higher education experience,New to higher education**,Learning Resources,86.7
+Previous higher education experience,New to higher education**,Questionnaire item: Overall Educational Experience,79
+Socio-economic status†,High*** ††,Skills Development,79.6
+Socio-economic status†,High*** ††,Peer Engagement *,61.6
+Socio-economic status†,High*** ††,Teaching Quality and Engagement,79.7
+Socio-economic status†,High*** ††,Student Support and Services *,66
+Socio-economic status†,High*** ††,Learning Resources,82.5
+Socio-economic status†,High*** ††,Questionnaire item: Overall Educational Experience,75.9
+Socio-economic status†,Medium*** ††,Skills Development,80.8
+Socio-economic status†,Medium*** ††,Peer Engagement *,57.5
+Socio-economic status†,Medium*** ††,Teaching Quality and Engagement,79.7
+Socio-economic status†,Medium*** ††,Student Support and Services *,69.6
+Socio-economic status†,Medium*** ††,Learning Resources,83.2
+Socio-economic status†,Medium*** ††,Questionnaire item: Overall Educational Experience,76.8
+Socio-economic status†,Low*** ††,Skills Development,80.7
+Socio-economic status†,Low*** ††,Peer Engagement *,52.1
+Socio-economic status†,Low*** ††,Teaching Quality and Engagement,80.1
+Socio-economic status†,Low*** ††,Student Support and Services *,71.9
+Socio-economic status†,Low*** ††,Learning Resources,83
+Socio-economic status†,Low*** ††,Questionnaire item: Overall Educational Experience,76.7
+Locality†,Metro*** †††,Skills Development,80.3
+Locality†,Metro*** †††,Peer Engagement *,59.5
+Locality†,Metro*** †††,Teaching Quality and Engagement,79.6
+Locality†,Metro*** †††,Student Support and Services *,68.6
+Locality†,Metro*** †††,Learning Resources,83
+Locality†,Metro*** †††,Questionnaire item: Overall Educational Experience,76
+Locality†,Regional/Remote*** †††,Skills Development,80.8
+Locality†,Regional/Remote*** †††,Peer Engagement *,51.7
+Locality†,Regional/Remote*** †††,Teaching Quality and Engagement,80.6
+Locality†,Regional/Remote*** †††,Student Support and Services *,69.8
+Locality†,Regional/Remote*** †††,Learning Resources,82.8
+Locality†,Regional/Remote*** †††,Questionnaire item: Overall Educational Experience,78.1
+Total,Total,Skills Development,81.4
+Total,Total,Peer Engagement *,61.4
+Total,Total,Teaching Quality and Engagement,80.5
+Total,Total,Student Support and Services *,71.3
+Total,Total,Learning Resources,83.3
+Total,Total,Questionnaire item: Overall Educational Experience,76.5

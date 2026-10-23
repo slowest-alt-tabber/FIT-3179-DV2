@@ -1,0 +1,15 @@
+state,indicator,mean_rating,university_count,state_full
+ACT,Overall Educational Experience,75.44999999999999,2,Australian Capital Territory
+ACT,Student Support and Services,71.05,2,Australian Capital Territory
+NSW,Overall Educational Experience,77.64117647058823,17,New South Wales
+NSW,Student Support and Services,72.18823529411765,17,New South Wales
+NT,Overall Educational Experience,72.5,2,Northern Territory
+NT,Student Support and Services,64.4,2,Northern Territory
+QLD,Overall Educational Experience,77.44,5,Queensland
+QLD,Student Support and Services,72.78,5,Queensland
+SA,Overall Educational Experience,78.06666666666666,3,South Australia
+SA,Student Support and Services,73.36666666666666,3,South Australia
+VIC,Overall Educational Experience,76.33333333333333,6,Victoria
+VIC,Student Support and Services,71.8,6,Victoria
+WA,Overall Educational Experience,77.1,4,Western Australia
+WA,Student Support and Services,71.875,4,Western Australia
