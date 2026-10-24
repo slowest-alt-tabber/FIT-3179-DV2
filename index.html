@@ -1,16 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description"
-        content="Explore Australian university completion and student experience.">
-  <title>Finishing the Degree | Australian University Completion</title>
+  <meta
+    name="description"
+    content="Explore Australian university completion rates, student pathways, experience and support."
+  >
+  <title>University Completion Rates | Australian University Completion</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
   <link rel="stylesheet" href="styles.css">
 
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -23,34 +28,32 @@
 
   <header class="hero">
     <div class="hero-inner">
-      <p class="eyebrow">AUSTRALIAN HIGHER EDUCATION</p>
-      <h1>Finishing the Degree</h1>
-
+      <p class="eyebrow">Australian higher education</p>
+      <h1>University Completion Rates</h1>
       <p class="subtitle">
-        Why do some students take longer to graduate?
+        What shapes completion across Australian universities?
       </p>
-
       <p class="intro">
-        Completion varies across study pathways and student groups.
-        Experience and location add further context.
-        Explore the patterns behind Australian university outcomes.
+        Follow completion over time and compare study pathways.
+        Explore student experiences, backgrounds and location.
       </p>
-
       <p class="hero-note">From commencement to completion</p>
     </div>
   </header>
 
   <main id="main-content">
 
-    <!-- CHAPTER ONE: THE COMPLETION JOURNEY -->
-    <section class="story-section story-section--completion"
-             aria-labelledby="section-01">
+    <!-- SECTION ONE: COMPLETION OVER TIME -->
 
+    <section
+      class="story-section story-section--completion"
+      aria-labelledby="section-01"
+    >
       <header class="section-header">
-        <p class="section-kicker">01 / THE COMPLETION JOURNEY</p>
-        <h2 id="section-01">Completion takes time</h2>
+        <p class="section-kicker">01 / Completion over time</p>
+        <h2 id="section-01">Completion grows with longer follow-up</h2>
         <p class="section-lead">
-          Early results capture only part of each student's journey.
+          Follow-up duration changes the share recorded as completed.
         </p>
       </header>
 
@@ -59,84 +62,155 @@
         <article class="chart-card">
           <header class="chart-card-header">
             <h3>Completion across follow-up periods</h3>
-            <p class="chart-narrative">
-              Part-time study, course transfers and interruptions
-              can delay graduation. Longer follow-up captures
-              students who finish beyond the expected course duration.
+            <p class="chart-narrative chart-takeaway">
+              
+              Completion rises as cohorts receive longer follow-up.
             </p>
           </header>
-          <div id="chart-trend" class="chart-embed"
-               aria-label="Completion trends across follow-up periods"></div>
+
+          <div
+            id="chart-trend"
+            class="chart-embed"
+            role="img"
+            aria-label="Completion rates by follow-up duration and cohort period"
+          ></div>
+
+          <p class="chart-narrative chart-explanation">
+              
+              Part-time study, interruptions and later returns
+              can extend the graduation timeline.
+            </p>
         </article>
 
         <article class="chart-card">
           <header class="chart-card-header">
-            <h3>Outcomes after nine years</h3>
-            <p class="chart-narrative">
-              Financial pressure, caring duties and course mismatch
-              may contribute to early departure. Flexible re-entry
-              can help some students return later.
+            <h3>Domestic student outcomes after nine years</h3>
+            <p class="chart-narrative chart-takeaway">
+              Completion is the largest outcome after nine years.
             </p>
           </header>
-          <div id="chart-outcomes" class="chart-embed"
-               aria-label="Domestic student outcomes after nine years"></div>
+
+          <div
+            id="chart-outcomes"
+            class="chart-embed"
+            role="img"
+            aria-label="Domestic student outcomes after nine years"
+          ></div>
+
+          <p class="chart-narrative chart-explanation">
+            
+            Study load, financial pressure and course fit
+            may shape different student pathways.
+          </p>
         </article>
 
       </div>
     </section>
 
-    <!-- CHAPTER TWO: DIFFERENT PATHWAYS -->
-    <section class="story-section story-section--pathways"
-             aria-labelledby="section-02">
-
+    <!-- SECTION TWO: STUDY PATHWAYS AND STUDENT GROUPS -->
+    <section
+      class="story-section story-section--pathways"
+      aria-labelledby="section-02"
+    >
       <header class="section-header">
-        <p class="section-kicker">02 / DIFFERENT PATHWAYS</p>
-        <h2 id="section-02">Students do not follow identical paths</h2>
+        <p class="section-kicker">02 / Study pathways and student groups</p>
+        <h2 id="section-02">Completion differs across pathways</h2>
         <p class="section-lead">
-          Course structures and entry preparation may shape progress.
+          Study field, entry preparation and student background
+          align with different completion outcomes.
         </p>
       </header>
 
-      <div class="chart-grid">
+      <div class="chart-grid chart-grid--related">
 
         <article class="chart-card">
           <header class="chart-card-header">
             <h3>Nine-year completion by study field</h3>
-            <p class="chart-narrative">
-              Professional placements and accreditation rules can
-              shape course length. Student backgrounds and course
-              structures also differ across disciplines.
+            <p class="chart-narrative chart-takeaway">
+              
+              Nine-year completion varies across fields of education.
             </p>
           </header>
-          <div id="chart-field" class="chart-embed"
-               aria-label="Nine-year completion rates by study field"></div>
+
+          <div
+            id="chart-field"
+            class="chart-embed"
+            role="img"
+            aria-label="Nine-year completion rates by study field"
+          ></div>
+
+          <p class="chart-narrative chart-explanation">
+              Course structures, placements and student backgrounds
+              may contribute to these differences.
+            </p>
         </article>
 
         <article class="chart-card">
           <header class="chart-card-header">
             <h3>Completion outcomes by university entry rank</h3>
-            <p class="chart-narrative">
-              Entry rank reflects earlier schooling and opportunity.
-              Bridging courses, teaching support and financial pressures
-              may also influence progress after enrolment.
+            <p class="chart-narrative chart-takeaway">
+              
+              Higher entry-rank bands generally show stronger completion.
             </p>
+            
           </header>
-          <div id="chart-characteristics" class="chart-embed"
-               aria-label="Nine-year outcomes by university entry rank"></div>
+
+          <div
+            id="chart-characteristics"
+            class="chart-embed"
+            role="img"
+            aria-label="Nine-year outcomes by university entry-rank band"
+          ></div>
+          <p class="chart-narrative chart-explanation">
+              
+            Prior preparation and academic support
+            may shape students' early progress.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="chart-grid">
+
+        <article class="chart-card">
+          <header class="chart-card-header">
+            <h3>Completion rates across student groups</h3>
+            <p class="chart-narrative chart-takeaway">
+              
+              The displayed 2021 completion rates range from
+              50% to 71.7%.
+            </p>
+            
+          </header>
+
+          <div
+            id="chart-qilt-indicators"
+            class="chart-embed"
+            role="img"
+            aria-label="Mini waffle charts comparing completion rates by student group"
+          ></div>
+          <p class="chart-narrative chart-explanation">
+              
+            Financial pressure, access barriers and culturally safe
+            support may shape study continuity.
+          </p>
         </article>
 
       </div>
     </section>
 
-    <!-- CHAPTER THREE: THE STUDENT EXPERIENCE -->
-    <section class="story-section story-section--experience"
-             aria-labelledby="section-03">
+    <!-- SECTION THREE: STUDENT EXPERIENCE -->
 
+    <section
+      class="story-section story-section--experience"
+      aria-labelledby="section-03"
+    >
       <header class="section-header">
-        <p class="section-kicker">03 / THE STUDENT EXPERIENCE</p>
-        <h2 id="section-03">Experience has several dimensions</h2>
+        <p class="section-kicker">03 / Student experience</p>
+        <h2 id="section-03">Experience varies across students</h2>
         <p class="section-lead">
-          Teaching, resources and connection create different experiences.
+          Study level, study field and provider relate
+          to different student experiences.
         </p>
       </header>
 
@@ -145,219 +219,316 @@
         <article class="chart-card">
           <header class="chart-card-header">
             <h3>Undergraduate and postgraduate ratings</h3>
-            <p class="chart-narrative">
-              Postgraduates may have clearer study goals or more experience.
-              Work and family commitments can leave less time
-              for campus activities and peer contact.
+            <p class="chart-narrative chart-takeaway">
+              
+              Postgraduates rate most measures higher;
+              peer engagement remains comparatively low.
             </p>
           </header>
-          <div id="chart-institution" class="chart-embed"
-               aria-label="Experience ratings by study level"></div>
+
+          <div
+            id="chart-institution"
+            class="chart-embed"
+            role="img"
+            aria-label="Student experience ratings by study level and measure"
+          ></div>
+          <p class="chart-narrative chart-explanation">
+              <span class="narrative-label"></span>
+              Study schedules and work commitments may affect
+              campus and peer involvement.
+            </p>
         </article>
 
         <article class="chart-card">
           <header class="chart-card-header">
             <h3>Provider ratings in 2017 and 2025</h3>
-            <p class="chart-narrative">
-              Online delivery, teaching changes and student needs
-              may affect experience ratings. Compare providers
-              to see which improved and which declined.
+            <p class="chart-narrative chart-takeaway">
+              
+              Provider ratings changed in different directions
+              between 2017 and 2025.
             </p>
+            
           </header>
-          <div id="chart-dumbbell" class="chart-embed"
-               aria-label="Provider experience ratings in 2017 and 2025"></div>
+
+          <div
+            id="chart-dumbbell"
+            class="chart-embed"
+            role="img"
+            aria-label="Provider experience ratings in 2017 and 2025"
+          ></div>
+          <p class="chart-narrative chart-explanation">
+              
+            Teaching changes, student mix and local resources
+            may contribute to variation.
+          </p>
         </article>
 
         <article class="chart-card">
           <header class="chart-card-header">
-            <h3>How experience ratings vary across fields</h3>
-            <p class="chart-narrative">
-              Peer engagement tends to receive weaker ratings.
-              Shared activities need time and access.
-              Students can use learning resources more independently.
+            <h3>Experience ratings by study area</h3>
+            <p class="chart-narrative chart-takeaway">
+              
+              Ratings vary by study area, with peer engagement often weaker.
             </p>
           </header>
-          <div id="chart-qilt-indicators" class="chart-embed"
-               aria-label="Experience rating distributions across study fields"></div>
+
+          <div
+            id="chart-qilt-heatmap"
+            class="chart-embed"
+            role="img"
+            aria-label="Student experience ratings by study area and measure"
+          ></div>
+          <p class="chart-narrative chart-explanation">
+              
+            Course design and opportunities for group work
+            may shape student responses.
+          </p>
         </article>
 
         <article class="chart-card">
-          <header class="chart-card-header">
-            <h3>Experience ratings by study field</h3>
-            <p class="chart-narrative">
-              Computing reports stronger resource ratings than
-              overall experience ratings. Feedback, workload and
-              career relevance may shape that gap.
-            </p>
-          </header>
-          <div id="chart-qilt-heatmap" class="chart-embed"
-               aria-label="Experience ratings by study field and measure"></div>
-        </article>
-
-        <article class="chart-card chart-card--wide">
           <header class="chart-card-header">
             <h3>How experience measures change rank</h3>
-            <p class="chart-narrative">
-              Skills and resources often rank strongly.
-              Peer engagement tends to rank lower.
-              The moving lines show whether this pattern changes.
+            <p class="chart-narrative chart-takeaway">
+              
+              Skills development and learning resources
+              usually rank above peer engagement.
             </p>
+            
           </header>
-          <div id="chart-completion-experience" class="chart-embed"
-               aria-label="Experience measure rankings over time"></div>
+
+          <div
+            id="chart-completion-experience"
+            class="chart-embed"
+            role="img"
+            aria-label="Rankings of student experience measures by survey year"
+          ></div>
+
+          <p class="chart-narrative chart-explanation">
+              
+            Students can access learning materials independently,
+            while peer contact requires coordination.
+          </p>
         </article>
 
       </div>
     </section>
 
-    <!-- CHAPTER FOUR: PLACE AND OPPORTUNITY -->
-    <section class="story-section story-section--geography"
-             aria-labelledby="section-04">
+    <!-- SECTION FOUR: PLACE AND SUPPORT -->
 
+    <section
+      class="story-section story-section--geography"
+      aria-labelledby="section-04"
+    >
       <header class="section-header">
-        <p class="section-kicker">04 / PLACE AND OPPORTUNITY</p>
-        <h2 id="section-04">Location adds another layer</h2>
+        <p class="section-kicker">04 / Place and support</p>
+        <h2 id="section-04">Location adds context</h2>
         <p class="section-lead">
-          Student support and completion do not vary identically.
+          Support ratings and disability completion
+          show distinct patterns across states and campuses.
         </p>
       </header>
 
-      <div class="chart-grid">
+      <div class="chart-grid chart-grid--related">
 
         <article class="chart-card">
           <header class="chart-card-header">
-            <h3>Student support ratings by state</h3>
-            <p class="chart-narrative">
-              State averages depend on represented providers.
-              New South Wales contributes the largest sample.
-              Smaller samples give individual providers greater influence.
+            <h3>Student support ratings across states</h3>
+            <p class="chart-narrative chart-takeaway">
+              
+              Student support ratings vary across states
+              and sampled providers.
             </p>
+            
           </header>
-          <div id="chart-map-choropleth" class="chart-embed"
-               aria-label="Geographic map of student support ratings"></div>
+
+          <div
+            id="chart-map-choropleth"
+            class="chart-embed"
+            role="img"
+            aria-label="Map of student support ratings by state"
+          ></div>
+
+          <p class="chart-narrative chart-explanation">
+              
+            Provider coverage and local service access
+            may shape these patterns.
+          </p>
         </article>
 
         <article class="chart-card">
           <header class="chart-card-header">
             <h3>Student support at sampled campuses</h3>
-            <p class="chart-narrative">
-              Support can depend on staff capacity and service access.
-              Major cities and regional centres face different constraints.
+            <p class="chart-narrative chart-takeaway">
+              
+              Support ratings differ across sampled campus locations.
             </p>
           </header>
-          <div id="chart-map-symbol" class="chart-embed"
-               aria-label="Map of campus support ratings"></div>
+
+          <div
+            id="chart-map-symbol"
+            class="chart-embed"
+            role="img"
+            aria-label="Map of student support ratings at sampled campuses"
+          ></div>
+          <p class="chart-narrative chart-explanation">
+              
+            Staff capacity, service design and student needs
+            may vary between campuses.
+          </p>
         </article>
 
-        <article class="chart-card chart-card--wide">
+      </div>
+
+      <div class="chart-grid">
+
+        <article class="chart-card">
           <header class="chart-card-header">
             <h3>Completion and support across states</h3>
-            <p class="chart-narrative">
-              Some states combine stronger completion with
-              moderate support ratings. Others show weaker results
-              across both measures.
+            <p class="chart-narrative chart-takeaway">
+              
+              Completion among students with disability varies
+              alongside student support ratings.
             </p>
+            
           </header>
 
-          <div id="chart-map-tile" class="chart-embed"
-               aria-label="Bivariate map of disability completion and student support"></div>
-
+          <div
+            id="chart-map-tile"
+            class="chart-embed"
+            role="img"
+            aria-label="Map combining student support and disability completion rates by state"
+          ></div>
+          <p class="chart-narrative chart-explanation">
+              
+            Accessibility, travel distance and available services
+            may shape local outcomes.
+          </p>
         </article>
 
       </div>
     </section>
 
     <!-- CONCLUSION -->
+
     <section class="conclusion" aria-labelledby="conclusion-title">
-      <p class="section-kicker">THE BIG PICTURE</p>
-      <h2 id="conclusion-title">Three takeaways</h2>
+      <p class="section-kicker">The big picture</p>
+      <h2 id="conclusion-title">Three key takeaways</h2>
 
       <div class="takeaway-grid">
+
         <article class="takeaway">
-          <h3>Time changes the picture</h3>
+          <p class="takeaway-number">01</p>
+          <h3>Completion changes over time</h3>
           <p>
-            Longer follow-up captures students who graduate later.
+            Longer follow-up captures later graduation
+            and continued enrolment.
           </p>
         </article>
 
         <article class="takeaway">
-          <h3>Pathways differ</h3>
+          <p class="takeaway-number">02</p>
+          <h3>Pathways and backgrounds matter</h3>
           <p>
-            Study field and entry preparation relate to completion.
+            Study field, entry rank and student groups
+            show different completion outcomes.
           </p>
         </article>
 
         <article class="takeaway">
-          <h3>Experience matters</h3>
+          <p class="takeaway-number">03</p>
+          <h3>Experience and location add context</h3>
           <p>
-            Support and peer connection show room for improvement.
+            Ratings and geographic patterns suggest
+            areas for closer support and investigation.
           </p>
         </article>
+
       </div>
-
-      <p class="conclusion-note">
-        These patterns identify questions for further investigation.
-        They do not establish direct causes of completion.
-      </p>
     </section>
 
-    <!-- SOURCES: SEPARATE FROM CONCLUSION -->
+    <!-- DATA SOURCES -->
+
     <section class="methodology" aria-labelledby="sources-title">
-      <p class="section-kicker">DATA AND REFERENCES</p>
-      <h2 id="sources-title">Data sources</h2>
+      <p class="section-kicker">Data and references</p>
+      <h2 id="sources-title">Sources</h2>
 
       <ul class="source-list">
-        <li>
-          <a href="https://www.education.gov.au/higher-education-statistics/resources/2024-section-17-completion-rates"
-             target="_blank" rel="noopener noreferrer">
-            Australian Government Department of Education
-            — Completion Rates
+
+        <li class="source-item">
+          <a
+            href="https://www.education.gov.au/higher-education-statistics/resources/2024-section-17-completion-rates"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Australian Government Department of Education —
+            Completion Rates
           </a>
         </li>
 
-        <li>
-          <a href="https://www.qilt.edu.au/surveys/student-experience-survey-%28ses%29"
-             target="_blank" rel="noopener noreferrer">
-            Quality Indicators for Learning and Teaching
-            — Student Experience Survey
+        <li class="source-item">
+          <a
+            href="https://www.education.gov.au/download/18228/accord-report-targeted-review-student-equity-higher-education-programs-and-system-level-policy/37667/document/pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Final Report: Targeted Review of Student Equity
+            in Higher Education Programs and System Level Policy Levers
           </a>
         </li>
 
-        <li>
-          <a href="https://www.aihw.gov.au/australias-disability-strategy/outcomes/education-and-learning/higher-education-completion"
-             target="_blank" rel="noopener noreferrer">
-            Australian Institute of Health and Welfare
-            — Higher Education Completion
+        <li class="source-item">
+          <a
+            href="https://www.qilt.edu.au/surveys/student-experience-survey-%28ses%29"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Quality Indicators for Learning and Teaching —
+            Student Experience Survey
           </a>
         </li>
 
-        <li>
-          <a href="https://data.gov.au/data/organization/aurin-australian-urban-research-infrastructure-network"
-             target="_blank" rel="noopener noreferrer">
-            Australian Urban Research Infrastructure Network
-            — Geographic Reference Data
+        <li class="source-item">
+          <a
+            href="https://www.aihw.gov.au/australias-disability-strategy/outcomes/education-and-learning/higher-education-completion"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Australian Institute of Health and Welfare —
+            Higher Education Completion
           </a>
         </li>
 
-        <li>
-          <a href="https://github.com/rowanhogan/australian-states"
-             target="_blank" rel="noopener noreferrer">
+        <li class="source-item">
+          <a
+            href="https://data.gov.au/data/organization/aurin-australian-urban-research-infrastructure-network"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Australian Urban Research Infrastructure Network —
+            Geographic Reference Data
+          </a>
+        </li>
+
+        <li class="source-item">
+          <a
+            href="https://github.com/rowanhogan/australian-states"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Australian State Boundary Geometry
           </a>
         </li>
+
       </ul>
 
       <footer class="page-footer">
-        <p>Data Visualisation Two · Monash University</p>
+        <p>Data Visualisation 2 · Monash University Malaysia</p>
         <p>Author: Lee Zhe Qi · October 2026</p>
-        <p>
-          Generative artificial intelligence assisted
-          with wording and design refinements.
-        </p>
       </footer>
     </section>
 
     <div id="load-message" role="status" aria-live="polite"></div>
+
   </main>
 
   <script src="js/dashboard.js"></script>
