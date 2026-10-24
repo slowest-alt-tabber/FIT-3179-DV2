@@ -1,47 +1,86 @@
-  {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": "container",
-    "height": 330,
-    "autosize": { "type": "fit", "contains": "padding" },
-    "background": "white",
-    "data": {
-      "url": "data/qilt_study_areas.csv"
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": "container",
+  "height": 330,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "white",
+  "data": {
+    "url": "data/qilt_study_areas.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.positive_percent != null && datum.study_area != null"
+    }
+  ],
+  "mark": {
+    "type": "line",
+    "strokeWidth": 1.1,
+    "opacity": 0.28,
+    "color": "#788896"
+  },
+  "encoding": {
+    "x": {
+      "field": "indicator",
+      "type": "nominal",
+      "title": "Experience indicator",
+      "sort": [
+        "Skills Development",
+        "Peer Engagement",
+        "Teaching Quality and Engagement",
+        "Student Support and Services",
+        "Learning Resources",
+        "Overall Educational Experience"
+      ],
+      "axis": {
+        "labelAngle": -35,
+        "labelFontSize": 10,
+        "labelLimit": 150
+      }
     },
-    "transform": [
-      { "filter": "datum.positive_percent != null && datum.study_area != null" }
-    ],
-    "mark": {
-      "type": "line",
-      "strokeWidth": 1.1,
-      "opacity": 0.25
+    "y": {
+      "field": "positive_percent",
+      "type": "quantitative",
+      "title": "Positive rating (%)",
+      "scale": {
+        "domain": [0, 100]
+      },
+      "axis": {
+        "gridColor": "#E3E7EB"
+      }
     },
-    "encoding": {
-      "x": {
+    "detail": {
+      "field": "study_area"
+    },
+    "tooltip": [
+      {
+        "field": "study_area",
+        "title": "Study area"
+      },
+      {
         "field": "indicator",
-        "type": "nominal",
-        "title": "Experience indicator",
-        "axis": { "labelAngle": -35 },
-        "sort": [
-          "Skills Development",
-          "Peer Engagement",
-          "Teaching Quality and Engagement",
-          "Student Support and Services",
-          "Learning Resources",
-          "Overall Educational Experience"
-        ]
+        "title": "Indicator"
       },
-      "y": {
+      {
         "field": "positive_percent",
-        "type": "quantitative",
         "title": "Positive rating (%)",
-        "scale": { "domain": [0, 100] }
-      },
-      "detail": { "field": "study_area" },
-      "color": { "value": "#4978a8" },
-      "tooltip": [
-        { "field": "study_area", "title": "Study Area" },
-        { "field": "indicator", "title": "Indicator" },
-        { "field": "positive_percent", "title": "Rating (%)", "format": ".1f" }
-      ]
+        "format": ".1f"
+      }
+    ]
+  },
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#263746",
+      "titleColor": "#263746",
+      "gridColor": "#E3E7EB",
+      "labelFont": "Inter",
+      "titleFont": "Inter"
     }
   }
+}

@@ -34,7 +34,7 @@
     {
       "mark": {
         "type": "rule",
-        "color": "#aab7bd",
+        "color": "#ADB5BD",
         "strokeWidth": 2
       },
       "encoding": {
@@ -45,57 +45,105 @@
           "sort": "-x",
           "axis": {
             "labelLimit": 220,
-            "labelFontSize": 10,
-            "labelColor": "#263943"
+            "labelFontSize": 10
           }
         },
         "x": {
           "field": "2017",
           "type": "quantitative",
           "title": "Positive rating (%)",
-          "scale": { "domain": [0, 100] }
+          "scale": {
+            "domain": [0, 100]
+          }
         },
         "x2": {
           "field": "2025"
-        }
+        },
+        "tooltip": [
+          {
+            "field": "provider",
+            "title": "University"
+          },
+          {
+            "field": "2017",
+            "title": "2017 rating (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "2025",
+            "title": "2025 rating (%)",
+            "format": ".1f"
+          }
+        ]
       }
     },
     {
       "mark": {
         "type": "point",
         "filled": true,
-        "size": 85
+        "size": 70
       },
       "encoding": {
         "y": {
           "field": "provider",
           "type": "nominal",
-          "sort": "-x"
+          "title": "University",
+          "sort": "-x",
+          "axis": {
+            "labelLimit": 220,
+            "labelFontSize": 10
+          }
         },
         "x": {
           "field": "positive_percent",
           "type": "quantitative",
-          "scale": { "domain": [0, 100] }
+          "title": "Positive rating (%)",
+          "scale": {
+            "domain": [0, 100]
+          }
         },
         "color": {
           "field": "survey_year",
           "type": "nominal",
-          "title": "Survey Year",
+          "title": "Survey year",
           "scale": {
             "domain": ["2017", "2025"],
-            "range": ["#e58a47", "#167c80"]
+            "range": ["#756BB1", "#008B8B"]
           }
         },
         "tooltip": [
-          { "field": "provider", "title": "University" },
-          { "field": "survey_year", "title": "Survey Year" },
-          { "field": "positive_percent", "title": "Rating (%)", "format": ".1f" }
+          {
+            "field": "provider",
+            "title": "University"
+          },
+          {
+            "field": "survey_year",
+            "title": "Survey year"
+          },
+          {
+            "field": "positive_percent",
+            "title": "Overall experience (%)",
+            "format": ".1f"
+          }
         ]
       }
     }
   ],
   "config": {
-    "view": { "stroke": null },
-    "axis": { "gridColor": "#e6ecef", "labelColor": "#263943", "titleColor": "#263943" }
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#263746",
+      "titleColor": "#263746",
+      "gridColor": "#E3E7EB",
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
   }
 }

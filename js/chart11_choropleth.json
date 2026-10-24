@@ -2,6 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 340,
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
+  "background": "white",
   "projection": {
     "type": "mercator",
     "center": [134, -26],
@@ -9,23 +14,29 @@
   },
   "data": {
     "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
-    "format": { "property": "features" }
+    "format": {
+      "property": "features"
+    }
   },
   "transform": [
     {
       "lookup": "properties.STATE_NAME",
       "from": {
         "data": {
-          "url": "data/qilt_state_support_summary.csv"
+          "url": "data/qilt_tile_map.csv"
         },
-        "key": "state_full",
-        "fields": ["mean_rating", "university_count", "indicator"]
+        "key": "state",
+        "fields": [
+          "mean_rating",
+          "university_count",
+          "indicator"
+        ]
       }
     }
   ],
   "mark": {
     "type": "geoshape",
-    "stroke": "#627984",
+    "stroke": "#FFFFFF",
     "strokeWidth": 0.9
   },
   "encoding": {
@@ -34,23 +45,47 @@
         "test": "isValid(datum.mean_rating)",
         "field": "mean_rating",
         "type": "quantitative",
-        "title": "Mean Rating (%)",
+        "title": "Support rating (%)",
         "scale": {
           "domain": [0, 100],
-          "range": ["#d1eee7", "#00695c"],
+          "range": ["#d1eee7", "#023020"],
           "clamp": true
         }
       },
-      "value": "#d5e1e7"
+      "value": "#D9E0E6"
     },
     "tooltip": [
-      { "field": "properties.STATE_NAME", "type": "nominal", "title": "State / Territory" },
-      { "field": "mean_rating", "type": "quantitative", "title": "Mean University Rating (%)", "format": ".1f" },
-      { "field": "university_count", "type": "quantitative", "title": "Universities Represented" },
-      { "field": "indicator", "type": "nominal", "title": "Survey Indicator" }
+      {
+        "field": "properties.STATE_NAME",
+        "type": "nominal",
+        "title": "State or territory"
+      },
+      {
+        "field": "mean_rating",
+        "type": "quantitative",
+        "title": "Mean support rating (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "university_count",
+        "type": "quantitative",
+        "title": "Providers represented"
+      },
+      {
+        "field": "indicator",
+        "type": "nominal",
+        "title": "Survey indicator"
+      }
     ]
   },
   "config": {
-    "view": { "stroke": null }
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
   }
 }

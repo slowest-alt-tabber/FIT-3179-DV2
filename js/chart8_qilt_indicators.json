@@ -2,44 +2,163 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 320,
-  "autosize": { "type": "fit", "contains": "padding" },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
   "background": "white",
   "data": {
     "url": "data/qilt_study_areas.csv"
   },
   "transform": [
-    { "filter": "datum.positive_percent != null" }
+    {
+      "filter": "datum.positive_percent != null"
+    }
   ],
   "layer": [
     {
-      "mark": { "type": "boxplot", "extent": 1.5 },
+      "mark": {
+        "type": "boxplot",
+        "extent": 1.5
+      },
       "encoding": {
         "x": {
           "field": "indicator",
           "type": "nominal",
           "title": null,
-          "axis": { "labelAngle": -35 },
           "sort": [
-          "Skills Development",
-          "Peer Engagement",
-          "Teaching Quality and Engagement",
-          "Student Support and Services",
-          "Learning Resources",
-          "Overall Educational Experience"
-        ]
+            "Skills Development",
+            "Peer Engagement",
+            "Teaching Quality and Engagement",
+            "Student Support and Services",
+            "Learning Resources",
+            "Overall Educational Experience"
+          ],
+          "axis": {
+            "labelAngle": -35,
+            "labelFontSize": 10,
+            "labelLimit": 145
+          }
         },
         "y": {
           "field": "positive_percent",
           "type": "quantitative",
           "title": "Positive rating (%)",
-          "scale": { "domain": [0, 100] }
+          "scale": {
+            "domain": [0, 100]
+          },
+          "axis": {
+            "gridColor": "#E3E7EB"
+          }
         },
         "color": {
           "field": "indicator",
           "type": "nominal",
-          "legend": null
+          "title": "Experience indicator",
+          "scale": {
+            "domain": [
+              "Skills Development",
+              "Peer Engagement",
+              "Teaching Quality and Engagement",
+              "Student Support and Services",
+              "Learning Resources",
+              "Overall Educational Experience"
+            ],
+            "range": [
+              "#332288",
+              "#88CCEE",
+              "#44AA99",
+              "#999933",
+              "#CC6677",
+              "#AA4499"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "indicator",
+            "title": "Experience indicator"
+          },
+          {
+            "field": "study_area",
+            "title": "Study area"
+          },
+          {
+            "field": "positive_percent",
+            "title": "Positive rating (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/qilt_study_areas.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.indicator == 'Peer Engagement' && datum.positive_percent != null"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "median",
+              "field": "positive_percent",
+              "as": "median_rating"
+            }
+          ],
+          "groupby": ["indicator"]
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -13,
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#263746"
+      },
+      "encoding": {
+        "x": {
+          "field": "indicator",
+          "type": "nominal",
+          "sort": [
+            "Skills Development",
+            "Peer Engagement",
+            "Teaching Quality and Engagement",
+            "Student Support and Services",
+            "Learning Resources",
+            "Overall Educational Experience"
+          ]
+        },
+        "y": {
+          "field": "median_rating",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 100]
+          }
+        },
+        "text": {
+          "value": "Lowest median"
         }
       }
     }
-  ]
+  ],
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#263746",
+      "titleColor": "#263746",
+      "gridColor": "#E3E7EB",
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  }
 }

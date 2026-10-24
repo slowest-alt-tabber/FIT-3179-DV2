@@ -2,13 +2,21 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 270,
-  "autosize": { "type": "fit", "contains": "padding" },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
   "background": "white",
   "data": {
     "url": "data/completion_national_trend.csv"
   },
   "transform": [
-    { "filter": "datum.rate != null && datum.outcome != null" },
+    {
+      "filter": "datum.cohort_type == 'Domestic Students' && datum.duration_years == 9"
+    },
+    {
+      "filter": "datum.rate != null && datum.outcome != null"
+    },
     {
       "aggregate": [
         {
@@ -20,28 +28,133 @@
       "groupby": ["outcome"]
     }
   ],
-  "mark": { "type": "bar", "cornerRadiusEnd": 3 },
-  "encoding": {
-    "y": {
-      "field": "outcome",
-      "type": "nominal",
-      "title": null
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 3
+      },
+      "encoding": {
+        "y": {
+          "field": "outcome",
+          "type": "nominal",
+          "title": null,
+          "sort": "-x",
+          "axis": {
+            "labelLimit": 250,
+            "labelFontSize": 10
+          }
+        },
+        "x": {
+          "field": "mean_rate",
+          "type": "quantitative",
+          "title": "Mean nine-year outcome rate (%)",
+          "scale": {
+            "domain": [0, 100]
+          },
+          "axis": {
+            "gridColor": "#E3E7EB"
+          }
+        },
+        "color": {
+          "field": "outcome",
+          "type": "nominal",
+          "title": "Outcome",
+          "scale": {
+            "domain": [
+              "Completed, in any year",
+              "Still enrolled at the end of the period",
+              "Re-enrolled, but dropped out",
+              "Never came back after the first year"
+            ],
+            "range": [
+              "#CC79A7",
+              "#56B4E9",
+              "#A6761D",
+              "#D55E00"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "outcome",
+            "title": "Outcome"
+          },
+          {
+            "field": "mean_rate",
+            "title": "Mean rate (%)",
+            "format": ".1f"
+          }
+        ]
+      }
     },
-    "x": {
-      "field": "mean_rate",
-      "type": "quantitative",
-      "title": "Mean Published rate (%)",
-      "scale": { "domain": [0, 100] }
+    {
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "rank"
+            }
+          ],
+          "sort": [
+            {
+              "field": "mean_rate",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.rank == 1"
+        },
+        {
+          "calculate": "format(datum.mean_rate, '.1f') + '%'",
+          "as": "value_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#263746"
+      },
+      "encoding": {
+        "x": {
+          "field": "mean_rate",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 100]
+          }
+        },
+        "y": {
+          "field": "outcome",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "text": {
+          "field": "value_label"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Inter",
+    "view": {
+      "stroke": null
     },
-    "color": {
-      "field": "outcome",
-      "type": "nominal",
-      "title": "Outcome"
+    "axis": {
+      "labelColor": "#263746",
+      "titleColor": "#263746",
+      "gridColor": "#E3E7EB",
+      "labelFont": "Inter",
+      "titleFont": "Inter"
     },
-    "tooltip": [
-      { "field": "outcome", "title": "Published outcome" },
-      { "field": "mean_rate", "title": "Mean Rate (%)", "format": ".2f" }
-    ]
-  },
-  "config": { "view": { "stroke": null } }
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
+  }
 }

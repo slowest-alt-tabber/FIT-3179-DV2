@@ -3,245 +3,361 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Australian university completion, student experience, and regional differences.">
   <title>Finishing the Degree | Australian University Completion</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="hero">
-    <p class="eyebrow">AUSTRALIAN HIGHER EDUCATION ANALYTICS</p>
-    <h1>Finishing the Degree</h1>
-    <p class="subtitle">
-      Who completes university, how do outcomes shift over time, and what role does student satisfaction play?
-    </p>
-    <p class="intro">
-      Commencing a university degree represents a significant investment of time, ambition, and financial resources. 
-      Yet, across Australian higher education, progression rates vary substantially. By examining official Department 
-      of Education cohort tracking alongside national Quality Indicators for Learning and Teaching (QILT) survey data, 
-      this dashboard explores the multi-faceted landscape of student completion, demographic equity, and campus experiences.
-    </p>
+    <div class="hero-inner">
+      <p class="eyebrow">AUSTRALIAN HIGHER EDUCATION</p>
+      <h1>University Completion Rates</h1>
+
+      <p class="subtitle">
+        Who completes a degree? How do outcomes vary?
+      </p>
+
+      <p class="intro">
+        Explore completion by study field, entry qualifications, and location.
+        Compare outcomes with student experience ratings.
+      </p>
+
+      <p class="hero-note">Four perspectives. One national story.</p>
+    </div>
   </header>
 
-  <main>
-    <!-- SECTION 1 -->
-    <section class="story-section">
-      <div class="section-header">
-        <h2>01 — The Big Picture: National Completion Trends</h2>
+  <main id="main-content">
+
+    <!-- SECTION 1: NATIONAL COMPLETION -->
+    <section class="story-section story-section--completion"
+             aria-labelledby="section-01">
+
+      <header class="section-header">
+        <p class="section-kicker">01 / COMPLETION TIMELINES</p>
+        <h2 id="section-01">When do students complete?</h2>
         <p class="section-lead">
-          University completion is not a single point in time—it is an extended journey. While approximately 42%–44% of commencing 
-          bachelor students graduate within four years, allowing additional follow-up time reveals a far higher long-term attainment rate.
+          Study pathways and interruptions can change completion timelines.
         </p>
-      </div>
+      </header>
 
       <div class="chart-grid">
+
         <article class="chart-card">
-          <h3>Published Completion Rates Across Cohort Periods</h3>
-          <p class="chart-narrative">
-            National cohort tracking displays steady long-term stability across published cohorts. While four-year completion 
-            rates sit between 42%–44%, extending tracking to six and nine years pushes completion up to 56%–58% and ~62% respectively—a 
-            <strong>+20 percentage point gain</strong> reflecting widespread flexible and part-time study pathways.
-          </p>
-          <div id="chart-trend"></div>
+          <header class="chart-card-header">
+            <h3>Completion across follow-up periods</h3>
+            <p class="chart-narrative">
+              Part-time study, course transfers and temporary breaks
+              may delay graduation. Longer pathways can extend beyond
+              the standard course duration.
+            </p>
+          </header>
+
+          <div id="chart-trend" class="chart-embed"
+               aria-label="Domestic student completion across follow-up periods"></div>
         </article>
 
         <article class="chart-card">
-          <h3>Completion Rates by Field of Education</h3>
-          <p class="chart-narrative">
-            Completion outcomes vary dramatically across academic disciplines. Professional accreditation disciplines such as 
-            <strong>Health</strong> and <strong>Education</strong> boast completion rates above 70%, whereas broad or technical 
-            fields like <strong>Information Technology</strong> experience higher drop-out rates.
-          </p>
-          <div id="chart-field"></div>
+          <header class="chart-card-header">
+            <h3>Outcomes after nine years</h3>
+            <p class="chart-narrative">
+              Financial pressure, workload and course fit may prompt
+              students to leave. Flexible re-entry options may help
+              some return when circumstances improve.
+            </p>
+          </header>
+
+          <div id="chart-outcomes" class="chart-embed"
+               aria-label="Domestic student outcomes after nine years"></div>
         </article>
 
-        <article class="chart-card">
-          <h3>Undergraduate vs. Postgraduate Experience Ratings</h3>
-          <p class="chart-narrative">
-            Comparing student satisfaction levels reveals significant shifts between study levels. While 
-            <strong>Student Support and Services</strong> and <strong>Teaching Quality</strong> show substantial 
-            positive gains for Postgraduate coursework students, <strong>Peer Engagement</strong> drops, reflecting 
-            more independent and flexible study routines.
-          </p>
-          <div id="chart-institution"></div>
-        </article>
-
-        <article class="chart-card">
-          <h3>National Breakdown of Published Outcomes</h3>
-          <p class="chart-narrative">
-            At the national level, approximately 62% of commencing domestic bachelor students complete their qualification over a 
-            nine-year window, while roughly 20% leave after their first year and never return, leaving 18% who re-enroll or take extended leaves.
-          </p>
-          <div id="chart-outcomes"></div>
-        </article>
       </div>
     </section>
 
-    <!-- SECTION 2 -->
-    <section class="story-section">
-      <div class="section-header">
-        <h2>02 — Equity & Student Pathways: Who Completes?</h2>
+    <!-- SECTION 2: COMPLETION DIFFERENCES -->
+    <section class="story-section story-section--equity"
+             aria-labelledby="section-02">
+
+      <header class="section-header">
+        <p class="section-kicker">02 / STUDENT PATHWAYS</p>
+        <h2 id="section-02">Who completes a degree?</h2>
         <p class="section-lead">
-          Student retention and academic success are deeply intertwined with entry qualifications, educational background, 
-          and student characteristics.
+          Course structure and prior preparation may shape student progress.
         </p>
-      </div>
+      </header>
 
       <div class="chart-grid">
+
         <article class="chart-card">
-          <h3>Completion Outcomes Across ATAR Bands & Characteristics</h3>
-          <p class="chart-narrative">
-            Academic preparation upon entry strongly predicts university completion. Students entering with an ATAR above 90 
-            achieve completion rates exceeding 80%, whereas lower ATAR brackets display higher rates of early attrition and re-enrollment delay.
-          </p>
-          <div id="chart-characteristics"></div>
+          <header class="chart-card-header">
+            <h3>Completion by field of education</h3>
+            <p class="chart-narrative">
+              Accreditation, clinical placements and prescribed course
+              sequences can shape study pace. Entry requirements and
+              student backgrounds also differ across disciplines.
+            </p>
+          </header>
+
+          <div id="chart-field" class="chart-embed"
+               aria-label="Nine-year completion rates by field of education"></div>
         </article>
 
         <article class="chart-card">
-          <h3>Early Completion vs. Longer-Term Trajectories</h3>
-          <p class="chart-narrative">
-            Comparing short-term (4-year) and long-term (9-year) outcomes demonstrates that non-traditional and part-time student 
-            groups make substantial gains over longer observation horizons, narrowing the initial gap seen in early graduation metrics.
-          </p>
-          <div id="chart-dumbbell"></div>
+          <header class="chart-card-header">
+            <h3>Completion outcomes by ATAR band</h3>
+            <p class="chart-narrative">
+              ATAR can reflect preparation for university-level study.
+              School opportunities, pathway entry and financial pressures
+              may also shape how students progress.
+            </p>
+          </header>
+
+          <div id="chart-characteristics" class="chart-embed"
+               aria-label="Nine-year outcomes by ATAR band"></div>
         </article>
+
       </div>
     </section>
 
-    <!-- SECTION 3 -->
-    <section class="story-section">
-      <div class="section-header">
-        <h2>03 — The Student Experience: Satisfaction & Engagement</h2>
+    <!-- SECTION 3: STUDENT EXPERIENCE -->
+    <section class="story-section story-section--experience"
+             aria-labelledby="section-03">
+
+      <header class="section-header">
+        <p class="section-kicker">03 / STUDENT EXPERIENCE</p>
+        <h2 id="section-03">What is university life like?</h2>
         <p class="section-lead">
-          Understanding completion requires looking beyond numerical completion rates to the underlying student experience. 
-          The national Quality Indicators for Learning and Teaching (QILT) survey evaluates teaching quality, peer engagement, and learning resources.
+          Study format, resources and student needs can shape experience.
         </p>
-      </div>
+      </header>
 
       <div class="chart-grid">
+
         <article class="chart-card">
-          <h3>Rating Distributions Across Experience Indicators</h3>
-          <p class="chart-narrative">
-            Across Australian universities, ratings for <strong>Skills Development</strong> and <strong>Learning Resources</strong> 
-            consistently surpass 80% positive feedback. In contrast, <strong>Peer Engagement</strong> displays widespread variance and lower overall ratings.
-          </p>
-          <div id="chart-qilt-indicators"></div>
+          <header class="chart-card-header">
+            <h3>Undergraduate versus postgraduate ratings</h3>
+            <p class="chart-narrative">
+              Postgraduates may navigate services with greater confidence.
+              Work and family commitments can leave less time
+              for campus activities and peer contact.
+            </p>
+          </header>
+
+          <div id="chart-institution" class="chart-embed"
+               aria-label="QILT experience ratings by study level"></div>
         </article>
 
         <article class="chart-card">
-          <h3>Student Experience Ratings by Field of Education</h3>
-          <p class="chart-narrative">
-            Field-level analysis indicates that satisfaction with <strong>Teaching Quality</strong> and <strong>Skills Development</strong> 
-            remains high across most disciplines, whereas fields such as Computing and Engineering register lower peer engagement satisfaction.
-          </p>
-          <div id="chart-qilt-heatmap"></div>
+          <header class="chart-card-header">
+            <h3>Overall experience: 2017 versus 2025</h3>
+            <p class="chart-narrative">
+              Ratings may shift with student demographics, online delivery
+              and teaching changes. Support investment and campus services
+              may also shape how students judge their experience.
+            </p>
+          </header>
+
+          <div id="chart-dumbbell" class="chart-embed"
+               aria-label="Provider experience ratings in 2017 and 2025"></div>
         </article>
 
         <article class="chart-card">
-          <h3>Comparative Experience Profiles Across Universities</h3>
-          <p class="chart-narrative">
-            Connecting institutional performance metrics reveals that universities scoring high in teaching quality do not always perform 
-            equally well in learner support, reflecting distinct institutional profiles and campus delivery models.
-          </p>
-          <div id="chart-completion-experience"></div>
+          <header class="chart-card-header">
+            <h3>Ratings across experience indicators</h3>
+            <p class="chart-narrative">
+              Learning resources can be used independently.
+              Peer engagement depends on shared time and interaction,
+              which work and commuting may limit.
+            </p>
+          </header>
+
+          <div id="chart-qilt-indicators" class="chart-embed"
+               aria-label="Distribution of QILT experience ratings"></div>
         </article>
+
+        <article class="chart-card">
+          <header class="chart-card-header">
+            <h3>Experience ratings by study field</h3>
+            <p class="chart-narrative">
+              Computing students may value reliable software and
+              digital resources. Teaching quality, workload, feedback
+              and career relevance also shape overall experience.
+            </p>
+          </header>
+
+          <div id="chart-qilt-heatmap" class="chart-embed"
+               aria-label="Experience ratings by study area and indicator"></div>
+        </article>
+
+        <article class="chart-card">
+          <header class="chart-card-header">
+            <h3>Experience profiles across study fields</h3>
+            <p class="chart-narrative">
+              Practical subjects may depend heavily on specialist resources.
+              Large cohorts or limited shared activities may make
+              meaningful peer connections harder to build.
+            </p>
+          </header>
+
+          <div id="chart-completion-experience" class="chart-embed"
+               aria-label="Experience profiles across study fields"></div>
+        </article>
+
       </div>
     </section>
 
-    <!-- SECTION 4 -->
-    <section class="story-section">
-      <div class="section-header">
-        <h2>04 — Geographic Perspectives: Regional Equity & Disability Outcomes</h2>
+    <!-- SECTION 4: GEOGRAPHIC PERSPECTIVES -->
+    <section class="story-section story-section--geography"
+             aria-labelledby="section-04">
+
+      <header class="section-header">
+        <p class="section-kicker">04 / REGIONAL PERSPECTIVES</p>
+        <h2 id="section-04">Where do regional differences appear?</h2>
         <p class="section-lead">
-          Geographic equity in Australian higher education extends beyond general satisfaction. Comparing completion outcomes 
-          for students with disability across states and territories highlights regional disparities in support and retention.
+          Provider mix, campus access and local support may shape outcomes.
         </p>
-      </div>
+      </header>
 
       <div class="chart-grid">
+
         <article class="chart-card">
-          <h3>Statewide Mean Student Support Ratings</h3>
-          <p class="chart-narrative">
-            Aggregating institutional support scores by state highlights regional consistency across major states (NSW, VIC, QLD), 
-            while smaller territories exhibit distinct average satisfaction profiles reflecting smaller student populations.
-          </p>
-          <div id="chart-map-choropleth"></div>
+          <header class="chart-card-header">
+            <h3>Mean student support ratings by state</h3>
+            <p class="chart-narrative">
+              State averages depend on which providers are represented.
+              Smaller provider samples give each institution more influence
+              over the reported result.
+            </p>
+          </header>
+
+          <div id="chart-map-choropleth" class="chart-embed"
+               aria-label="Map of mean student support ratings by state"></div>
         </article>
 
         <article class="chart-card">
-          <h3>Institution Locations and Student Ratings</h3>
-          <p class="chart-narrative">
-            Mapping individual main campuses illustrates the geographic concentration of Australian higher education along the 
-            coastal capitals, displaying specific positive rating scores for each university.
-          </p>
-          <div id="chart-map-symbol"></div>
+          <header class="chart-card-header">
+            <h3>Campus locations and student support ratings</h3>
+            <p class="chart-narrative">
+              Campus support may depend on adviser access, staff capacity
+              and service availability. Large cities and regional centres
+              face different access and staffing constraints.
+            </p>
+          </header>
+
+          <div id="chart-map-symbol" class="chart-embed"
+               aria-label="Map of campus locations and student support ratings"></div>
         </article>
 
         <article class="chart-card">
-          <h3>Disability Student Completion Rates by State</h3>
-          <p class="chart-narrative">
-            Utilizing a cartogram tile grid to eliminate land-area distortions, this map reveals completion outcomes for students with 
-            a disability. Victoria (63.5%) and ACT (60.0%) lead national benchmarks, while several regions hover below 50%.
-          </p>
-          <div id="chart-map-tile"></div>
+          <header class="chart-card-header">
+            <h3>Disability completion by state</h3>
+            <p class="chart-narrative">
+              Timely adjustments, accessible course design and support
+              may influence student progress. Course mix and local
+              service availability may also contribute.
+            </p>
+          </header>
+
+          <div id="chart-map-tile" class="chart-embed"
+               aria-label="Tile map of completion rates for students with disability"></div>
         </article>
+
       </div>
     </section>
 
-    <!-- METHODOLOGY & METADATA -->
-    <section class="methodology">
-      <h2>About the Data & Methodology</h2>
+    <!-- DATA SOURCES AND METHODOLOGY -->
+    <section class="methodology" aria-labelledby="methodology-title">
+      <p class="section-kicker">DATA / METHODS</p>
+      <h2 id="methodology-title">About the data</h2>
 
-      <p>
-        <strong>Completion Rates:</strong> Derived from the Australian Government Department of Education 
-        <em>2024 Section 17 Completion Rates</em> dataset. Cohort tracking follows commencing domestic undergraduate 
-        bachelor cohorts across specified 4-year, 6-year, and 9-year follow-up windows.
-      </p>
+      <div class="methodology-grid">
 
-      <p>
-        <strong>Student Experience:</strong> Sourced from the Quality Indicators for Learning and Teaching (QILT) 
-        <em>Student Experience Survey (SES)</em>. Survey metrics report positive rating percentages (%) across key focus areas.
-      </p>
+        <div>
+          <h3>Completion rates</h3>
+          <p>
+            Department of Education cohort data cover four-, six-,
+            and nine-year follow-up periods.
+          </p>
+        </div>
 
-      <p>
-        <strong>Analytical Note:</strong> The relationship between institutional completion rates and QILT survey indicators 
-        represents an association across cohorts rather than direct individual causal tracking.
-      </p>
+        <div>
+          <h3>Student experience</h3>
+          <p>
+            QILT survey data report positive ratings for teaching,
+            support, resources, skills, and peer engagement.
+          </p>
+        </div>
 
-      <h3>Data Sources</h3>
-      <ul>
+        <div>
+          <h3>Disability completion</h3>
+          <p>
+            The tile map uses the state values in the supplied
+            disability-completion CSV.
+          </p>
+        </div>
+
+        <div>
+          <h3>Interpreting the findings</h3>
+          <p>
+            Suggested explanations are plausible contributing factors.
+            The datasets do not directly test these causes.
+          </p>
+        </div>
+
+      </div>
+
+      <h3 class="sources-heading">Data sources</h3>
+
+      <ul class="source-list">
         <li>
-          <a href="https://www.education.gov.au/higher-education-statistics/resources/2024-section-17-completion-rates" target="_blank" rel="noopener">
-            Australian Government Department of Education — 2024 Section 17: Completion Rates
+          <a href="https://www.education.gov.au/higher-education-statistics/resources/2024-section-17-completion-rates"
+             target="_blank" rel="noopener noreferrer">
+            Department of Education — Completion Rates
           </a>
         </li>
         <li>
-          <a href="https://www.qilt.edu.au/surveys/student-experience-survey-%28ses%29" target="_blank" rel="noopener">
-            Quality Indicators for Learning and Teaching (QILT) — Student Experience Survey
+          <a href="https://www.qilt.edu.au/surveys/student-experience-survey-%28ses%29"
+             target="_blank" rel="noopener noreferrer">
+            QILT — Student Experience Survey
           </a>
         </li>
         <li>
-          <a href="https://data.gov.au/data/organization/aurin-australian-urban-research-infrastructure-network" target="_blank" rel="noopener">
-            AURIN — Geographic Reference Data & Campus Coordinates
+          <a href="https://www.aihw.gov.au/australias-disability-strategy/outcomes/education-and-learning/higher-education-completion"
+             target="_blank" rel="noopener noreferrer">
+            AIHW — Higher Education Completion
           </a>
         </li>
         <li>
-          <a href="https://github.com/rowanhogan/australian-states" target="_blank" rel="noopener">
-            Australian States GeoJSON Map Geometry (Rowan Hogan)
+          <a href="https://data.gov.au/data/organization/aurin-australian-urban-research-infrastructure-network"
+             target="_blank" rel="noopener noreferrer">
+            AURIN — Geographic Reference Data
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/rowanhogan/australian-states"
+             target="_blank" rel="noopener noreferrer">
+            Australian States GeoJSON
           </a>
         </li>
       </ul>
 
-      <p class="credit">
-        FIT3179 Data Visualisation 2 · Monash University (Clayton) · Author: Lee Zhe Qi · Date: October 2026
-      </p>
+      <footer class="page-footer">
+        <p>FIT3179 Data Visualisation 2 · Monash University Malaysia</p>
+        <p>Author: Lee Zhe Qi · October 2026</p>
+      </footer>
     </section>
 
-    <div id="load-message" role="status"></div>
+    <div id="load-message" role="status" aria-live="polite"></div>
   </main>
 
   <script src="js/dashboard.js"></script>

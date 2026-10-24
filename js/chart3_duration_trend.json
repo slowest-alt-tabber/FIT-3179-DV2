@@ -2,9 +2,14 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 310,
-  "autosize": { "type": "fit", "contains": "padding" },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
   "background": "white",
-  "data": { "url": "data/qilt_slopegraph_study_level.csv" },
+  "data": {
+    "url": "data/qilt_slopegraph_study_level.csv"
+  },
   "layer": [
     {
       "mark": {
@@ -16,11 +21,13 @@
           "field": "study_level",
           "type": "nominal",
           "title": null,
-          "sort": ["Undergraduate", "Postgraduate coursework"],
+          "sort": [
+            "Undergraduate",
+            "Postgraduate coursework"
+          ],
           "axis": {
             "labelFontSize": 11,
             "labelFontWeight": "bold",
-            "labelColor": "#263943",
             "labelAngle": 0
           }
         },
@@ -28,17 +35,17 @@
           "field": "positive_percent",
           "type": "quantitative",
           "title": "Positive rating (%)",
-          "scale": { "domain": [50, 90] },
+          "scale": {
+            "domain": [50, 90]
+          },
           "axis": {
-            "gridColor": "#e6ecef",
-            "labelFontSize": 10,
-            "labelColor": "#263943"
+            "gridColor": "#E3E7EB"
           }
         },
         "color": {
           "field": "indicator",
           "type": "nominal",
-          "title": "Indicator",
+          "title": "Experience indicator",
           "scale": {
             "domain": [
               "Skills Development",
@@ -49,16 +56,18 @@
               "Overall Educational Experience"
             ],
             "range": [
-              "#167c80",
-              "#315f91",
-              "#e58a47",
-              "#bd665b",
-              "#8064a2",
-              "#258577"
+              "#332288",
+              "#88CCEE",
+              "#44AA99",
+              "#999933",
+              "#CC6677",
+              "#AA4499"
             ]
           }
         },
-        "detail": { "field": "indicator" }
+        "detail": {
+          "field": "indicator"
+        }
       }
     },
     {
@@ -71,25 +80,113 @@
         "x": {
           "field": "study_level",
           "type": "nominal",
-          "sort": ["Undergraduate", "Postgraduate coursework"]
+          "sort": [
+            "Undergraduate",
+            "Postgraduate coursework"
+          ]
         },
         "y": {
           "field": "positive_percent",
-          "type": "quantitative"
+          "type": "quantitative",
+          "scale": {
+            "domain": [50, 90]
+          }
         },
         "color": {
           "field": "indicator",
-          "type": "nominal"
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Skills Development",
+              "Peer Engagement",
+              "Teaching Quality and Engagement",
+              "Student Support and Services",
+              "Learning Resources",
+              "Overall Educational Experience"
+            ],
+            "range": [
+              "#332288",
+              "#88CCEE",
+              "#44AA99",
+              "#999933",
+              "#CC6677",
+              "#AA4499"
+            ]
+          }
         },
         "tooltip": [
-          { "field": "study_level", "title": "Study Level" },
-          { "field": "indicator", "title": "Indicator" },
-          { "field": "positive_percent", "title": "Rating (%)", "format": ".1f" }
+          {
+            "field": "study_level",
+            "title": "Study level"
+          },
+          {
+            "field": "indicator",
+            "title": "Experience indicator"
+          },
+          {
+            "field": "positive_percent",
+            "title": "Positive rating (%)",
+            "format": ".1f"
+          }
         ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.indicator == 'Overall Educational Experience'"
+        },
+        {
+          "calculate": "format(datum.positive_percent, '.1f') + '%'",
+          "as": "rating_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -12,
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#AA4499"
+      },
+      "encoding": {
+        "x": {
+          "field": "study_level",
+          "type": "nominal",
+          "sort": [
+            "Undergraduate",
+            "Postgraduate coursework"
+          ]
+        },
+        "y": {
+          "field": "positive_percent",
+          "type": "quantitative",
+          "scale": {
+            "domain": [50, 90]
+          }
+        },
+        "text": {
+          "field": "rating_label"
+        }
       }
     }
   ],
   "config": {
-    "view": { "stroke": null }
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#263746",
+      "titleColor": "#263746",
+      "gridColor": "#E3E7EB",
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 10
+    }
   }
 }

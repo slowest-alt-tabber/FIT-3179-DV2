@@ -1,4 +1,3 @@
-
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
@@ -9,14 +8,13 @@
   },
   "background": "white",
   "data": {
-    "url": "data/qilt_tile_map.csv",
+    "url": "data/disability_completion_rates.csv",
     "format": {
       "type": "csv",
       "parse": {
         "col": "number",
         "row": "number",
-        "mean_rating": "number",
-        "university_count": "number"
+        "disability_completion_rate": "number"
       }
     }
   },
@@ -25,7 +23,7 @@
       "mark": {
         "type": "rect",
         "stroke": "white",
-        "strokeWidth": 3,
+        "strokeWidth": 2,
         "cornerRadius": 5
       },
       "encoding": {
@@ -52,46 +50,74 @@
           }
         },
         "color": {
-          "field": "mean_rating",
+          "field": "disability_completion_rate",
           "type": "quantitative",
-          "title": "Mean Positive Rating",
+          "title": "Completion rate (%)",
           "scale": {
             "domain": [0, 100],
-            "range": ["#d1eee7", "#00695c"],
+            "range": ["#F3F4F6", "#3B2F2F"],
             "clamp": true
           }
         },
         "tooltip": [
           {
             "field": "state",
+            "type": "nominal",
             "title": "State or territory"
           },
           {
-            "field": "indicator",
-            "title": "Survey indicator"
-          },
-          {
-            "field": "survey_year",
-            "title": "Survey year"
-          },
-          {
-            "field": "mean_rating",
-            "title": "Mean university rating (%)",
+            "field": "disability_completion_rate",
+            "type": "quantitative",
+            "title": "Completion rate (%)",
             "format": ".1f"
-          },
-          {
-            "field": "university_count",
-            "title": "Universities represented"
           }
         ]
       }
     },
     {
+      "transform": [
+        {
+          "filter": "datum.state == 'Victoria' || datum.state == 'Queensland'"
+        }
+      ],
+      "mark": {
+        "type": "rect",
+        "fill": "transparent",
+        "stroke": "#D55E00",
+        "strokeWidth": 2.5,
+        "cornerRadius": 5
+      },
+      "encoding": {
+        "x": {
+          "field": "col",
+          "type": "ordinal",
+          "sort": [0, 1, 2, 3, 4, 5],
+          "scale": {
+            "domain": [0, 1, 2, 3, 4, 5],
+            "paddingInner": 0.08
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "row",
+          "type": "ordinal",
+          "sort": [0, 1, 2, 3, 4],
+          "scale": {
+            "domain": [0, 1, 2, 3, 4],
+            "paddingInner": 0.08
+          },
+          "axis": null
+        }
+      }
+    },
+    {
       "mark": {
         "type": "text",
-        "fontSize": 13,
+        "font": "Inter",
+        "fontSize": 11,
         "fontWeight": "bold",
-        "color": "#18343d"
+        "color": "#263746",
+        "dy": -7
       },
       "encoding": {
         "x": {
@@ -118,9 +144,65 @@
           "field": "state_abbr"
         }
       }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.state == 'Victoria' || datum.state == 'Queensland'"
+        },
+        {
+          "calculate": "format(datum.disability_completion_rate, '.1f') + '%'",
+          "as": "annotation_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "white",
+        "strokeWidth": 1,
+        "dy": 10
+      },
+      "encoding": {
+        "x": {
+          "field": "col",
+          "type": "ordinal",
+          "sort": [0, 1, 2, 3, 4, 5],
+          "scale": {
+            "domain": [0, 1, 2, 3, 4, 5],
+            "paddingInner": 0.08
+          },
+          "axis": null
+        },
+        "y": {
+          "field": "row",
+          "type": "ordinal",
+          "sort": [0, 1, 2, 3, 4],
+          "scale": {
+            "domain": [0, 1, 2, 3, 4],
+            "paddingInner": 0.08
+          },
+          "axis": null
+        },
+        "text": {
+          "field": "annotation_label"
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State or territory"
+          },
+          {
+            "field": "disability_completion_rate",
+            "title": "Completion rate (%)",
+            "format": ".1f"
+          }
+        ]
+      }
     }
   ],
   "config": {
+    "font": "Inter",
     "view": {
       "stroke": null
     }

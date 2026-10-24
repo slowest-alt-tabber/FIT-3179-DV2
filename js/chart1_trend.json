@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
   "height": 280,
-  "autosize": { "type": "fit", "contains": "padding" },
+  "autosize": {
+    "type": "fit",
+    "contains": "padding"
+  },
   "background": "white",
   "data": {
     "url": "data/completion_national_trend.csv"
@@ -32,41 +35,145 @@
       "groupby": ["timeframe", "duration_series"]
     }
   ],
-  "mark": {
-    "type": "line",
-    "point": { "filled": true, "size": 35 },
-    "strokeWidth": 2.5
-  },
-  "encoding": {
-    "x": {
-      "field": "timeframe",
-      "type": "nominal",
-      "title": "Published cohort period",
-      "axis": { "labelAngle": -90, "labelFontSize": 10 }
-    },
-    "y": {
-      "field": "mean_rate",
-      "type": "quantitative",
-      "title": "Completed (%)",
-      "scale": { "domain": [0, 100] }
-    },
-    "color": {
-      "field": "duration_series",
-      "type": "nominal",
-      "title": "Follow-up duration",
-      "scale": {
-        "domain": ["Four Years", "Six Years", "Nine Years"],
-        "range": ["#222222", "#555555", "#999999"]
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": {
+          "filled": true,
+          "size": 38
+        },
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "timeframe",
+          "type": "nominal",
+          "title": "Published cohort period",
+          "sort": "ascending",
+          "axis": {
+            "labelAngle": -45,
+            "labelFontSize": 10,
+            "labelLimit": 100
+          }
+        },
+        "y": {
+          "field": "mean_rate",
+          "type": "quantitative",
+          "title": "Completion rate (%)",
+          "scale": {
+            "domain": [0, 100]
+          }
+        },
+        "color": {
+          "field": "duration_series",
+          "type": "nominal",
+          "title": "Follow-up period",
+          "scale": {
+            "domain": ["Four Years", "Six Years", "Nine Years"],
+            "range": ["#0072B2", "#E69F00", "#009E73"]
+          }
+        },
+        "detail": {
+          "field": "duration_series"
+        },
+        "tooltip": [
+          {
+            "field": "timeframe",
+            "title": "Cohort period"
+          },
+          {
+            "field": "duration_series",
+            "title": "Follow-up period"
+          },
+          {
+            "field": "mean_rate",
+            "title": "Mean completion rate (%)",
+            "format": ".1f"
+          }
+        ]
       }
     },
-    "tooltip": [
-      { "field": "timeframe", "title": "Cohort period" },
-      { "field": "duration_series", "title": "Follow-up duration" },
-      { "field": "mean_rate", "title": "Completion rate (%)", "format": ".1f" }
-    ]
-  },
+    {
+      "transform": [
+        {
+          "window": [
+            {
+              "op": "row_number",
+              "as": "series_rank"
+            }
+          ],
+          "groupby": ["duration_series"],
+          "sort": [
+            {
+              "field": "timeframe",
+              "order": "descending"
+            }
+          ]
+        },
+        {
+          "filter": "datum.series_rank == 1"
+        },
+        {
+          "calculate": "format(datum.mean_rate, '.0f') + '%'",
+          "as": "endpoint_label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 6,
+        "dy": -2,
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "timeframe",
+          "type": "nominal",
+          "sort": "ascending"
+        },
+        "y": {
+          "field": "mean_rate",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 100]
+          }
+        },
+        "text": {
+          "field": "endpoint_label"
+        },
+        "color": {
+          "field": "duration_series",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Four Years", "Six Years", "Nine Years"],
+            "range": ["#0072B2", "#E69F00", "#009E73"]
+          },
+          "legend": null
+        },
+        "detail": {
+          "field": "duration_series"
+        }
+      }
+    }
+  ],
   "config": {
-    "view": { "stroke": null },
-    "axis": { "gridColor": "#e6ecef", "labelColor": "#263943", "titleColor": "#263943" }
+    "font": "Inter",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelColor": "#263746",
+      "titleColor": "#263746",
+      "gridColor": "#E3E7EB",
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter"
+    }
   }
 }
