@@ -1,86 +1,158 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 330,
+  "height": 320,
   "autosize": {
     "type": "fit",
     "contains": "padding"
   },
   "background": "white",
   "data": {
-    "url": "data/qilt_study_areas.csv"
+    "url": "data/qilt.csv"
   },
   "transform": [
     {
-      "filter": "datum.positive_percent != null && datum.study_area != null"
+      "filter": "datum.row_type == 'provider' && datum.study_level == 'Undergraduate' && datum.positive_percent != null && datum.survey_year >= 2017 && datum.survey_year <= 2025"
+    },
+    {
+      "filter": "datum.indicator == 'Skills Development' || datum.indicator == 'Peer Engagement' || datum.indicator == 'Teaching Quality and Engagement' || datum.indicator == 'Student Support and Services' || datum.indicator == 'Learning Resources' || datum.indicator == 'Overall Educational Experience'"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "positive_percent",
+          "as": "mean_rating"
+        }
+      ],
+      "groupby": ["survey_year", "indicator"]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "indicator_rank"
+        }
+      ],
+      "groupby": ["survey_year"],
+      "sort": [
+        {
+          "field": "mean_rating",
+          "order": "descending"
+        }
+      ]
     }
   ],
-  "mark": {
-    "type": "line",
-    "strokeWidth": 1.1,
-    "opacity": 0.28,
-    "color": "#788896"
-  },
-  "encoding": {
-    "x": {
-      "field": "indicator",
-      "type": "nominal",
-      "title": "Experience indicator",
-      "sort": [
-        "Skills Development",
-        "Peer Engagement",
-        "Teaching Quality and Engagement",
-        "Student Support and Services",
-        "Learning Resources",
-        "Overall Educational Experience"
-      ],
-      "axis": {
-        "labelAngle": -35,
-        "labelFontSize": 10,
-        "labelLimit": 150
-      }
-    },
-    "y": {
-      "field": "positive_percent",
-      "type": "quantitative",
-      "title": "Positive rating (%)",
-      "scale": {
-        "domain": [0, 100]
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 2.5,
+        "point": {
+          "filled": true,
+          "size": 38
+        }
       },
-      "axis": {
-        "gridColor": "#E3E7EB"
+      "encoding": {
+        "x": {
+          "field": "survey_year",
+          "type": "quantitative",
+          "title": "Survey year",
+          "scale": {
+            "domain": [2017, 2025]
+          },
+          "axis": {
+            "values": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+            "format": "d",
+            "labelAngle": -35,
+            "labelFontSize": 10
+          }
+        },
+        "y": {
+          "field": "indicator_rank",
+          "type": "quantitative",
+          "title": "Rank (one is highest)",
+          "scale": {
+            "domain": [6, 1]
+          },
+          "axis": {
+            "values": [1, 2, 3, 4, 5, 6],
+            "gridColor": "#E1E6EA"
+          }
+        },
+        "color": {
+          "field": "indicator",
+          "type": "nominal",
+          "title": "Experience measure",
+          "scale": {
+            "domain": [
+              "Skills Development",
+              "Peer Engagement",
+              "Teaching Quality and Engagement",
+              "Student Support and Services",
+              "Learning Resources",
+              "Overall Educational Experience"
+            ],
+            "range": [
+              "#0072B2",
+              "#E69F00",
+              "#009E73",
+              "#D55E00",
+              "#56B4E9",
+              "#CC79A7"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 2,
+            "labelLimit": 210,
+            "title": "Experience measure"
+          }
+        },
+        "detail": {
+          "field": "indicator"
+        },
+        "tooltip": [
+          {
+            "field": "survey_year",
+            "title": "Survey year",
+            "format": "d"
+          },
+          {
+            "field": "indicator",
+            "title": "Full experience measure"
+          },
+          {
+            "field": "mean_rating",
+            "title": "Mean positive rating (%)",
+            "format": ".1f"
+          },
+          {
+            "field": "indicator_rank",
+            "title": "Ranking"
+          }
+        ]
       }
-    },
-    "detail": {
-      "field": "study_area"
-    },
-    "tooltip": [
-      {
-        "field": "study_area",
-        "title": "Study area"
-      },
-      {
-        "field": "indicator",
-        "title": "Indicator"
-      },
-      {
-        "field": "positive_percent",
-        "title": "Positive rating (%)",
-        "format": ".1f"
-      }
-    ]
-  },
+    }
+  ],
   "config": {
     "font": "Inter",
     "view": {
       "stroke": null
     },
     "axis": {
-      "labelColor": "#263746",
-      "titleColor": "#263746",
-      "gridColor": "#E3E7EB",
       "labelFont": "Inter",
-      "titleFont": "Inter"
+      "titleFont": "Inter",
+      "labelColor": "#24313D",
+      "titleColor": "#24313D",
+      "gridColor": "#E1E6EA"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 9,
+      "titleFontSize": 10
     }
   }
 }

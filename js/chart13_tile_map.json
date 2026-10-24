@@ -1,206 +1,117 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 300,
+  "height": 380,
   "autosize": {
     "type": "fit",
     "contains": "padding"
   },
   "background": "white",
+  "projection": {
+    "type": "mercator",
+    "center": [134, -26],
+    "scale": 520
+  },
   "data": {
-    "url": "data/disability_completion_rates.csv",
+    "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
     "format": {
-      "type": "csv",
-      "parse": {
-        "col": "number",
-        "row": "number",
-        "disability_completion_rate": "number"
-      }
+      "property": "features"
     }
   },
-  "layer": [
+  "transform": [
     {
-      "mark": {
-        "type": "rect",
-        "stroke": "white",
-        "strokeWidth": 2,
-        "cornerRadius": 5
-      },
-      "encoding": {
-        "x": {
-          "field": "col",
-          "type": "ordinal",
-          "title": null,
-          "axis": null,
-          "sort": [0, 1, 2, 3, 4, 5],
-          "scale": {
-            "domain": [0, 1, 2, 3, 4, 5],
-            "paddingInner": 0.08
-          }
+      "lookup": "properties.STATE_NAME",
+      "from": {
+        "data": {
+          "url": "data/disability_completion_rates.csv"
         },
-        "y": {
-          "field": "row",
-          "type": "ordinal",
-          "title": null,
-          "axis": null,
-          "sort": [0, 1, 2, 3, 4],
-          "scale": {
-            "domain": [0, 1, 2, 3, 4],
-            "paddingInner": 0.08
-          }
-        },
-        "color": {
-          "field": "disability_completion_rate",
-          "type": "quantitative",
-          "title": "Completion rate (%)",
-          "scale": {
-            "domain": [0, 100],
-            "range": ["#F3F4F6", "#3B2F2F"],
-            "clamp": true
-          }
-        },
-        "tooltip": [
-          {
-            "field": "state",
-            "type": "nominal",
-            "title": "State or territory"
-          },
-          {
-            "field": "disability_completion_rate",
-            "type": "quantitative",
-            "title": "Completion rate (%)",
-            "format": ".1f"
-          }
+        "key": "state",
+        "fields": [
+          "disability_completion_rate"
         ]
       }
     },
     {
-      "transform": [
-        {
-          "filter": "datum.state == 'Victoria' || datum.state == 'Queensland'"
-        }
-      ],
-      "mark": {
-        "type": "rect",
-        "fill": "transparent",
-        "stroke": "#D55E00",
-        "strokeWidth": 2.5,
-        "cornerRadius": 5
-      },
-      "encoding": {
-        "x": {
-          "field": "col",
-          "type": "ordinal",
-          "sort": [0, 1, 2, 3, 4, 5],
-          "scale": {
-            "domain": [0, 1, 2, 3, 4, 5],
-            "paddingInner": 0.08
-          },
-          "axis": null
+      "lookup": "properties.STATE_NAME",
+      "from": {
+        "data": {
+          "url": "data/qilt_tile_map.csv"
         },
-        "y": {
-          "field": "row",
-          "type": "ordinal",
-          "sort": [0, 1, 2, 3, 4],
-          "scale": {
-            "domain": [0, 1, 2, 3, 4],
-            "paddingInner": 0.08
-          },
-          "axis": null
-        }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "font": "Inter",
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#263746",
-        "dy": -7
-      },
-      "encoding": {
-        "x": {
-          "field": "col",
-          "type": "ordinal",
-          "sort": [0, 1, 2, 3, 4, 5],
-          "scale": {
-            "domain": [0, 1, 2, 3, 4, 5],
-            "paddingInner": 0.08
-          },
-          "axis": null
-        },
-        "y": {
-          "field": "row",
-          "type": "ordinal",
-          "sort": [0, 1, 2, 3, 4],
-          "scale": {
-            "domain": [0, 1, 2, 3, 4],
-            "paddingInner": 0.08
-          },
-          "axis": null
-        },
-        "text": {
-          "field": "state_abbr"
-        }
-      }
-    },
-    {
-      "transform": [
-        {
-          "filter": "datum.state == 'Victoria' || datum.state == 'Queensland'"
-        },
-        {
-          "calculate": "format(datum.disability_completion_rate, '.1f') + '%'",
-          "as": "annotation_label"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "fontSize": 10,
-        "fontWeight": "bold",
-        "color": "white",
-        "strokeWidth": 1,
-        "dy": 10
-      },
-      "encoding": {
-        "x": {
-          "field": "col",
-          "type": "ordinal",
-          "sort": [0, 1, 2, 3, 4, 5],
-          "scale": {
-            "domain": [0, 1, 2, 3, 4, 5],
-            "paddingInner": 0.08
-          },
-          "axis": null
-        },
-        "y": {
-          "field": "row",
-          "type": "ordinal",
-          "sort": [0, 1, 2, 3, 4],
-          "scale": {
-            "domain": [0, 1, 2, 3, 4],
-            "paddingInner": 0.08
-          },
-          "axis": null
-        },
-        "text": {
-          "field": "annotation_label"
-        },
-        "tooltip": [
-          {
-            "field": "state",
-            "title": "State or territory"
-          },
-          {
-            "field": "disability_completion_rate",
-            "title": "Completion rate (%)",
-            "format": ".1f"
-          }
+        "key": "state",
+        "fields": [
+          "mean_rating",
+          "university_count"
         ]
       }
+    },
+    {
+      "calculate": "isValid(datum.mean_rating) ? (datum.disability_completion_rate < 52 ? (datum.mean_rating < 70 ? '0-0' : datum.mean_rating < 73 ? '0-1' : '0-2') : datum.disability_completion_rate < 58 ? (datum.mean_rating < 70 ? '1-0' : datum.mean_rating < 73 ? '1-1' : '1-2') : (datum.mean_rating < 70 ? '2-0' : datum.mean_rating < 73 ? '2-1' : '2-2')) : 'missing'",
+      "as": "bivariate_key"
     }
   ],
+  "mark": {
+    "type": "geoshape",
+    "stroke": "#FFFFFF",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "color": {
+      "field": "bivariate_key",
+      "type": "nominal",
+      "title": "Completion and support",
+      "scale": {
+        "domain": [
+          "0-0",
+          "0-1",
+          "0-2",
+          "1-0",
+          "1-1",
+          "1-2",
+          "2-0",
+          "2-1",
+          "2-2",
+          "missing"
+        ],
+        "range": [
+          "#E8E8E8",
+          "#ACE4E4",
+          "#5AC8C8",
+          "#DFB0D6",
+          "#A5ADD3",
+          "#5698B9",
+          "#BE64AC",
+          "#8C62AA",
+          "#3B4994",
+          "#D9E0E6"
+        ]
+      },
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "properties.STATE_NAME",
+        "type": "nominal",
+        "title": "State or territory"
+      },
+      {
+        "field": "disability_completion_rate",
+        "type": "quantitative",
+        "title": "Completion among students with disability (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "mean_rating",
+        "type": "quantitative",
+        "title": "Mean positive support rating (%)",
+        "format": ".1f"
+      },
+      {
+        "field": "university_count",
+        "type": "quantitative",
+        "title": "Providers represented"
+      }
+    ]
+  },
   "config": {
     "font": "Inter",
     "view": {

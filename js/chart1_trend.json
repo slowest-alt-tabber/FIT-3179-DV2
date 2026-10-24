@@ -18,11 +18,11 @@
       "filter": "datum.rate != null && (datum.outcome == 'Completed, in any year' || datum.outcome == 'Completed')"
     },
     {
-      "calculate": "datum.duration_years == 4 || datum.duration_label == '4 Years' ? 'Four Years' : (datum.duration_years == 6 || datum.duration_label == '6 Years' ? 'Six Years' : (datum.duration_years == 9 || datum.duration_label == '9 Years' ? 'Nine Years' : datum.duration_label))",
-      "as": "duration_series"
+      "calculate": "datum.duration_years == 4 ? 'Four years' : datum.duration_years == 6 ? 'Six years' : datum.duration_years == 9 ? 'Nine years' : datum.duration_label",
+      "as": "duration_display"
     },
     {
-      "filter": "datum.duration_series == 'Four Years' || datum.duration_series == 'Six Years' || datum.duration_series == 'Nine Years'"
+      "filter": "datum.duration_display == 'Four years' || datum.duration_display == 'Six years' || datum.duration_display == 'Nine years'"
     },
     {
       "aggregate": [
@@ -32,7 +32,7 @@
           "as": "mean_rate"
         }
       ],
-      "groupby": ["timeframe", "duration_series"]
+      "groupby": ["timeframe", "duration_display"]
     }
   ],
   "layer": [
@@ -41,7 +41,7 @@
         "type": "line",
         "point": {
           "filled": true,
-          "size": 38
+          "size": 42
         },
         "strokeWidth": 2.5
       },
@@ -66,16 +66,23 @@
           }
         },
         "color": {
-          "field": "duration_series",
+          "field": "duration_display",
           "type": "nominal",
           "title": "Follow-up period",
           "scale": {
-            "domain": ["Four Years", "Six Years", "Nine Years"],
+            "domain": ["Four years", "Six years", "Nine years"],
             "range": ["#0072B2", "#E69F00", "#009E73"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 3,
+            "title": "Follow-up period",
+            "labelLimit": 120
           }
         },
         "detail": {
-          "field": "duration_series"
+          "field": "duration_display"
         },
         "tooltip": [
           {
@@ -83,7 +90,7 @@
             "title": "Cohort period"
           },
           {
-            "field": "duration_series",
+            "field": "duration_display",
             "title": "Follow-up period"
           },
           {
@@ -100,10 +107,10 @@
           "window": [
             {
               "op": "row_number",
-              "as": "series_rank"
+              "as": "latest_rank"
             }
           ],
-          "groupby": ["duration_series"],
+          "groupby": ["duration_display"],
           "sort": [
             {
               "field": "timeframe",
@@ -112,7 +119,7 @@
           ]
         },
         {
-          "filter": "datum.series_rank == 1"
+          "filter": "datum.latest_rank == 1"
         },
         {
           "calculate": "format(datum.mean_rate, '.0f') + '%'",
@@ -123,7 +130,6 @@
         "type": "text",
         "align": "left",
         "dx": 6,
-        "dy": -2,
         "font": "Inter",
         "fontSize": 10,
         "fontWeight": "bold"
@@ -141,20 +147,20 @@
             "domain": [0, 100]
           }
         },
-        "text": {
-          "field": "endpoint_label"
-        },
         "color": {
-          "field": "duration_series",
+          "field": "duration_display",
           "type": "nominal",
           "scale": {
-            "domain": ["Four Years", "Six Years", "Nine Years"],
+            "domain": ["Four years", "Six years", "Nine years"],
             "range": ["#0072B2", "#E69F00", "#009E73"]
           },
           "legend": null
         },
         "detail": {
-          "field": "duration_series"
+          "field": "duration_display"
+        },
+        "text": {
+          "field": "endpoint_label"
         }
       }
     }
@@ -165,15 +171,17 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#263746",
-      "titleColor": "#263746",
-      "gridColor": "#E3E7EB",
       "labelFont": "Inter",
-      "titleFont": "Inter"
+      "titleFont": "Inter",
+      "labelColor": "#24313D",
+      "titleColor": "#24313D",
+      "gridColor": "#E1E6EA"
     },
     "legend": {
       "labelFont": "Inter",
-      "titleFont": "Inter"
+      "titleFont": "Inter",
+      "labelFontSize": 10,
+      "titleFontSize": 11
     }
   }
 }

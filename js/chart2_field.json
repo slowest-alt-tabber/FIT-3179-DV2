@@ -31,171 +31,66 @@
       "groupby": ["field_of_education"]
     }
   ],
-  "layer": [
-    {
-      "mark": {
-        "type": "bar",
-        "cornerRadiusEnd": 2
-      },
-      "encoding": {
-        "y": {
-          "field": "field_of_education",
-          "type": "nominal",
-          "title": null,
-          "sort": "-x",
-          "axis": {
-            "labelLimit": 240,
-            "labelFontSize": 10
-          }
-        },
-        "x": {
-          "field": "mean_rate",
-          "type": "quantitative",
-          "title": "Nine-year completion rate (%)",
-          "scale": {
-            "domain": [0, 100]
-          },
-          "axis": {
-            "gridColor": "#E3E7EB"
-          }
-        },
-        "color": {
-          "field": "mean_rate",
-          "type": "quantitative",
-          "title": "Completion rate (%)",
-          "scale": {
-            "domain": [0, 100],
-            "range": ["#F3F4F6", "#263746"]
-          },
-          "legend": null
-        },
-        "tooltip": [
-          {
-            "field": "field_of_education",
-            "title": "Field of education"
-          },
-          {
-            "field": "mean_rate",
-            "title": "Mean nine-year completion rate (%)",
-            "format": ".1f"
-          }
-        ]
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+  "encoding": {
+    "y": {
+      "field": "field_of_education",
+      "type": "nominal",
+      "title": null,
+      "sort": "-x",
+      "axis": {
+        "labelLimit": 250,
+        "labelFontSize": 10
       }
     },
-    {
-      "transform": [
-        {
-          "window": [
-            {
-              "op": "row_number",
-              "as": "rank"
-            }
-          ],
-          "sort": [
-            {
-              "field": "mean_rate",
-              "order": "descending"
-            }
-          ]
-        },
-        {
-          "filter": "datum.rank == 1"
-        },
-        {
-          "calculate": "format(datum.mean_rate, '.1f') + '%'",
-          "as": "value_label"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 5,
-        "font": "Inter",
-        "fontSize": 10,
-        "fontWeight": "bold",
-        "color": "#263746"
+    "x": {
+      "field": "mean_rate",
+      "type": "quantitative",
+      "title": "Nine-year completion rate (%)",
+      "scale": {
+        "domain": [0, 100]
       },
-      "encoding": {
-        "x": {
-          "field": "mean_rate",
-          "type": "quantitative",
-          "scale": {
-            "domain": [0, 100]
-          }
-        },
-        "y": {
-          "field": "field_of_education",
-          "type": "nominal",
-          "sort": "-x"
-        },
-        "text": {
-          "field": "value_label"
-        }
+      "axis": {
+        "gridColor": "#E1E6EA"
       }
     },
-    {
-      "transform": [
-        {
-          "window": [
-            {
-              "op": "row_number",
-              "as": "rank"
-            }
-          ],
-          "sort": [
-            {
-              "field": "mean_rate",
-              "order": "ascending"
-            }
-          ]
-        },
-        {
-          "filter": "datum.rank == 1"
-        },
-        {
-          "calculate": "format(datum.mean_rate, '.1f') + '%'",
-          "as": "value_label"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "dx": 5,
-        "font": "Inter",
-        "fontSize": 10,
-        "fontWeight": "bold",
-        "color": "#263746"
+    "color": {
+      "field": "mean_rate",
+      "type": "quantitative",
+      "title": "Completion rate (%)",
+      "scale": {
+        "domain": [0, 100],
+        "range": ["#F3F4F6", "#404854"],
+        "clamp": true
       },
-      "encoding": {
-        "x": {
-          "field": "mean_rate",
-          "type": "quantitative",
-          "scale": {
-            "domain": [0, 100]
-          }
-        },
-        "y": {
-          "field": "field_of_education",
-          "type": "nominal",
-          "sort": "-x"
-        },
-        "text": {
-          "field": "value_label"
-        }
+      "legend": null
+    },
+    "tooltip": [
+      {
+        "field": "field_of_education",
+        "title": "Field of education"
+      },
+      {
+        "field": "mean_rate",
+        "title": "Mean nine-year completion rate (%)",
+        "format": ".1f"
       }
-    }
-  ],
+    ]
+  },
   "config": {
     "font": "Inter",
     "view": {
       "stroke": null
     },
     "axis": {
-      "labelColor": "#263746",
-      "titleColor": "#263746",
-      "gridColor": "#E3E7EB",
       "labelFont": "Inter",
-      "titleFont": "Inter"
+      "titleFont": "Inter",
+      "labelColor": "#24313D",
+      "titleColor": "#24313D",
+      "gridColor": "#E1E6EA"
     }
   }
 }

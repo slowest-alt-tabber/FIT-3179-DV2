@@ -10,6 +10,12 @@
   "data": {
     "url": "data/qilt_slopegraph_study_level.csv"
   },
+  "transform": [
+    {
+      "calculate": "datum.indicator == 'Skills Development' ? 'Skills Development' : datum.indicator == 'Peer Engagement' ? 'Peer Engagement' : datum.indicator == 'Teaching Quality and Engagement' ? 'Teaching Quality and Engagement' : datum.indicator == 'Student Support and Services' ? 'Student Support and Services' : datum.indicator == 'Learning Resources' ? 'Learning Resources' : 'Overall Educational Experience'",
+      "as": "indicator_display"
+    }
+  ],
   "layer": [
     {
       "mark": {
@@ -36,16 +42,17 @@
           "type": "quantitative",
           "title": "Positive rating (%)",
           "scale": {
-            "domain": [50, 90]
+            "domain": [0, 100]
           },
           "axis": {
-            "gridColor": "#E3E7EB"
+            "values": [0, 20, 40, 60, 80, 100],
+            "gridColor": "#E1E6EA"
           }
         },
         "color": {
-          "field": "indicator",
+          "field": "indicator_display",
           "type": "nominal",
-          "title": "Experience indicator",
+          "title": "Experience measure",
           "scale": {
             "domain": [
               "Skills Development",
@@ -56,17 +63,24 @@
               "Overall Educational Experience"
             ],
             "range": [
-              "#332288",
-              "#88CCEE",
-              "#44AA99",
-              "#999933",
-              "#CC6677",
-              "#AA4499"
+              "#0072B2",
+              "#E69F00",
+              "#009E73",
+              "#D55E00",
+              "#56B4E9",
+              "#CC79A7"
             ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 2,
+            "labelLimit": 210,
+            "title": "Experience measure"
           }
         },
         "detail": {
-          "field": "indicator"
+          "field": "indicator_display"
         }
       }
     },
@@ -74,7 +88,7 @@
       "mark": {
         "type": "point",
         "filled": true,
-        "size": 70
+        "size": 68
       },
       "encoding": {
         "x": {
@@ -89,11 +103,11 @@
           "field": "positive_percent",
           "type": "quantitative",
           "scale": {
-            "domain": [50, 90]
+            "domain": [0, 100]
           }
         },
         "color": {
-          "field": "indicator",
+          "field": "indicator_display",
           "type": "nominal",
           "scale": {
             "domain": [
@@ -105,14 +119,16 @@
               "Overall Educational Experience"
             ],
             "range": [
-              "#332288",
-              "#88CCEE",
-              "#44AA99",
-              "#999933",
-              "#CC6677",
-              "#AA4499"
-            ]
-          }
+              "#0072B2",
+              "#E69F00",
+              "#009E73",
+              "#D55E00",
+              "#56B4E9",
+              "#CC79A7"
+            ],
+            "domainImplicit": false
+          },
+          "legend": null
         },
         "tooltip": [
           {
@@ -121,7 +137,7 @@
           },
           {
             "field": "indicator",
-            "title": "Experience indicator"
+            "title": "Full experience measure"
           },
           {
             "field": "positive_percent",
@@ -147,7 +163,7 @@
         "font": "Inter",
         "fontSize": 10,
         "fontWeight": "bold",
-        "color": "#AA4499"
+        "color": "#AA3377"
       },
       "encoding": {
         "x": {
@@ -162,7 +178,7 @@
           "field": "positive_percent",
           "type": "quantitative",
           "scale": {
-            "domain": [50, 90]
+            "domain": [0, 100]
           }
         },
         "text": {
@@ -177,16 +193,17 @@
       "stroke": null
     },
     "axis": {
-      "labelColor": "#263746",
-      "titleColor": "#263746",
-      "gridColor": "#E3E7EB",
       "labelFont": "Inter",
-      "titleFont": "Inter"
+      "titleFont": "Inter",
+      "labelColor": "#24313D",
+      "titleColor": "#24313D",
+      "gridColor": "#E1E6EA"
     },
     "legend": {
       "labelFont": "Inter",
       "titleFont": "Inter",
-      "labelFontSize": 10
+      "labelFontSize": 10,
+      "titleFontSize": 11
     }
   }
 }
