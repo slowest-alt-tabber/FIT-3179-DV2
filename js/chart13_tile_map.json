@@ -1,7 +1,8 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
-  "height": 380,
+  "height": 390,
   "autosize": {
     "type": "fit",
     "contains": "padding"
@@ -9,109 +10,197 @@
   "background": "white",
   "projection": {
     "type": "mercator",
-    "center": [134, -26],
+    "center": [134, -27],
     "scale": 520
   },
-  "data": {
-    "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
-    "format": {
-      "property": "features"
-    }
-  },
-  "transform": [
+  "layer": [
     {
-      "lookup": "properties.STATE_NAME",
-      "from": {
-        "data": {
-          "url": "data/disability_completion_rates.csv"
+      "data": {
+        "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#F0F3F6",
+        "stroke": "#CBD5DE",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "state": "Western Australia",
+            "longitude": 121.5,
+            "latitude": -25.5
+          },
+          {
+            "state": "Northern Territory",
+            "longitude": 133.5,
+            "latitude": -19
+          },
+          {
+            "state": "South Australia",
+            "longitude": 136.5,
+            "latitude": -30
+          },
+          {
+            "state": "Queensland",
+            "longitude": 145.5,
+            "latitude": -22
+          },
+          {
+            "state": "New South Wales",
+            "longitude": 147,
+            "latitude": -32
+          },
+          {
+            "state": "Victoria",
+            "longitude": 145.5,
+            "latitude": -36.5
+          },
+          {
+            "state": "Tasmania",
+            "longitude": 146.5,
+            "latitude": -42
+          },
+          {
+            "state": "Australian Capital Territory",
+            "longitude": 149.1,
+            "latitude": -35.3
+          }
+        ]
+      },
+      "transform": [
+        {
+          "lookup": "state",
+          "from": {
+            "data": {
+              "url": "data/disability_completion_rates.csv"
+            },
+            "key": "state",
+            "fields": [
+              "disability_completion_rate"
+            ]
+          }
         },
-        "key": "state",
-        "fields": [
-          "disability_completion_rate"
+        {
+          "filter": "isValid(datum.disability_completion_rate)"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "opacity": 0.76,
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.2
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "disability_completion_rate",
+          "type": "quantitative",
+          "title": "Completion rate",
+          "scale": {
+            "domain": [0, 100],
+            "range": [100, 1800],
+            "zero": true
+          },
+          "legend": null
+        },
+        "color": {
+          "field": "disability_completion_rate",
+          "type": "quantitative",
+          "title": "Completion among students with disability (%)",
+          "scale": {
+            "domain": [0, 100],
+            "range": ["#F3F4F6", "#404854"],
+            "clamp": true
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": "Completion rate (%)"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State or territory"
+          },
+          {
+            "field": "disability_completion_rate",
+            "title": "Completion rate (%)",
+            "format": ".1f"
+          }
         ]
       }
     },
     {
-      "lookup": "properties.STATE_NAME",
-      "from": {
-        "data": {
-          "url": "data/qilt_tile_map.csv"
+      "data": {
+        "url": "data/disability_completion_rates.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.state == 'Victoria' || datum.state == 'Queensland'"
         },
-        "key": "state",
-        "fields": [
-          "mean_rating",
-          "university_count"
+        {
+          "calculate": "format(datum.disability_completion_rate, '.1f') + '%'",
+          "as": "annotation_label"
+        },
+        {
+          "calculate": "datum.state == 'Victoria' ? 145.5 : 145.5",
+          "as": "longitude"
+        },
+        {
+          "calculate": "datum.state == 'Victoria' ? -36.5 : -22",
+          "as": "latitude"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -18,
+        "font": "Inter",
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#24313D",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "annotation_label"
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "title": "State or territory"
+          },
+          {
+            "field": "disability_completion_rate",
+            "title": "Completion rate (%)",
+            "format": ".1f"
+          }
         ]
       }
-    },
-    {
-      "calculate": "isValid(datum.mean_rating) ? (datum.disability_completion_rate < 52 ? (datum.mean_rating < 70 ? '0-0' : datum.mean_rating < 73 ? '0-1' : '0-2') : datum.disability_completion_rate < 58 ? (datum.mean_rating < 70 ? '1-0' : datum.mean_rating < 73 ? '1-1' : '1-2') : (datum.mean_rating < 70 ? '2-0' : datum.mean_rating < 73 ? '2-1' : '2-2')) : 'missing'",
-      "as": "bivariate_key"
     }
   ],
-  "mark": {
-    "type": "geoshape",
-    "stroke": "#FFFFFF",
-    "strokeWidth": 1
-  },
-  "encoding": {
-    "color": {
-      "field": "bivariate_key",
-      "type": "nominal",
-      "title": "Completion and support",
-      "scale": {
-        "domain": [
-          "0-0",
-          "0-1",
-          "0-2",
-          "1-0",
-          "1-1",
-          "1-2",
-          "2-0",
-          "2-1",
-          "2-2",
-          "missing"
-        ],
-        "range": [
-          "#E8E8E8",
-          "#ACE4E4",
-          "#5AC8C8",
-          "#DFB0D6",
-          "#A5ADD3",
-          "#5698B9",
-          "#BE64AC",
-          "#8C62AA",
-          "#3B4994",
-          "#D9E0E6"
-        ]
-      },
-      "legend": null
-    },
-    "tooltip": [
-      {
-        "field": "properties.STATE_NAME",
-        "type": "nominal",
-        "title": "State or territory"
-      },
-      {
-        "field": "disability_completion_rate",
-        "type": "quantitative",
-        "title": "Completion among students with disability (%)",
-        "format": ".1f"
-      },
-      {
-        "field": "mean_rating",
-        "type": "quantitative",
-        "title": "Mean positive support rating (%)",
-        "format": ".1f"
-      },
-      {
-        "field": "university_count",
-        "type": "quantitative",
-        "title": "Providers represented"
-      }
-    ]
-  },
   "config": {
     "font": "Inter",
     "view": {

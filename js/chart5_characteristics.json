@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
@@ -15,7 +16,7 @@
       "filter": "datum.duration_years == 9"
     },
     {
-      "filter": "datum.atar_band != null && datum.atar_band != ''"
+      "filter": "datum.atar_band != null && trim(datum.atar_band) != ''"
     },
     {
       "calculate": "datum.outcome == 'Completed, in any year' || datum.outcome == 'Completed' ? 'Completed' : (datum.outcome == 'Never came back after the first year' || datum.outcome == 'Never returned' ? 'Never returned' : (datum.outcome == 'Re-enrolled, but dropped out' || datum.outcome == 'Re-enrolled, then left' ? 'Re-enrolled, then left' : (datum.outcome == 'Still enrolled at the end of the period' || datum.outcome == 'Still enrolled' ? 'Still enrolled' : datum.outcome)))",
@@ -29,7 +30,10 @@
           "as": "mean_rate"
         }
       ],
-      "groupby": ["atar_band", "outcome_display"]
+      "groupby": [
+        "atar_band",
+        "outcome_display"
+      ]
     }
   ],
   "layer": [
@@ -59,7 +63,7 @@
         "y": {
           "field": "atar_band",
           "type": "nominal",
-          "title": "ATAR band",
+          "title": "Australian Tertiary Admission Rank band",
           "sort": [
             "30-49",
             "50-59",
@@ -81,14 +85,17 @@
           "title": "Mean published rate (%)",
           "scale": {
             "domain": [0, 100],
-            "range": ["#FFFFFF", "#001f3f"],
+            "range": [
+              "#FFFFFF",
+              "#001f3f"
+            ],
             "clamp": true
           }
         },
         "tooltip": [
           {
             "field": "atar_band",
-            "title": "University entry rank band"
+            "title": "Australian Tertiary Admission Rank band"
           },
           {
             "field": "outcome_display",
@@ -105,7 +112,7 @@
     {
       "transform": [
         {
-          "filter": "(datum.atar_band == '95-100' && datum.outcome_display == 'Completed')"
+          "filter": "datum.atar_band == '95-100' && datum.outcome_display == 'Completed'"
         },
         {
           "calculate": "format(datum.mean_rate, '.0f') + '%'",
@@ -131,7 +138,7 @@
           ]
         },
         "y": {
-          "field": "University entry rank band",
+          "field": "atar_band",
           "type": "nominal",
           "sort": [
             "30-49",
@@ -146,7 +153,18 @@
         },
         "text": {
           "field": "annotation_label"
-        }
+        },
+        "tooltip": [
+          {
+            "field": "atar_band",
+            "title": "Australian Tertiary Admission Rank band"
+          },
+          {
+            "field": "mean_rate",
+            "title": "Mean nine-year rate (%)",
+            "format": ".1f"
+          }
+        ]
       }
     }
   ],

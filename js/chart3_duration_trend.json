@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
@@ -150,7 +151,7 @@
     {
       "transform": [
         {
-          "filter": "datum.indicator == 'Overall Educational Experience'"
+          "filter": "datum.indicator == 'Overall Educational Experience' && datum.study_level == 'Undergraduate'"
         },
         {
           "calculate": "format(datum.positive_percent, '.1f') + '%'",
@@ -159,11 +160,13 @@
       ],
       "mark": {
         "type": "text",
-        "dy": -12,
+        "align": "right",
+        "baseline": "middle",
+        "dx": -8,
         "font": "Inter",
         "fontSize": 10,
         "fontWeight": "bold",
-        "color": "#AA3377"
+        "color": "#CC79A7"
       },
       "encoding": {
         "x": {
@@ -183,7 +186,70 @@
         },
         "text": {
           "field": "rating_label"
+        },
+        "tooltip": [
+          {
+            "field": "study_level",
+            "title": "Study level"
+          },
+          {
+            "field": "positive_percent",
+            "title": "Positive rating (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.indicator == 'Overall Educational Experience' && datum.study_level == 'Postgraduate coursework'"
+        },
+        {
+          "calculate": "format(datum.positive_percent, '.1f') + '%'",
+          "as": "rating_label"
         }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "font": "Inter",
+        "fontSize": 10,
+        "fontWeight": "bold",
+        "color": "#CC79A7"
+      },
+      "encoding": {
+        "x": {
+          "field": "study_level",
+          "type": "nominal",
+          "sort": [
+            "Undergraduate",
+            "Postgraduate coursework"
+          ]
+        },
+        "y": {
+          "field": "positive_percent",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 100]
+          }
+        },
+        "text": {
+          "field": "rating_label"
+        },
+        "tooltip": [
+          {
+            "field": "study_level",
+            "title": "Study level"
+          },
+          {
+            "field": "positive_percent",
+            "title": "Positive rating (%)",
+            "format": ".1f"
+          }
+        ]
       }
     }
   ],

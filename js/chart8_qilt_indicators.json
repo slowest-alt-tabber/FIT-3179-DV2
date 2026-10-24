@@ -1,164 +1,121 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height": 320,
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  },
+  "description": "Small-multiple waffle charts comparing published completion rates across student groups.",
   "background": "white",
   "data": {
-    "url": "data/qilt_study_areas.csv"
+    "url": "data/completion_equity_groups.csv",
+    "format": {
+      "type": "csv"
+    }
   },
   "transform": [
     {
-      "filter": "datum.positive_percent != null"
+      "calculate": "datum.completed == 1 || datum.completed == '1' || datum.completed == true || datum.completed == 'TRUE' || datum.completed == 'true' ? 'Completed' : 'Remaining'",
+      "as": "tile_status"
     }
   ],
-  "layer": [
-    {
-      "mark": {
-        "type": "boxplot",
-        "extent": 1.5
-      },
-      "encoding": {
-        "x": {
-          "field": "indicator",
-          "type": "nominal",
-          "title": null,
-          "sort": [
-            "Skills Development",
-            "Peer Engagement",
-            "Teaching Quality and Engagement",
-            "Student Support and Services",
-            "Learning Resources",
-            "Overall Educational Experience"
-          ],
-          "axis": {
-            "labelAngle": -35,
-            "labelFontSize": 10,
-            "labelLimit": 145
-          }
-        },
-        "y": {
-          "field": "positive_percent",
-          "type": "quantitative",
-          "title": "Positive rating (%)",
-          "scale": {
-            "domain": [0, 100]
-          },
-          "axis": {
-            "gridColor": "#E3E7EB"
-          }
-        },
-        "color": {
-          "field": "indicator",
-          "type": "nominal",
-          "title": "Experience indicator",
-          "scale": {
-            "domain": [
-              "Skills Development",
-              "Peer Engagement",
-              "Teaching Quality and Engagement",
-              "Student Support and Services",
-              "Learning Resources",
-              "Overall Educational Experience"
-            ],
-            "range": [
-              "#332288",
-              "#88CCEE",
-              "#44AA99",
-              "#999933",
-              "#CC6677",
-              "#AA4499"
-            ]
-          }
-        },
-        "tooltip": [
-          {
-            "field": "indicator",
-            "title": "Experience indicator"
-          },
-          {
-            "field": "study_area",
-            "title": "Study area"
-          },
-          {
-            "field": "positive_percent",
-            "title": "Positive rating (%)",
-            "format": ".1f"
-          }
-        ]
-      }
+  "facet": {
+    "field": "group_label",
+    "type": "nominal",
+    "columns": 2,
+    "sort": [
+      "All students · 71.7%",
+      "First in family · 68.6%",
+      "Regional students · 65.6%",
+      "Low socioeconomic · 64.2%",
+      "Remote students · 61.9%",
+      "Indigenous students · 50.0%"
+    ],
+    "header": {
+      "title": null,
+      "labelOrient": "top",
+      "labelAnchor": "start",
+      "labelAlign": "left",
+      "labelPadding": 9,
+      "labelFont": "Inter",
+      "labelFontSize": 11,
+      "labelFontWeight": 600,
+      "labelColor": "#24313D",
+      "labelLimit": 220
+    }
+  },
+  "spec": {
+    "width": 150,
+    "height": 150,
+    "mark": {
+      "type": "rect",
+      "cornerRadius": 1,
+      "stroke": "white",
+      "strokeWidth": 1
     },
-    {
-      "data": {
-        "url": "data/qilt_study_areas.csv"
-      },
-      "transform": [
-        {
-          "filter": "datum.indicator == 'Peer Engagement' && datum.positive_percent != null"
-        },
-        {
-          "aggregate": [
-            {
-              "op": "median",
-              "field": "positive_percent",
-              "as": "median_rating"
-            }
-          ],
-          "groupby": ["indicator"]
+    "encoding": {
+      "x": {
+        "field": "tile_x",
+        "type": "ordinal",
+        "sort": [
+          1, 2, 3, 4, 5,
+          6, 7, 8, 9, 10
+        ],
+        "axis": null,
+        "scale": {
+          "paddingInner": 0.12,
+          "paddingOuter": 0.04
         }
-      ],
-      "mark": {
-        "type": "text",
-        "dy": -13,
-        "font": "Inter",
-        "fontSize": 10,
-        "fontWeight": "bold",
-        "color": "#263746"
       },
-      "encoding": {
-        "x": {
-          "field": "indicator",
+      "y": {
+        "field": "tile_y",
+        "type": "ordinal",
+        "sort": [
+          10, 9, 8, 7, 6,
+          5, 4, 3, 2, 1
+        ],
+        "axis": null,
+        "scale": {
+          "paddingInner": 0.12,
+          "paddingOuter": 0.04
+        }
+      },
+      "color": {
+        "condition": {
+          "test": "datum.tile_status === 'Completed'",
+          "value": "#386641"
+        },
+        "value": "#E5E9ED",
+        "legend": null
+      },
+      "tooltip": [
+        {
+          "field": "student_group",
           "type": "nominal",
-          "sort": [
-            "Skills Development",
-            "Peer Engagement",
-            "Teaching Quality and Engagement",
-            "Student Support and Services",
-            "Learning Resources",
-            "Overall Educational Experience"
-          ]
+          "title": "Student group"
         },
-        "y": {
-          "field": "median_rating",
+        {
+          "field": "completion_rate",
           "type": "quantitative",
-          "scale": {
-            "domain": [0, 100]
-          }
+          "title": "Published completion rate",
+          "format": ".1f"
         },
-        "text": {
-          "value": "Lowest median"
+        {
+          "field": "tile_status",
+          "type": "nominal",
+          "title": "Tile status"
         }
-      }
+      ]
     }
-  ],
+  },
   "config": {
     "font": "Inter",
     "view": {
       "stroke": null
     },
-    "axis": {
-      "labelColor": "#263746",
-      "titleColor": "#263746",
-      "gridColor": "#E3E7EB",
-      "labelFont": "Inter",
-      "titleFont": "Inter"
+    "facet": {
+      "spacing": 24
     },
-    "legend": {
+    "axis": {
       "labelFont": "Inter",
-      "titleFont": "Inter"
+      "titleFont": "Inter",
+      "labelColor": "#24313D",
+      "titleColor": "#24313D"
     }
   }
 }

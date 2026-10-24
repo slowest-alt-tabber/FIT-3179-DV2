@@ -1,3 +1,4 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": "container",
@@ -18,6 +19,10 @@
       "filter": "datum.rate != null && datum.outcome != null"
     },
     {
+      "calculate": "datum.outcome == 'Completed, in any year' ? 'Completed' : datum.outcome == 'Still enrolled at the end of the period' ? 'Still enrolled' : datum.outcome == 'Re-enrolled, but dropped out' ? 'Returned, then left' : datum.outcome == 'Never came back after the first year' ? 'Left after year one' : datum.outcome",
+      "as": "short_outcome"
+    },
+    {
       "aggregate": [
         {
           "op": "mean",
@@ -25,7 +30,7 @@
           "as": "mean_rate"
         }
       ],
-      "groupby": ["outcome"]
+      "groupby": ["outcome", "short_outcome"]
     }
   ],
   "layer": [
@@ -36,12 +41,12 @@
       },
       "encoding": {
         "y": {
-          "field": "outcome",
+          "field": "short_outcome",
           "type": "nominal",
           "title": null,
           "sort": "-x",
           "axis": {
-            "labelLimit": 250,
+            "labelLimit": 150,
             "labelFontSize": 10
           }
         },
@@ -57,15 +62,15 @@
           }
         },
         "color": {
-          "field": "outcome",
+          "field": "short_outcome",
           "type": "nominal",
           "title": "Outcome",
           "scale": {
             "domain": [
-              "Completed, in any year",
-              "Still enrolled at the end of the period",
-              "Re-enrolled, but dropped out",
-              "Never came back after the first year"
+              "Completed",
+              "Still enrolled",
+              "Returned, then left",
+              "Left after year one"
             ],
             "range": [
               "#CC79A7",
@@ -73,12 +78,16 @@
               "#A6761D",
               "#D55E00"
             ]
+          },
+          "legend": {
+            "labelLimit": 130,
+            "labelFontSize": 10
           }
         },
         "tooltip": [
           {
             "field": "outcome",
-            "title": "Outcome"
+            "title": "Full outcome"
           },
           {
             "field": "mean_rate",
@@ -130,7 +139,7 @@
           }
         },
         "y": {
-          "field": "outcome",
+          "field": "short_outcome",
           "type": "nominal",
           "sort": "-x"
         },
