@@ -76,11 +76,6 @@
         "field": "university_count",
         "type": "quantitative",
         "title": "Providers represented"
-      },
-      {
-        "field": "indicator",
-        "type": "nominal",
-        "title": "Survey indicator"
       }
     ]
   },

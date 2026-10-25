@@ -91,10 +91,6 @@
             "field": "positive_percent",
             "title": "Student support rating (%)",
             "format": ".1f"
-          },
-          {
-            "field": "survey_year",
-            "title": "Survey year"
           }
         ]
       }
