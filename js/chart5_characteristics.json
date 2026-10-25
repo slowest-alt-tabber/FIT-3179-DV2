@@ -79,17 +79,20 @@
             "labelFontSize": 10
           }
         },
+        
         "color": {
           "field": "mean_rate",
           "type": "quantitative",
           "title": "Mean published rate (%)",
           "scale": {
-            "domain": [0, 100],
+            "type": "linear",
+            "domain": [0, 50, 100],
+            "clamp": true,
             "range": [
-              "#FFFFFF",
-              "#001f3f"
-            ],
-            "clamp": true
+              "#FFF3CD",
+              "#E9A23B",
+              "#7C2D12"
+            ]
           }
         },
         "tooltip": [

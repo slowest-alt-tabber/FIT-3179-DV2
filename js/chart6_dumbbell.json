@@ -17,9 +17,10 @@
   },
   "layer": [
     {
+      
       "mark": {
         "type": "rule",
-        "color": "#ADB5BD",
+        "color": "#C9CDD2",
         "strokeWidth": 2
       },
       "encoding": {
@@ -119,7 +120,10 @@
           "title": "Survey year",
           "scale": {
             "domain": ["2017", "2025"],
-            "range": ["#756BB1", "#008B8B"]
+            "range": [
+              "#59636E",
+              "#C1123F"
+            ]
           },
           "legend": {
             "orient": "bottom",

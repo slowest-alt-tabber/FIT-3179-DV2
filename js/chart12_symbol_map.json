@@ -54,14 +54,24 @@
           "field": "latitude",
           "type": "quantitative"
         },
+        
         "color": {
           "field": "positive_percent",
           "type": "quantitative",
           "title": "Student support rating (%)",
           "scale": {
-            "domain": [0, 100],
-            "range": ["#693EFE", "#100046 "],
-            "clamp": true
+            "type": "linear",
+            "domain": [0, 50, 100],
+            "clamp": true,
+            "range": [
+              "#FCE4EC",
+              "#E573A5",
+              "#880E4F"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "title": "Student support rating (%)"
           }
         },
         "tooltip": [

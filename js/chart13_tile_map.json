@@ -1,22 +1,28 @@
 
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": "container",
-  "height": 390,
-  "autosize": {
-    "type": "fit",
-    "contains": "padding"
-  },
+  "description": "Non-contiguous cartogram resizing Australian state areas by completion rates among students with disability.",
   "background": "white",
-  "projection": {
-    "type": "mercator",
-    "center": [134, -27],
-    "scale": 520
+  "padding": {
+    "top": 8,
+    "bottom": 4,
+    "left": 4,
+    "right": 4
   },
-  "layer": [
+  "vconcat": [
     {
+      "width": "container",
+      "height": 340,
+      "projection": {
+        "type": "mercator",
+        "fit": {
+          "expr": "data('cartogram_features')"
+        },
+        "clipAngle": null
+      },
       "data": {
-        "url": "https://raw.githubusercontent.com/rowanhogan/australian-states/master/states.geojson",
+        "name": "cartogram_features",
+        "url": "data/disability_completion_cartogram.geojson",
         "format": {
           "type": "json",
           "property": "features"
@@ -24,187 +30,157 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#F0F3F6",
-        "stroke": "#CBD5DE",
-        "strokeWidth": 0.8
+        "stroke": "#FFFFFF",
+        "strokeWidth": 1.5,
+        "fillOpacity": 0.92
+      },
+      "encoding": {
+        
+      "color": {
+        "field": "properties.disability_completion_rate",
+        "type": "quantitative",
+        "title": "Completion rate (%)",
+        "scale": {
+          "type": "linear",
+          "domain": [0, 50, 100],
+          "clamp": true,
+          "range": [
+            "#F3E5F5",
+            "#8E24AA",
+            "#311B92"
+          ]
+        },
+        "legend": {
+          "orient": "bottom",
+          "direction": "horizontal",
+          "gradientLength": 220,
+          "values": [0, 25, 50, 75, 100],
+          "format": ".0f",
+          "titleFontSize": 11,
+          "labelFontSize": 10,
+          "offset": 4
+        }
+      },
+        "tooltip": [
+          {
+            "field": "properties.state",
+            "type": "nominal",
+            "title": "State or territory"
+          },
+          {
+            "field": "properties.disability_completion_rate",
+            "type": "quantitative",
+            "title": "Completion rate (%)",
+            "format": ".1f"
+          }
+        ]
       }
     },
     {
+      "width": "container",
+      "height": 94,
+      "title": {
+        "text": "Size scaling",
+        "subtitle": "Larger squares represent larger completion-rate weights.",
+        "anchor": "start",
+        "fontSize": 12,
+        "subtitleFontSize": 10,
+        "offset": 3
+      },
       "data": {
         "values": [
-          {
-            "state": "Western Australia",
-            "longitude": 121.5,
-            "latitude": -25.5
-          },
-          {
-            "state": "Northern Territory",
-            "longitude": 133.5,
-            "latitude": -19
-          },
-          {
-            "state": "South Australia",
-            "longitude": 136.5,
-            "latitude": -30
-          },
-          {
-            "state": "Queensland",
-            "longitude": 145.5,
-            "latitude": -22
-          },
-          {
-            "state": "New South Wales",
-            "longitude": 147,
-            "latitude": -32
-          },
-          {
-            "state": "Victoria",
-            "longitude": 145.5,
-            "latitude": -36.5
-          },
-          {
-            "state": "Tasmania",
-            "longitude": 146.5,
-            "latitude": -42
-          },
-          {
-            "state": "Australian Capital Territory",
-            "longitude": 149.1,
-            "latitude": -35.3
-          }
+          {"rate": 25, "row": 0.5},
+          {"rate": 50, "row": 0.5},
+          {"rate": 75, "row": 0.5},
+          {"rate": 100, "row": 0.5}
         ]
       },
-      "transform": [
-        {
-          "lookup": "state",
-          "from": {
-            "data": {
-              "url": "data/disability_completion_rates.csv"
-            },
-            "key": "state",
-            "fields": [
-              "disability_completion_rate"
-            ]
+      
+      "mark": {
+        "type": "point",
+        "shape": "square",
+        "filled": true,
+        "color": "#455A64",
+        "stroke": "#263238",
+        "strokeWidth": 1
+      }
+      ,
+      "encoding": {
+        "x": {
+          "field": "rate",
+          "type": "quantitative",
+          "scale": {
+            "domain": [-10, 110],
+            "nice": false
+          },
+          "axis": {
+            "title": "Completion-rate weight (%)",
+            "values": [0, 25, 50, 75, 100],
+            "format": ".0f",
+            "grid": false,
+            "labelFontSize": 10,
+            "titleFontSize": 11,
+            "labelPadding": 3,
+            "titlePadding": 5
           }
         },
-        {
-          "filter": "isValid(datum.disability_completion_rate)"
-        }
-      ],
-      "mark": {
-        "type": "circle",
-        "filled": true,
-        "opacity": 0.76,
-        "stroke": "#FFFFFF",
-        "strokeWidth": 1.2
-      },
-      "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
+        "y": {
+          "field": "row",
+          "type": "quantitative",
+          "scale": {
+            "domain": [0, 1]
+          },
+          "axis": null
         },
         "size": {
-          "field": "disability_completion_rate",
+          "field": "rate",
           "type": "quantitative",
-          "title": "Completion rate",
           "scale": {
             "domain": [0, 100],
-            "range": [100, 1800],
-            "zero": true
+            "range": [0, 700]
           },
           "legend": null
         },
-        "color": {
-          "field": "disability_completion_rate",
-          "type": "quantitative",
-          "title": "Completion among students with disability (%)",
-          "scale": {
-            "domain": [0, 100],
-            "range": ["#F3F4F6", "#404854"],
-            "clamp": true
-          },
-          "legend": {
-            "orient": "bottom",
-            "title": "Completion rate (%)"
-          }
-        },
         "tooltip": [
           {
-            "field": "state",
-            "title": "State or territory"
-          },
-          {
-            "field": "disability_completion_rate",
-            "title": "Completion rate (%)",
-            "format": ".1f"
-          }
-        ]
-      }
-    },
-    {
-      "data": {
-        "url": "data/disability_completion_rates.csv"
-      },
-      "transform": [
-        {
-          "filter": "datum.state == 'Victoria' || datum.state == 'Queensland'"
-        },
-        {
-          "calculate": "format(datum.disability_completion_rate, '.1f') + '%'",
-          "as": "annotation_label"
-        },
-        {
-          "calculate": "datum.state == 'Victoria' ? 145.5 : 145.5",
-          "as": "longitude"
-        },
-        {
-          "calculate": "datum.state == 'Victoria' ? -36.5 : -22",
-          "as": "latitude"
-        }
-      ],
-      "mark": {
-        "type": "text",
-        "dy": -18,
-        "font": "Inter",
-        "fontSize": 11,
-        "fontWeight": "bold",
-        "color": "#24313D",
-        "strokeWidth": 2
-      },
-      "encoding": {
-        "longitude": {
-          "field": "longitude",
-          "type": "quantitative"
-        },
-        "latitude": {
-          "field": "latitude",
-          "type": "quantitative"
-        },
-        "text": {
-          "field": "annotation_label"
-        },
-        "tooltip": [
-          {
-            "field": "state",
-            "title": "State or territory"
-          },
-          {
-            "field": "disability_completion_rate",
-            "title": "Completion rate (%)",
-            "format": ".1f"
+            "field": "rate",
+            "type": "quantitative",
+            "title": "Completion-rate weight (%)",
+            "format": ".0f"
           }
         ]
       }
     }
   ],
+  "spacing": 4,
   "config": {
     "font": "Inter",
     "view": {
       "stroke": null
+    },
+    "axis": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelColor": "#24313D",
+      "titleColor": "#24313D",
+      "gridColor": "#E8EEEE",
+      "domainColor": "#D6DFDF",
+      "tickColor": "#D6DFDF"
+    },
+    "title": {
+      "font": "Inter",
+      "fontSize": 13,
+      "anchor": "start",
+      "color": "#24313D",
+      "subtitleFont": "Inter",
+      "subtitleFontSize": 11,
+      "subtitleColor": "#596873"
+    },
+    "legend": {
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelColor": "#24313D",
+      "titleColor": "#24313D"
     }
   }
 }

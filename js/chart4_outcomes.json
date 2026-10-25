@@ -43,7 +43,7 @@
         "y": {
           "field": "short_outcome",
           "type": "nominal",
-          "title": null,
+          "title": "Outcome",
           "sort": "-x",
           "axis": {
             "labelLimit": 150,
@@ -61,6 +61,7 @@
             "gridColor": "#E3E7EB"
           }
         },
+        
         "color": {
           "field": "short_outcome",
           "type": "nominal",
@@ -73,10 +74,10 @@
               "Left after year one"
             ],
             "range": [
-              "#CC79A7",
-              "#56B4E9",
-              "#A6761D",
-              "#D55E00"
+              "#264653",
+              "#0096C7",
+              "#F4A261",
+              "#C1121F"
             ]
           },
           "legend": {

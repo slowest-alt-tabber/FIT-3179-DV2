@@ -56,6 +56,7 @@
             "gridColor": "#E1E6EA"
           }
         },
+        
         "color": {
           "field": "indicator",
           "type": "nominal",

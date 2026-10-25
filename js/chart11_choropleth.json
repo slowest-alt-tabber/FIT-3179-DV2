@@ -40,6 +40,7 @@
     "strokeWidth": 0.9
   },
   "encoding": {
+    
     "color": {
       "condition": {
         "test": "isValid(datum.mean_rating)",
@@ -47,9 +48,14 @@
         "type": "quantitative",
         "title": "Support rating (%)",
         "scale": {
-          "domain": [0, 100],
-          "range": ["#d1eee7", "#023020"],
-          "clamp": true
+          "type": "linear",
+          "domain": [0, 50, 100],
+          "clamp": true,
+          "range": [
+            "#DCEBFA",
+            "#6BAED6",
+            "#084594"
+          ]
         }
       },
       "value": "#D9E0E6"

@@ -39,7 +39,7 @@
     "y": {
       "field": "field_of_education",
       "type": "nominal",
-      "title": null,
+      "title": "Field of Education",
       "sort": "-x",
       "axis": {
         "labelLimit": 250,
@@ -57,14 +57,20 @@
         "gridColor": "#E1E6EA"
       }
     },
+    
     "color": {
       "field": "mean_rate",
       "type": "quantitative",
       "title": "Completion rate (%)",
       "scale": {
-        "domain": [0, 100],
-        "range": ["#F3F4F6", "#404854"],
-        "clamp": true
+        "type": "linear",
+        "domain": [0, 50, 100],
+        "clamp": true,
+        "range": [
+          "#D9F0EE",
+          "#66B2A8",
+          "#005B50"
+        ]
       },
       "legend": null
     },

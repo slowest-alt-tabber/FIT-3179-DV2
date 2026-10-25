@@ -50,6 +50,7 @@
             "gridColor": "#E1E6EA"
           }
         },
+        
         "color": {
           "field": "indicator_display",
           "type": "nominal",
@@ -107,9 +108,11 @@
             "domain": [0, 100]
           }
         },
+        
         "color": {
           "field": "indicator_display",
           "type": "nominal",
+          "title": "Experience measure",
           "scale": {
             "domain": [
               "Skills Development",
@@ -126,10 +129,15 @@
               "#D55E00",
               "#56B4E9",
               "#CC79A7"
-            ],
-            "domainImplicit": false
+            ]
           },
-          "legend": null
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 2,
+            "labelLimit": 210,
+            "title": "Experience measure"
+          }
         },
         "tooltip": [
           {

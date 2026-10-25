@@ -75,6 +75,7 @@
           "paddingOuter": 0.04
         }
       },
+      
       "color": {
         "condition": {
           "test": "datum.tile_status === 'Completed'",

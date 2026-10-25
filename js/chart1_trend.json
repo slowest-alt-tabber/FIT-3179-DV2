@@ -65,13 +65,22 @@
             "domain": [0, 100]
           }
         },
+        
         "color": {
           "field": "duration_display",
           "type": "nominal",
           "title": "Follow-up period",
           "scale": {
-            "domain": ["Four years", "Six years", "Nine years"],
-            "range": ["#0072B2", "#E69F00", "#009E73"]
+            "domain": [
+              "Four years",
+              "Six years",
+              "Nine years"
+            ],
+            "range": [
+              "#6A3D9A",
+              "#E07A5F",
+              "#008C95"
+            ]
           },
           "legend": {
             "orient": "bottom",
@@ -80,7 +89,8 @@
             "title": "Follow-up period",
             "labelLimit": 120
           }
-        },
+        }
+,
         "detail": {
           "field": "duration_display"
         },
@@ -147,15 +157,25 @@
             "domain": [0, 100]
           }
         },
+        
         "color": {
           "field": "duration_display",
           "type": "nominal",
           "scale": {
-            "domain": ["Four years", "Six years", "Nine years"],
-            "range": ["#0072B2", "#E69F00", "#009E73"]
+            "domain": [
+              "Four years",
+              "Six years",
+              "Nine years"
+            ],
+            "range": [
+              "#6A3D9A",
+              "#E07A5F",
+              "#008C95"
+            ]
           },
           "legend": null
-        },
+        }
+,
         "detail": {
           "field": "duration_display"
         },

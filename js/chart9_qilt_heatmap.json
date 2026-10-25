@@ -50,14 +50,24 @@
             "labelFontSize": 10
           }
         },
+        
         "color": {
           "field": "positive_percent",
           "type": "quantitative",
           "title": "Positive rating (%)",
           "scale": {
-            "domain": [0, 100],
-            "range": ["#fff0d9", "#b94700"],
-            "clamp": true
+            "type": "linear",
+            "domain": [0, 50, 100],
+            "clamp": true,
+            "range": [
+              "#F4F7E8",
+              "#A3B86C",
+              "#3F6212"
+            ]
+          },
+          "legend": {
+            "orient": "right",
+            "title": "Positive rating (%)"
           }
         },
         "tooltip": [
