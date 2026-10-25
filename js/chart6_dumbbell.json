@@ -1,5 +1,7 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "University positive ratings for overall educational experience in 2017 and 2025.",
   "width": "container",
   "height": 420,
   "autosize": {
@@ -8,28 +10,11 @@
   },
   "background": "white",
   "data": {
-    "url": "data/qilt.csv"
-  },
-  "transform": [
-    {
-      "filter": "datum.row_type == 'provider' && datum.indicator == 'Overall Educational Experience' && datum.positive_percent != null"
-    },
-    {
-      "filter": "datum.survey_year == 2017 || datum.survey_year == 2025"
-    },
-    {
-      "pivot": "survey_year",
-      "value": "positive_percent",
-      "groupby": ["provider"]
-    },
-    {
-      "filter": "datum['2017'] != null && datum['2025'] != null"
-    },
-    {
-      "fold": ["2017", "2025"],
-      "as": ["survey_year", "positive_percent"]
+    "url": "data/qilt_dumbbell.csv",
+    "format": {
+      "type": "csv"
     }
-  ],
+  },
   "layer": [
     {
       "mark": {
@@ -49,28 +34,35 @@
           }
         },
         "x": {
-          "field": "2017",
+          "field": "rating_2017",
           "type": "quantitative",
           "title": "Positive rating (%)",
           "scale": {
             "domain": [0, 100]
+          },
+          "axis": {
+            "format": ".0f",
+            "gridColor": "#E3E7EB"
           }
         },
         "x2": {
-          "field": "2025"
+          "field": "rating_2025"
         },
         "tooltip": [
           {
             "field": "provider",
+            "type": "nominal",
             "title": "University"
           },
           {
-            "field": "2017",
+            "field": "rating_2017",
+            "type": "quantitative",
             "title": "2017 rating (%)",
             "format": ".1f"
           },
           {
-            "field": "2025",
+            "field": "rating_2025",
+            "type": "quantitative",
             "title": "2025 rating (%)",
             "format": ".1f"
           }
@@ -78,6 +70,22 @@
       }
     },
     {
+      "transform": [
+        {
+          "fold": [
+            "rating_2017",
+            "rating_2025"
+          ],
+          "as": [
+            "rating_field",
+            "positive_percent"
+          ]
+        },
+        {
+          "calculate": "datum.rating_field === 'rating_2017' ? '2017' : '2025'",
+          "as": "survey_year"
+        }
+      ],
       "mark": {
         "type": "point",
         "filled": true,
@@ -88,7 +96,10 @@
           "field": "provider",
           "type": "nominal",
           "title": "University",
-          "sort": "-x",
+          "sort": {
+            "field": "rating_2025",
+            "order": "descending"
+          },
           "axis": {
             "labelLimit": 220,
             "labelFontSize": 10
@@ -109,19 +120,27 @@
           "scale": {
             "domain": ["2017", "2025"],
             "range": ["#756BB1", "#008B8B"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "title": "Survey year"
           }
         },
         "tooltip": [
           {
             "field": "provider",
+            "type": "nominal",
             "title": "University"
           },
           {
             "field": "survey_year",
+            "type": "nominal",
             "title": "Survey year"
           },
           {
             "field": "positive_percent",
+            "type": "quantitative",
             "title": "Overall experience (%)",
             "format": ".1f"
           }

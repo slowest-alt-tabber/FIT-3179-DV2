@@ -1,5 +1,7 @@
+
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Ranks of undergraduate student experience measures across survey years.",
   "width": "container",
   "height": 320,
   "autosize": {
@@ -8,41 +10,11 @@
   },
   "background": "white",
   "data": {
-    "url": "data/qilt.csv"
-  },
-  "transform": [
-    {
-      "filter": "datum.row_type == 'provider' && datum.study_level == 'Undergraduate' && datum.positive_percent != null && datum.survey_year >= 2017 && datum.survey_year <= 2025"
-    },
-    {
-      "filter": "datum.indicator == 'Skills Development' || datum.indicator == 'Peer Engagement' || datum.indicator == 'Teaching Quality and Engagement' || datum.indicator == 'Student Support and Services' || datum.indicator == 'Learning Resources' || datum.indicator == 'Overall Educational Experience'"
-    },
-    {
-      "aggregate": [
-        {
-          "op": "mean",
-          "field": "positive_percent",
-          "as": "mean_rating"
-        }
-      ],
-      "groupby": ["survey_year", "indicator"]
-    },
-    {
-      "window": [
-        {
-          "op": "rank",
-          "as": "indicator_rank"
-        }
-      ],
-      "groupby": ["survey_year"],
-      "sort": [
-        {
-          "field": "mean_rating",
-          "order": "descending"
-        }
-      ]
+    "url": "data/qilt_experience_ranks.csv",
+    "format": {
+      "type": "csv"
     }
-  ],
+  },
   "layer": [
     {
       "mark": {
@@ -62,7 +34,11 @@
             "domain": [2017, 2025]
           },
           "axis": {
-            "values": [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
+            "values": [
+              2017, 2018, 2019,
+              2020, 2021, 2022,
+              2023, 2024, 2025
+            ],
             "format": "d",
             "labelAngle": -35,
             "labelFontSize": 10
@@ -116,21 +92,26 @@
         "tooltip": [
           {
             "field": "survey_year",
+            "type": "quantitative",
             "title": "Survey year",
             "format": "d"
           },
           {
             "field": "indicator",
+            "type": "nominal",
             "title": "Full experience measure"
           },
           {
             "field": "mean_rating",
+            "type": "quantitative",
             "title": "Mean positive rating (%)",
             "format": ".1f"
           },
           {
             "field": "indicator_rank",
-            "title": "Ranking"
+            "type": "quantitative",
+            "title": "Ranking",
+            "format": "d"
           }
         ]
       }
