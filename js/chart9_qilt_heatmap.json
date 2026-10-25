@@ -43,7 +43,7 @@
         "y": {
           "field": "study_area",
           "type": "nominal",
-          "title": null,
+          "title": "Study area",
           "sort": "ascending",
           "axis": {
             "labelLimit": 220,

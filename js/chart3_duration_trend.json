@@ -27,7 +27,7 @@
         "x": {
           "field": "study_level",
           "type": "nominal",
-          "title": null,
+          "title": "Study level",
           "sort": [
             "Undergraduate",
             "Postgraduate coursework"
